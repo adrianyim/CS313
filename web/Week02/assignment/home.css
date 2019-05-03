@@ -31,6 +31,7 @@ a:link {
     background-color: white;
     color: black;
     border: 2px solid skyblue;
+    text-decoration: none;
     display: inline-block;
 }
 
@@ -38,4 +39,10 @@ a:hover {
     background-color: tomato;
     color: aquamarine;
     text-decoration: none;
+}
+
+.content {
+    margin: 50%;
+    font-size: 50px;
+    text-align: center;
 }
