@@ -51,7 +51,7 @@ a.a-header:hover {
 }
 
 .div-header {
-    margin: 85%;
+    margin-left: 85%;
     text-align: end;
-    background-color: aliceblue
+    background-color: aliceblue;
 }
