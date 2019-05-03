@@ -26,12 +26,12 @@ div.div-assign-content:hover {
     color: white;
 }
 
-li.assign_List:link, li.assign_List:visited {
+.assign_List a {
     color: black;
     text-decoration: none;
 }
 
-li.assign_List:hover {
+.assign_List a:hover {
     background-color: gray;
     color: white;
     text-decoration: none;
