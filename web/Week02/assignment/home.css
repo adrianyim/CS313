@@ -29,17 +29,18 @@ ul.ul-assign:hover {
     font-weight: bold;
 }
 
-div.div-header:link, div.div-header:visited {
+a.a-header:link, a.a-header:visited {
     background-color: white;
     color: black;
-    border: 2px solid;
+    border: 2px solid yellow;
     text-decoration: none;
     display: inline-block;
+    text-align: end;
 }
 
-div.div-header:hover {
-    background-color: gray;
-    color: aquamarine;
+a.a-header:hover {
+    background-color: yellow;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
@@ -48,8 +49,4 @@ div.div-header:hover {
     /* margin: 50%; */
     font-size: 50px;
     text-align: center;
-}
-
-.div-header {
-    text-align: end;
 }
