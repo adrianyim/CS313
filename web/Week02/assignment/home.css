@@ -22,9 +22,14 @@ ul {
     text-align: center;
 }
 
+ul.ul-assign:link, ul.ul-assign:visited {
+    color: white;
+    text-decoration: none;
+}
+
 ul.ul-assign:hover {
-    background-color: yellow;
-    color: aquamarine;
+    background-color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
@@ -41,7 +46,6 @@ a.a-header:hover {
     background-color: gray;
     color: white;
     text-decoration: none;
-    /* font-weight: bold; */
 }
 
 .div-content {
