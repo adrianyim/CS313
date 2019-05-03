@@ -9,8 +9,8 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
         <a href="/Week02/assignment/assignment.php" <?php if ($file === "assignment") echo 'active' ?> class="a-header">Assignment</a>
         <span id='time'>
         <?php
-        // date_default_timezone_set("America/Denver");
-        echo " " . date("m/d/Y") . "Mountain Time"; 
+        date_default_timezone_set("America/Denver");
+        echo "Mountain Time " . date("l, M d, Y"); 
         ?> 
     </div>
     <hr>
