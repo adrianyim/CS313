@@ -22,23 +22,26 @@ ul {
     text-align: center;
 }
 
-ul:hover {
+ul.ul-assign:hover {
     background-color: yellow;
     color: aquamarine;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-a:link {
+a.div-header:link, :visited {
     background-color: white;
     color: black;
-    border: 2px solid skyblue;
+    border: 2px solid;
     text-decoration: none;
     display: inline-block;
 }
 
-a:hover {
-    background-color: tomato;
+div.div-header:hover {
+    background-color: gray;
     color: aquamarine;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .div-content {
