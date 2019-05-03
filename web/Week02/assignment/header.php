@@ -8,9 +8,8 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
         <a href="/Week02/assignment/home.php" <?php if ($file === "home") echo 'active' ?> class="a-header">Home</a>
         <a href="/Week02/assignment/assignment.php" <?php if ($file === "assignment") echo 'active' ?> class="a-header">Assignment</a>
         <?php 
-        echo "Today's date is :"; 
-        $today = date("d/m/Y"); 
-        echo $today; 
+        $today = date("m/d/Y");
+        echo "Today's date is : $today"; 
         ?> 
     </div>
     <hr>
