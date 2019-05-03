@@ -14,5 +14,8 @@
     <div class="div-content">
         Coming Soon!!
     </div>
+    <?php
+        include 'footer.php'
+    ?>
 </body>
 </html>

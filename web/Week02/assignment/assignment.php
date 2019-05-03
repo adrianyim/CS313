@@ -27,5 +27,8 @@
             <li class="assign_List"><a href="/Week02/assignment/assign14.php">Assignment 14</a></li>
         </ul>
     </div>
+    <?php
+        include 'footer.php'
+        ?>
 </body>
 </html>
