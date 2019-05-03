@@ -10,7 +10,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
         <!-- <span id='time'>  -->
             <?php
             date_default_timezone_set("America/Denver");
-            echo "Mountain Time " . date("l, Y-m-d"); 
+            echo "Mountain Time " . date("l, m d, Y"); 
             ?>
         <!-- </span> -->
     </div>
