@@ -32,7 +32,6 @@ ul.ul-assign:hover {
 a.a-header:link, a.a-header:visited {
     background-color: white;
     color: black;
-    border: 2px solid gray;
     text-decoration: none;
     display: inline-block;
 }
@@ -40,6 +39,7 @@ a.a-header:link, a.a-header:visited {
 a.a-header:hover {
     background-color: gray;
     color: yellow;
+    border: 2px solid gray;
     text-decoration: none;
     font-weight: bold;
 }
