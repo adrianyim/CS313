@@ -11,7 +11,6 @@
     <?php
     include 'header.php';
     ?>
-    <hr>
     <div class="div-info"><img src="me.jpg" class="me">
         <p>My name is Adrian Yim. I am from Hong Kong and I am majoring in software engineering. I have been marrying for more than 4 months. I know three languages: Cantonese, Engllish, and Mandrian.</p>
         <p></p>
