@@ -16,3 +16,26 @@ body {
 .div-info {
     text-align: center;
 }
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul:hover {
+    background-color: yellow;
+    color: aquamarine;
+}
+
+a:link {
+    background-color: white;
+    color: black;
+    border: 2px solid skyblue;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: tomato;
+    color: aquamarine;
+    text-decoration: none;
+}
