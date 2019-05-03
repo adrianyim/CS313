@@ -63,6 +63,9 @@ a.a-header:hover {
     background-color: white;
 }
 
+.div-footer {
+    text-align: center;
+}
 .content-left {
     margin-right: 25%;
     background-color: white;
