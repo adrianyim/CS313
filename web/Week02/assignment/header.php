@@ -9,7 +9,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
         <a href="/Week02/assignment/assignment.php" <?php if ($file === "assignment") echo 'active' ?> class="a-header">Assignment</a>
         <?php 
         $timestamp = time();
-        echo(date("h:i:s a, m/d/Y", $timestamp)); 
+        echo(date("H:i:s a, m/d/Y", $timestamp)); 
         ?> 
     </div>
     <hr>
