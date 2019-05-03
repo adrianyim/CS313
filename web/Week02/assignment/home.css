@@ -35,7 +35,6 @@ a.a-header:link, a.a-header:visited {
     border: 2px solid yellow;
     text-decoration: none;
     display: inline-block;
-    text-align: end;
 }
 
 a.a-header:hover {
@@ -49,4 +48,8 @@ a.a-header:hover {
     /* margin: 50%; */
     font-size: 50px;
     text-align: center;
+}
+
+.a-header {
+    text-align: end;
 }
