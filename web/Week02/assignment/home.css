@@ -22,14 +22,17 @@ ul {
     text-align: center;
 }
 
-ul.ul-assign:link, ul.ul-assign:visited {
+div.div-assign-content:hover {
     color: white;
+}
+
+li.li-assign:link, li.li-assign:visited {
     text-decoration: none;
 }
 
-ul.ul-assign:hover {
-    background-color: white;
-    color: black;
+li.li-assign:hover {
+    background-color: gray;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
