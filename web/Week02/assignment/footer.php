@@ -14,6 +14,6 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
             <span><a href="https://www.linkedin.com/in/adrian-yim/">
             <img src="linkedin-logo.png" class="img-footer"></a></span>
         </p>
-        <p>© 2019-<?php echo date("Y");?></p>
+        <p>© <?php echo date("Y");?></p>
     </div>
 </footer>

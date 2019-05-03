@@ -22,9 +22,9 @@ ul {
     text-align: center;
 }
 
-/* .div-assign-content:hover {
-    color: white;
-} */
+.div-assign-content:hover {
+    background-color: white;
+}
 
 .assign_List a {
     color: black;
