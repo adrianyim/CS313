@@ -11,7 +11,7 @@
     <?php
     include 'header.php'
     ?>
-    <div class="content">
+    <div class="div-content">
         Coming Soon!!
     </div>
 </body>

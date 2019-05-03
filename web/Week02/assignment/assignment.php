@@ -11,7 +11,8 @@
     <?php
     include 'header.php'
     ?>
-    <ul>
+
+    <div><ul>
         <li><a href="/Week02/assignment/assign03.php">Assignment 03</a></li>
         <li><a href="/Week02/assignment/assign04.php">Assignment 04</a></li>
         <li><a href="/Week02/assignment/assign05.php">Assignment 05</a></li>
@@ -24,6 +25,6 @@
         <li><a href="/Week02/assignment/assign12.php">Assignment 12</a></li>
         <li><a href="/Week02/assignment/assign13.php">Assignment 13</a></li>
         <li><a href="/Week02/assignment/assign14.php">Assignment 14</a></li>
-    </ul>
+    </ul></div>
 </body>
 </html>

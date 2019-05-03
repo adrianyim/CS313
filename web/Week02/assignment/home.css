@@ -41,8 +41,12 @@ a:hover {
     text-decoration: none;
 }
 
-.content {
-    margin: 50%;
+.div-content {
+    /* margin: 50%; */
     font-size: 50px;
     text-align: center;
+}
+
+.div-header {
+    text-align: end;
 }
