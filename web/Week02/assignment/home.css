@@ -29,7 +29,7 @@ ul.ul-assign:hover {
     font-weight: bold;
 }
 
-a.div-header:link, a.div-header:visited {
+div.div-header:link, div.div-header:visited {
     background-color: white;
     color: black;
     border: 2px solid;
