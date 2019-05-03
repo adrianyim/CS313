@@ -32,20 +32,19 @@ ul.ul-assign:hover {
 a.a-header:link, a.a-header:visited {
     background-color: white;
     color: black;
-    border: 2px solid yellow;
+    border: 2px solid gray;
     text-decoration: none;
     display: inline-block;
 }
 
 a.a-header:hover {
-    background-color: yellow;
-    color: gray;
+    background-color: gray;
+    color: yellow;
     text-decoration: none;
     font-weight: bold;
 }
 
 .div-content {
-    margin:50% 50%;
     font-size: 50px;
     text-align: center;
 }
