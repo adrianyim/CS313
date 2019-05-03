@@ -40,7 +40,7 @@ a.a-header:link, a.a-header:visited {
 
 a.a-header:hover {
     background-color: yellow;
-    color: black;
+    color: gray;
     text-decoration: none;
     font-weight: bold;
 }
