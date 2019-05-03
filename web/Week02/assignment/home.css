@@ -62,3 +62,12 @@ a.a-header:hover {
     text-align: end;
     background-color: white;
 }
+
+.content-left {
+    margin-right: 25%;
+    background-color: white;
+}
+.content-right {
+    margin-left: 25%;
+    background-color: white;
+}
