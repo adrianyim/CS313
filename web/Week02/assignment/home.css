@@ -27,6 +27,7 @@ div.div-assign-content:hover {
 }
 
 li.li-assign:link, li.li-assign:visited {
+    color: black;
     text-decoration: none;
 }
 
