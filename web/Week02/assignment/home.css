@@ -45,13 +45,13 @@ a.a-header:hover {
 }
 
 .div-content {
-    /* margin: 50%; */
+    margin:50% 50%;
     font-size: 50px;
     text-align: center;
 }
 
 .div-header {
-    margin-left: 85%;
+    margin-left: 25%;
     text-align: end;
-    background-color: aliceblue;
+    background-color: white;
 }
