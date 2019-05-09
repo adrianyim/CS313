@@ -63,13 +63,12 @@ if(empty($VISITED)) {
     echo("Please select.");
 } else {
     for ($i = 0; $i < count($converter); $i++) {
-        if($VISITED == $i) {
-            $place = $i;
-        }
+        print($converter[$i]);
     }
     // print_r($converter);
 }
 ?>
+<br>
 <button type="submit" name="Submit" value="Submit">Submit</button>
 
 </form>
