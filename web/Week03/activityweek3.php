@@ -38,7 +38,7 @@ Major:
 <?php
 for ($i = 0; $i < count($majorsArray); $i++) : ?>
     <?php $major = $majorsArray[$i];?>
-    <input type="radio" name="Major" value="<?php echo $major?>"> Computer Science
+    <input type="radio" name="Major" value="<?php echo $major?>"> <?php echo $major ?>
 
 <?php endfor?>
 
