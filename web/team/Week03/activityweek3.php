@@ -72,6 +72,7 @@ VISITED =
 <?php 
 foreach ($VISITED as $place) {
     echo $converter[$place];
+    echo ", ";
 }
 ?>
 </p>
