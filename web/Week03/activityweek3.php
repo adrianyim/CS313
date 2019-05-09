@@ -61,13 +61,12 @@ Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
 <br>
 
 <?php
-$len = count($VISITED);
 if(empty($VISITED)) {
     $errorVisited = "Please select.";
 } else {
     for ($i = 0; $i < count($converter); $i++) {
         if($VISITED == $i) {
-            echo ($converter[$i]);
+            $place = $converter[$i];
         }
     }
 }
@@ -85,7 +84,7 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
+VISITED = <?PHP echo implode(', ', $place); ?> <br>
 </p>
 
 </body>
