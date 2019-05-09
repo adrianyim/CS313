@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wevice-winitial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Team Activity Week03</title>
     <link rel="stylesheet" type="text/css" href="../../style/main.css">
@@ -49,13 +49,13 @@ Comments:
 <br>
 Visited Place(s):
 <br>
-<input type="checkbox" name="Visited[]" id="na" value="na"><label for="na">North America</label><br>
-<input type="checkbox" name="Visited[]" id="sa" value="sa"><label for="sa">South America</label><br>
-<input type="checkbox" name="Visited[]" id="e" value="e"><label for="e">Europe</label><br>
-<input type="checkbox" name="Visited[]" id="a"value="a"><label for="a">Asia</label><br>
+<input type="checkbox" name="Visited[]" value="na">North America<br>
+<input type="checkbox" name="Visited[]" value="sa"><label for="sa">South America</label><br>
+<input type="checkbox" name="Visited[]"  value="e"><label for="e">Europe</label><br>
+<input type="checkbox" name="Visited[]" value="a"><label for="a">Asia</label><br>
 <input type="checkbox" name="Visited[]" value="au"><label for="au">Australia</label><br>
-<input type="checkbox" name="Visited[]" id="af" value="af"><label for="af">Africa</label><br>
-<input type="checkbox" name="Visited[]" id="an" value="an"><label for="an">Antarctica</label><br>
+<input type="checkbox" name="Visited[]" value="af"><label for="af">Africa</label><br>
+<input type="checkbox" name="Visited[]" value="an"><label for="an">Antarctica</label><br>
 <br>
 <input type="submit" value="Submit Answers">
 
@@ -68,19 +68,11 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
-
-visited = 
+VISITED = 
 <?php 
-
 foreach ($VISITED as $place) {
-    // echo $place;
     echo $converter[$place];
 }
-
-// foreach ($VISITED as $place) {
-//     echo htmlspecialchars($place);
-
 ?>
 </p>
 
