@@ -64,11 +64,11 @@ Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
 if(empty($VISITED)) {
     $errorVisited = "Please select.";
 } else {
+    echo($VISITED);
     for ($i = 0; $i < count($converter); $i++) {
         if($VISITED == $i) {
             $place = $i;
         }
-        // print_r($converter);
     }
     print_r($converter);
 }
