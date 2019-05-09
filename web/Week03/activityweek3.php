@@ -36,13 +36,11 @@ Email:
 Major:
 
 <?php
-for ($i = 0; $i < count($majorsArray); $i++) {
-    $major = $majorsArray[$i];?>
-    Major:
+for ($i = 0; $i < count($majorsArray); $i++) : ?>
+    <?php $major = $majorsArray[$i];?>
     <input type="radio" name="Major" value="<?php echo $major?>"> Computer Science
-}
 
-?>
+<?php endfor?>
 
 <!-- <input type="radio" value="Computer Science"  name="Major"> Computer Science
 <input type="radio" value="Web Design and Development" name="Major"> Web Design and Development
