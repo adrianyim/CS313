@@ -66,7 +66,7 @@ if(empty($VISITED)) {
     echo("Please select.");
 } else {
     for ($i = 0; $i < count($converter); $i++) {
-        echo $converter[$i];
+        print $converter[$i];
     }
 }
 ?>
