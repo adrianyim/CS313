@@ -19,7 +19,7 @@ $COMMENT = $_POST["Comments"];
 $VISITED  = $_POST["Visited"];
 }
 
-include '../../header.php';
+include '/assignment/Week02/header.php';
 
 $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 
