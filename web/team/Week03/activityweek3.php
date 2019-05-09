@@ -72,7 +72,7 @@ VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = 
 <?php 
 foreach ($VISITED as $place) {
-    echo htmlspecialchars($place);
+    echo htmlspecialchars(', ', $place);
 }
 ?>
 </p>
