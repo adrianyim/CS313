@@ -68,8 +68,9 @@ if(empty($VISITED)) {
         if($VISITED == $i) {
             $place = $i;
         }
-        print_r($converter);
+        // print_r($converter);
     }
+    print_r($converter);
 }
 ?>
 <br>
