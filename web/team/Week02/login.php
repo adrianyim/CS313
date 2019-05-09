@@ -12,8 +12,8 @@
 include 'header.php';
 ?>
 
-<a href="/admin.php">Log In as Administrator</a>
-<a href="/tester.php">Log In as Tester</a>
+<a href="/team/Week02/admin.php">Log In as Administrator</a>
+<a href="/team/Week02/tester.php">Log In as Tester</a>
 
 </body>
 </html>
