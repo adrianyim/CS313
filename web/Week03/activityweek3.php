@@ -74,7 +74,7 @@ EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
 VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
-visited = <?PHP echo implode(', ', $)
+visited = <?PHP echo implode(', ', $map); ?>
 </p>
 
 
