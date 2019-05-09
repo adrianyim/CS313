@@ -77,7 +77,7 @@ foreach ($VISITED as $place) {
 
 // foreach ($VISITED as $place) {
 //     echo htmlspecialchars($place);
-}
+
 ?>
 </p>
 
