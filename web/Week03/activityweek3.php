@@ -21,6 +21,8 @@ $VISITED  = $_POST["Visited"];
 }
 
 include '../../header.php';
+
+$majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 ?>
 
 
@@ -32,16 +34,28 @@ Email:
 <input tyoe="text" placeholder="Email" name="Email">
 <br>
 Major:
-<input type="radio" value="Computer Science"  name="Major"> Computer Science
+
+<?php
+for ($i = 0; $i < count($majorsArray); $i++) {
+    $major = $majorsArray[$i];?>
+    Major:
+    <input type="radio" name="Major" value="<?php echo $major?>"> Computer Science
+}
+
+?>
+
+<!-- <input type="radio" value="Computer Science"  name="Major"> Computer Science
 <input type="radio" value="Web Design and Development" name="Major"> Web Design and Development
 <input type="radio" value="Computer Information Technology" name="Major"> Computer Information Technology
-<input type="radio" value="Computer Engineering"  name="Major"> Computer Engineering
+<input type="radio" value="Computer Engineering"  name="Major"> Computer Engineering -->
 
 <br>
 Comments:
+<br>
 <textarea name="Comments" rows="5" cols="40" placeholder="Enter Comments Here"></textarea>
 <br>
 Visited Place:
+<br>
 <input type="checkbox" name="Visited[]" value="North America">North America<br>
 <input type="checkbox" name="Visited[]" value="South America">South America<br>
 <input type="checkbox" name="Visited[]" value="Europe">Europe<br>
