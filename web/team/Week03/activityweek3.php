@@ -49,13 +49,13 @@ Comments:
 <br>
 Visited Place(s):
 <br>
-<input type="checkbox" name="Visited[]" id="na" value="North America">North America<br>
-<input type="checkbox" name="Visited[]" id="sa" value="South America">South America<br>
-<input type="checkbox" name="Visited[]" id="e" value="Europe">Europe<br>
-<input type="checkbox" name="Visited[]" id="a"value="Asia">Asia<br>
-<input type="checkbox" name="Visited[]" value="Australia">Australia<br>
-<input type="checkbox" name="Visited[]" id="af" value="Africa">Africa<br>
-<input type="checkbox" name="Visited[]" id="an" value="Antarctica">Antarctica<br>
+<input type="checkbox" name="Visited[]" id="na" value="North America"><label for="na">North America</label><br>
+<input type="checkbox" name="Visited[]" id="sa" value="South America"><label for="sa">South America</label><br>
+<input type="checkbox" name="Visited[]" id="e" value="Europe"><label for="e">Europe</label><br>
+<input type="checkbox" name="Visited[]" id="a"value="Asia"><label for="a">Asia</label><br>
+<input type="checkbox" name="Visited[]" value="Australia"><label for="au">Australia</label><br>
+<input type="checkbox" name="Visited[]" id="af" value="Africa"><label for="af">Africa</label><br>
+<input type="checkbox" name="Visited[]" id="an" value="Antarctica"><label for="an">Antarctica</label><br>
 <br>
 <input type="submit" value="Submit Answers">
 
@@ -72,7 +72,8 @@ VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = 
 <?php 
 foreach ($VISITED as $places) {
-    echo implode(', ', htmlspecialchars($places));
+    $place_clean = htmlspecialchars($place);
+	echo "<li><p>$place_clean</p></li>";
 }
 ?>
 </p>
