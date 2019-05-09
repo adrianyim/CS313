@@ -69,8 +69,10 @@ EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
 VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
+
 visited = 
 <?php 
+print_r($converter);
 foreach ($VISITED as $place) {
     echo $converter[$place];
 }
