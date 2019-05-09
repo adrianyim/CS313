@@ -72,8 +72,9 @@ VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 
 visited = 
 <?php 
-print_r($converter);
+
 foreach ($VISITED as $place) {
+    echo $place;
     echo $converter[$place];
 }
 
