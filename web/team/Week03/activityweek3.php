@@ -72,8 +72,7 @@ VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = 
 <?php 
 foreach ($VISITED as $place) {
-    $place_clean = htmlspecialchars($place);
-	echo "<li><p>$place_clean</p></li>";
+    echo implode(', ', $place);
 }
 ?>
 </p>
