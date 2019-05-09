@@ -21,9 +21,9 @@ $VISITED  = $_POST["Visited"];
 
 include '/assignment/Week02/header.php';
 
-$majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
+// $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 
-$converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
+// $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
 ?>
 
 
@@ -49,13 +49,13 @@ Comments:
 <br>
 Visited Place(s):
 <br>
-<input type="checkbox" name="Visited[]" value="na">North America<br>
-<input type="checkbox" name="Visited[]" value="sa">South America<br>
-<input type="checkbox" name="Visited[]" value="e">Europe<br>
-<input type="checkbox" name="Visited[]" value="a">Asia<br>
-<input type="checkbox" name="Visited[]" value="au">Australia<br>
-<input type="checkbox" name="Visited[]" value="af">Africa<br>
-<input type="checkbox" name="Visited[]" value="an">Antarctica<br>
+<input type="checkbox" name="Visited[]" id="na" value="North America">North America<br>
+<input type="checkbox" name="Visited[]" id="sa" value="South America">South America<br>
+<input type="checkbox" name="Visited[]" id="e" value="Europe">Europe<br>
+<input type="checkbox" name="Visited[]" id="a"value="Asia">Asia<br>
+<input type="checkbox" name="Visited[]" value="Australia">Australia<br>
+<input type="checkbox" name="Visited[]" id="af" value="Africa">Africa<br>
+<input type="checkbox" name="Visited[]" id="an" value="Antarctica">Antarctica<br>
 <br>
 
 <?php 
@@ -70,7 +70,7 @@ if(empty($VISITED)) {
 }
 ?>
 <br>
-<button type="submit" name="Submit" value="Submit">Submit</button>
+<input type="submit" value="Submit Answers">
 
 </form>
 <br>
