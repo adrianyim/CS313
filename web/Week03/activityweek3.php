@@ -17,7 +17,7 @@ $EMAIL = $_POST["Email"];
 $MAJOR = $_POST["Major"];
 $COMMENT = $_POST["Comments"];
 $VISITED  = $_POST["Visited"];
-
+// $place = $_POST['Visited'];
 }
 
 include '../../header.php';
@@ -63,11 +63,13 @@ Visited Place(s):
 <br>
 
 <?php
-for ($i = 0; $i < count($map); $i++) : ?>
-    <?php $place = $map[$i];?>
-    <?php echo $place?>
-
-<?php endfor?>
+if(empty($VISITED)) {
+    echo("Please select.");
+} else {
+    for ($i = 0; $i < count($VISITED); $i++)
+    echo $i;
+}
+?>
 <br>
 
 <button type="submit" name="Submit" value="Submit">Submit</button>
@@ -82,10 +84,7 @@ EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
 VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
-visited = <?PHP echo implode(', ', $map); ?>
-<?php echo print($map); ?>
 </p>
-
 
 </body>
 </html>
