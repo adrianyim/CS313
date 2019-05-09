@@ -25,7 +25,7 @@ $majorsArray = array("Computer Science", "Web Design and Development", "Computer
 
 $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
 
-$visited_map = array_map()
+
 ?>
 
 
@@ -49,7 +49,7 @@ Comments:
 <br>
 <textarea name="Comments" rows="5" cols="40" placeholder="Enter Comments Here"></textarea>
 <br>
-Visited Place(s):
+Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
 <br>
 <input type="checkbox" name="Visited[]" value="na">North America<br>
 <input type="checkbox" name="Visited[]" value="sa">South America<br>
@@ -63,10 +63,12 @@ Visited Place(s):
 <?php
 $len = count($VISITED);
 if(empty($VISITED)) {
-    echo("Please select.");
+    $errorVisited = "Please select.";
 } else {
     for ($i = 0; $i < count($converter); $i++) {
-        print $converter[$i];
+        if($VISITED == $i) {
+            echo ($converter[$i]);
+        }
     }
 }
 ?>
