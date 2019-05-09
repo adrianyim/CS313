@@ -57,19 +57,6 @@ Visited Place(s):
 <input type="checkbox" name="Visited[]" id="af" value="Africa">Africa<br>
 <input type="checkbox" name="Visited[]" id="an" value="Antarctica">Antarctica<br>
 <br>
-
-<?php 
-if(empty($VISITED)) {
-    echo("Please select.");
-} else {
-    for ($i = 0; $i < count($converter); $i++) {
-        
-        $place = array($converter);
-    }
-    // print_r($converter);
-}
-?>
-<br>
 <input type="submit" value="Submit Answers">
 
 </form>
@@ -81,7 +68,7 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ', $place); ?> <br>
+VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = 
 <?php 
 foreach ($VISITED as $places) {
