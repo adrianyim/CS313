@@ -58,7 +58,7 @@ Comments:
 <br>
 <textarea name="Comments" rows="5" cols="40" placeholder="Enter Comments Here"></textarea>
 <br>
-Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
+Visited Place(s): <span <?PHP echo $errorVisited ?>></span>
 <br>
 <input type="checkbox" name="Visited[]" value="na">North America<br>
 <input type="checkbox" name="Visited[]" value="sa">South America<br>
