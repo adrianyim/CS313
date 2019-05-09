@@ -82,6 +82,12 @@ EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
 VISITED = <?PHP echo implode(', ', $place); ?> <br>
+visited = 
+<?php 
+foreach ($VISITED as $places) {
+    echo implode(', ', htmlspecialchars($places));
+}
+?>
 </p>
 
 </body>
