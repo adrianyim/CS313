@@ -68,6 +68,7 @@ if(empty($VISITED)) {
         if($VISITED == $i) {
             $place = $i;
         }
+        print_r($converter);
     }
 }
 ?>
@@ -84,7 +85,7 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ', $place); ?> <br>
+VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 </p>
 
 </body>
