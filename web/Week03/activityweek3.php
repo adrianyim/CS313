@@ -66,7 +66,7 @@ if(empty($VISITED)) {
 } else {
     for ($i = 0; $i < count($converter); $i++) {
         if($VISITED == $i) {
-            $place = $converter[$i];
+            $place = $i;
         }
     }
 }
