@@ -49,13 +49,13 @@ Comments:
 <br>
 Visited Place(s):
 <br>
-<input type="checkbox" name="Visited[]" id="na" value="North America"><label for="na">North America</label><br>
-<input type="checkbox" name="Visited[]" id="sa" value="South America"><label for="sa">South America</label><br>
-<input type="checkbox" name="Visited[]" id="e" value="Europe"><label for="e">Europe</label><br>
-<input type="checkbox" name="Visited[]" id="a"value="Asia"><label for="a">Asia</label><br>
-<input type="checkbox" name="Visited[]" value="Australia"><label for="au">Australia</label><br>
-<input type="checkbox" name="Visited[]" id="af" value="Africa"><label for="af">Africa</label><br>
-<input type="checkbox" name="Visited[]" id="an" value="Antarctica"><label for="an">Antarctica</label><br>
+<input type="checkbox" name="Visited[]" id="na" value="na"><label for="na">North America</label><br>
+<input type="checkbox" name="Visited[]" id="sa" value="sa"><label for="sa">South America</label><br>
+<input type="checkbox" name="Visited[]" id="e" value="e"><label for="e">Europe</label><br>
+<input type="checkbox" name="Visited[]" id="a"value="a"><label for="a">Asia</label><br>
+<input type="checkbox" name="Visited[]" value="au"><label for="au">Australia</label><br>
+<input type="checkbox" name="Visited[]" id="af" value="af"><label for="af">Africa</label><br>
+<input type="checkbox" name="Visited[]" id="an" value="an"><label for="an">Antarctica</label><br>
 <br>
 <input type="submit" value="Submit Answers">
 
@@ -74,7 +74,7 @@ visited =
 <?php 
 
 foreach ($VISITED as $place) {
-    echo $place;
+    // echo $place;
     echo $converter[$place];
 }
 
