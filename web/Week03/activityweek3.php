@@ -83,7 +83,7 @@ MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
 VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = <?PHP echo implode(', ', $map); ?>
-<?php echo print_r($map); ?>
+<?php echo print($map); ?>
 </p>
 
 
