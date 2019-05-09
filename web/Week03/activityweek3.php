@@ -63,7 +63,7 @@ if(empty($VISITED)) {
     echo("Please select.");
 } else {
     for ($i = 0; $i < count($converter); $i++) {
-        print($converter[$i]);
+        $place[] = array($converter[$i]);
     }
     // print_r($converter);
 }
