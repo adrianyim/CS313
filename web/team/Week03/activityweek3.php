@@ -23,7 +23,7 @@ include '/assignment/Week02/header.php';
 
 // $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 
-// $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
+$converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
 ?>
 
 
@@ -72,7 +72,11 @@ VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
 visited = 
 <?php 
 foreach ($VISITED as $place) {
-    echo htmlspecialchars($place);
+    echo $converter[$place];
+}
+
+// foreach ($VISITED as $place) {
+//     echo htmlspecialchars($place);
 }
 ?>
 </p>
