@@ -64,9 +64,9 @@ Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
 if(empty($VISITED)) {
     $errorVisited = "Please select.";
 } else {
-    if(isset($VISITED))
+    // if(isset($VISITED))
     for ($i = 0; $i < count($converter); $i++) {
-        if($VISITED == $i) {
+        if($VISITED === $i) {
             $place = $i;
         }
     }
