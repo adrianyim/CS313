@@ -24,17 +24,6 @@ include '../../header.php';
 $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 
 $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
-
-if(empty($VISITED)) {
-    echo("Please select.");
-} else {
-    for ($i = 0; $i < count($converter); $i++) {
-        if($VISITED == $i) {
-            $place = $i;
-        }
-    }
-    // print_r($converter);
-}
 ?>
 
 
@@ -69,6 +58,18 @@ Visited Place(s):
 <input type="checkbox" name="Visited[]" value="an">Antarctica<br>
 <br>
 
+<?php 
+if(empty($VISITED)) {
+    echo("Please select.");
+} else {
+    for ($i = 0; $i < count($converter); $i++) {
+        if($VISITED == $i) {
+            $place = $i;
+        }
+    }
+    // print_r($converter);
+}
+?>
 <button type="submit" name="Submit" value="Submit">Submit</button>
 
 </form>
