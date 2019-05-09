@@ -65,10 +65,12 @@ $len = count($VISITED);
 if(empty($VISITED)) {
     echo("Please select.");
 } else {
-    for ($i = 0; $i < count($converter); $i++) {
-        $place = $converter[$i];
-        echo $place;
-    }
+    // for ($i = 0; $i < count($converter); $i++) {
+    //     $place = $converter[$i];
+    //     echo $place;
+    //     echo $len;
+    // }
+    print_r($converter);
 }
 ?>
 <br>
