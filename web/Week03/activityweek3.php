@@ -25,7 +25,16 @@ $majorsArray = array("Computer Science", "Web Design and Development", "Computer
 
 $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
 
-
+if(empty($VISITED)) {
+    $errorVisited = "Please select.";
+} else {
+    for ($i = 0; $i < count($converter); $i++) {
+        if($VISITED == $i) {
+            $place = $i;
+        }
+    }
+    // print_r($converter);
+}
 ?>
 
 
@@ -60,21 +69,6 @@ Visited Place(s): <p <?PHP echo $errorVisited ?>></p>
 <input type="checkbox" name="Visited[]" value="an">Antarctica<br>
 <br>
 
-<?php
-if(empty($VISITED)) {
-    $errorVisited = "Please select.";
-} else {
-    // if(isset($VISITED))
-    for ($i = 0; $i < count($converter); $i++) {
-        if($VISITED === $i) {
-            $place = $i;
-        }
-    }
-    print_r($converter);
-}
-?>
-<br>
-
 <button type="submit" name="Submit" value="Submit">Submit</button>
 
 </form>
@@ -86,7 +80,7 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
+VISITED = <?PHP echo implode(', ', $place); ?> <br>
 </p>
 
 </body>
