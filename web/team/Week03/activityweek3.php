@@ -50,12 +50,12 @@ Comments:
 Visited Place(s):
 <br>
 <input type="checkbox" name="Visited[]" value="na">North America<br>
-<input type="checkbox" name="Visited[]" value="sa"><label for="sa">South America</label><br>
-<input type="checkbox" name="Visited[]"  value="e"><label for="e">Europe</label><br>
-<input type="checkbox" name="Visited[]" value="a"><label for="a">Asia</label><br>
-<input type="checkbox" name="Visited[]" value="au"><label for="au">Australia</label><br>
-<input type="checkbox" name="Visited[]" value="af"><label for="af">Africa</label><br>
-<input type="checkbox" name="Visited[]" value="an"><label for="an">Antarctica</label><br>
+<input type="checkbox" name="Visited[]" value="sa">South America<br>
+<input type="checkbox" name="Visited[]"  value="e">Europe<br>
+<input type="checkbox" name="Visited[]" value="a">Asia<br>
+<input type="checkbox" name="Visited[]" value="au">Australia<br>
+<input type="checkbox" name="Visited[]" value="af">Africa<br>
+<input type="checkbox" name="Visited[]" value="an">Antarctica<br>
 <br>
 <input type="submit" value="Submit Answers">
 
