@@ -32,10 +32,10 @@ Email:
 <input tyoe="text" placeholder="Email" name="Email">
 <br>
 Major:
-<input type="radio" value="CS"  name="Major"> Computer Science
-<input type="radio" value="WDD" name="Major"> Web Design and Development
-<input type="radio" value="CIT" name="Major"> Computer Information Technology
-<input type="radio" value="CE"  name="Major"> Computer Engineering
+<input type="radio" value="Computer Science"  name="Major"> Computer Science
+<input type="radio" value="Web Design and Development" name="Major"> Web Design and Development
+<input type="radio" value="Computer Information Technology" name="Major"> Computer Information Technology
+<input type="radio" value="Computer Engineering"  name="Major"> Computer Engineering
 
 <br>
 Comments:
