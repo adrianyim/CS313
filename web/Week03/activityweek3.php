@@ -17,17 +17,15 @@ $EMAIL = $_POST["Email"];
 $MAJOR = $_POST["Major"];
 $COMMENT = $_POST["Comments"];
 $VISITED  = $_POST["Visited"];
-// $place = $_POST['Visited'];
 }
 
 include '../../header.php';
 
 $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
 
-$converter = array("na", "sa", "e", "a", "au", "af", "an");
-$converter_text = array("North America", "South America", "Europe", "Asia", "Australia", "Africa", "Antarctica");
-$map = array_map($converter_text, $converter);
-print_r($map);
+$converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
+
+$visited_map = array_map()
 ?>
 
 
@@ -63,11 +61,14 @@ Visited Place(s):
 <br>
 
 <?php
+$len = count($VISITED);
 if(empty($VISITED)) {
     echo("Please select.");
 } else {
-    for ($i = 0; $i < count($VISITED); $i++)
-    echo $i;
+    for ($i = 0; $i < count($converter); $i++) {
+        $place = $converter[$i];
+        echo $place;
+    }
 }
 ?>
 <br>
