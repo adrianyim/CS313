@@ -23,6 +23,11 @@ $VISITED  = $_POST["Visited"];
 include '../../header.php';
 
 $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
+
+$converter = array("na", "sa", "e", "a", "au", "af", "an");
+$converter_text = array("North America", "South America", "Europe", "Asia", "Australia", "Africa", "Antarctica");
+$map = array_map($converter_text, $converter);
+print_r($map);
 ?>
 
 
@@ -34,7 +39,6 @@ Email:
 <input tyoe="text" placeholder="Email" name="Email">
 <br>
 Major:
-
 <?php
 for ($i = 0; $i < count($majorsArray); $i++) : ?>
     <?php $major = $majorsArray[$i];?>
@@ -42,25 +46,20 @@ for ($i = 0; $i < count($majorsArray); $i++) : ?>
 
 <?php endfor?>
 
-<!-- <input type="radio" value="Computer Science"  name="Major"> Computer Science
-<input type="radio" value="Web Design and Development" name="Major"> Web Design and Development
-<input type="radio" value="Computer Information Technology" name="Major"> Computer Information Technology
-<input type="radio" value="Computer Engineering"  name="Major"> Computer Engineering -->
-
 <br>
 Comments:
 <br>
 <textarea name="Comments" rows="5" cols="40" placeholder="Enter Comments Here"></textarea>
 <br>
-Visited Place:
+Visited Place(s):
 <br>
-<input type="checkbox" name="Visited[]" value="North America">North America<br>
-<input type="checkbox" name="Visited[]" value="South America">South America<br>
-<input type="checkbox" name="Visited[]" value="Europe">Europe<br>
-<input type="checkbox" name="Visited[]" value="Asia">Asia<br>
-<input type="checkbox" name="Visited[]" value="Australia">Australia<br>
-<input type="checkbox" name="Visited[]" value="Africa">Africa<br>
-<input type="checkbox" name="Visited[]" value="Antarctica">Antarctica<br>
+<input type="checkbox" name="Visited[]" value="na">North America<br>
+<input type="checkbox" name="Visited[]" value="sa">South America<br>
+<input type="checkbox" name="Visited[]" value="e">Europe<br>
+<input type="checkbox" name="Visited[]" value="a">Asia<br>
+<input type="checkbox" name="Visited[]" value="au">Australia<br>
+<input type="checkbox" name="Visited[]" value="af">Africa<br>
+<input type="checkbox" name="Visited[]" value="an">Antarctica<br>
 <br>
 
 <button type="submit" name="Submit" value="Submit">Submit</button>
@@ -74,7 +73,8 @@ NAME = <?PHP echo $NAME ?> <br>
 EMAIL = <?PHP echo $EMAIL ?> <br>
 MAJOR = <?PHP echo $MAJOR ?>  <br>
 COMMENT = <?PHP echo $COMMENT ?> <br>
-VISITED = <?PHP echo implode(', ',$_POST['Visited']); ?>
+VISITED = <?PHP echo implode(', ', $VISITED); ?> <br>
+visited = <?PHP echo implode(', ', $)
 </p>
 
 
