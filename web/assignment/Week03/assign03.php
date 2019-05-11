@@ -16,7 +16,7 @@ include 'header.php';
 ?>
 
     <div class="div-info">
-        <h3>Chinese Paper Cutting online shipping</h3>
+        <h2>Chinese Paper Cutting online shipping</h2>
 
         <form method="post" action="cart.php" >
             <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> Plan of Salvation $500<br>

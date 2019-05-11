@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION["ITEMS"] = $_POST["item"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +14,6 @@
 <body>
 <?php
 include 'header.php';
-
-$_SESSION["ITEMS"] = $_POST["item"];
-    
 ?>
     
     <div class="div-info">
@@ -28,7 +26,7 @@ $_SESSION["ITEMS"] = $_POST["item"];
         ?>
         </ul>
         <a href="assign03.php"><input type="button" value="Continue Shopping"></a>
-        <a href="checkout.php"><input type="button" value="Checkout"></a>
+        <a href="checkout.php" <?php echo htmlspecialchars(SID); ?>><input type="button" value="Checkout"></a>
     </div>
 
     <?php

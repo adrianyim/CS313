@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $_SESSION["NAME"] = $_POST["name"];
+    $_SESSION["ADDRESS"] = $_POST["address"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +15,6 @@
 <body>
 <?php
 include 'header.php';
-
-$_SESSION["NAME"] = $_POST["name"];
-$_SESSION["ADDRESS"] = $_POST["address"];
 ?>
 
     <div class="div-info">
