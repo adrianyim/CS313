@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Cart</title>
+    <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
 <?php
-    include '../assignment/Week02/header.php'
+    include '../assignment/Week02/header.php';
+
+    $ITEMS = htmlspecialchars($_POST["item"]);
     ?>
     
-    <p>You are in the cart page</p>
+    <div>
+        <p>Your cart lists:</p><br>
+        <ul>
+        <?php
+            foreach ($ITEMS as $item) {
+                echo ("<li><p>$item</p></li>");
+            }
+        ?>
+        </ul>
+    </div>
 
     <?php
-        include '../assignment/Week02/footer.php'
+        include '../assignment/Week02/footer.php';
     ?>
 </body>
 </html>
