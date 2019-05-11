@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +14,8 @@
 <?php
     include 'header.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $ITEMS = htmlspecialchars($_POST["item"]);
-    }
+    $ITEMS = $_SESSION["item"];
+    
     ?>
     
     <div>

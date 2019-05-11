@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +11,8 @@
 </head>
 <body>
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $NAME = $_POST["Name"];
-        $EMAIL = $_POST["Email"];
-    }
+    $NAME = $_SESSION["Name"];
+    $EMAIL = $_SESSION["Email"];
     ?>
 
     <div>
