@@ -14,7 +14,7 @@
 <?php
 include 'header.php';
 ?>
-    <div class="div-content">
+    <div class="div-info">
         <p>Checkout:</p>
 
         <form method="post" action="confirmation.php">

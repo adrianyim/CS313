@@ -15,7 +15,7 @@
 include 'header.php';
 ?>
 
-    <div class="div-content">
+    <div class="div-info">
         <h3>Chinese Paper Cutting online shipping</h3>
 
         <form method="post" action="cart.php" >
