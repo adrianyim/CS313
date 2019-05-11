@@ -18,7 +18,7 @@ $_SESSION["NAME"] = $_POST["name"];
 $_SESSION["ADDRESS"] = $_POST["address"];
 ?>
 
-    <div>
+    <div class="div-content">
         <p>Confirmation Order</p>
 
         <p>Name: <?php echo $_SESSION["NAME"] ?>

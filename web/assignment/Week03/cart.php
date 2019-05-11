@@ -18,7 +18,7 @@ $_SESSION["ITEMS"] = $_POST["item"];
     
 ?>
     
-    <div>
+    <div class="div-content">
         <p>Your cart lists:</p><br>
         <ul>
         <?php
