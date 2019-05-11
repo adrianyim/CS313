@@ -12,17 +12,17 @@
 </head>
 <body>
 <?php
-    include 'header.php';
+include 'header.php';
 
-    $_SESSION["ITEMS"] = $_POST["item"];
+$_SESSION["ITEMS"] = $_POST["item"];
     
-    ?>
+?>
     
     <div>
         <p>Your cart lists:</p><br>
         <ul>
         <?php
-            foreach ($ITEMS as $item) {
+            foreach ($_SESSION["ITEMS"] as $item) {
                 echo ("<li><p>$item</p></li>");
             }
         ?>
@@ -33,7 +33,7 @@
 
     <?php
     print_r($_SESSION);
-        include 'footer.php';
+    include 'footer.php';
     ?>
 </body>
 </html>
