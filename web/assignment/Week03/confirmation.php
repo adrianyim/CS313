@@ -8,9 +8,16 @@
 </head>
 <body>
     <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $NAME = $_POST["Name"];
+        $EMAIL = $_POST["Email"];
+    }
     ?>
+
     <div>
-        <p>You are in the confirmationo page</p>
+        <p>You are in the confirmation page</p>
+        <p>Name: <?php $NAME ?>
+        <p>Shipping to: <?php $EMAIL?></p>
     </div>
 </body>
 </html>

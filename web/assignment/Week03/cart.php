@@ -11,7 +11,9 @@
 <?php
     include 'header.php';
 
-    $ITEMS = htmlspecialchars($_POST["item"]);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $ITEMS = htmlspecialchars($_POST["item"]);
+    }
     ?>
     
     <div>

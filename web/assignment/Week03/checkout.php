@@ -11,8 +11,15 @@
 
     ?>
     <div>
-    <p>You are in the checkout page</p>
-    <a href="confirmation.php"><input type="button" value="Confirm"></a>
+        <p>You are in the checkout page</p>
+        <form method="post" action="confirmation.php">
+            Name:
+            <input type="text" placeholder="Name" name="Name"> <br>
+            Email:
+            <input tyoe="text" placeholder="Email" name="Email"> <br>
+
+            <input type="submit" value="Confirm">
+        </form>
     </div>
 </body>
 </html>
