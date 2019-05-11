@@ -21,8 +21,8 @@ $_SESSION["EMAIL"] = $_POST["email"];
     <div>
         <p>You are in the confirmation page</p>
 
-        <p>Name: <?php $_SESSION["NAME"] ?>
-        <p>Shipping to: <?php $_SESSION["EMAIL"] ?></p>
+        <p>Name: <?php echo $_SESSION["NAME"] ?>
+        <p>Shipping to: <?php echo $_SESSION["EMAIL"] ?></p>
         <p>Your cart lists:</p><br>
         <ul>
         <?php
