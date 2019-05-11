@@ -1,7 +1,5 @@
 <?php
     session_start();
-    
-    $this->session->data['last_page'] = $this->getcurrenturl();
 ?>
 <!DOCTYPE html>
 <html lang="en">
