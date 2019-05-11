@@ -32,7 +32,6 @@ $_SESSION["ITEMS"] = $_POST["item"];
     </div>
 
     <?php
-    print_r($_SESSION);
     include 'footer.php';
     ?>
 </body>
