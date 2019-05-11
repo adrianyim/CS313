@@ -20,6 +20,14 @@
         <p>You are in the confirmation page</p>
         <p>Name: <?php $_SESSION["NAME"] ?>
         <p>Shipping to: <?php $_SESSION["EMAIL"] ?></p>
+        <p>Your cart lists:</p><br>
+        <ul>
+        <?php
+            foreach ($_SESSION["ITEMS"] as $item) {
+                echo ("<li><p>$item</p></li>");
+            }
+        ?>
+        </ul>
     </div>
 </body>
 </html>
