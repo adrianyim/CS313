@@ -14,8 +14,8 @@
 
     <div class="div-content">
         <h3>Chinese Paper Cutting online shipping</h3>
-
-        <form method="post" action="<?php htmlspecialchar($_SERVER["cart.php"]); ?>" >
+        
+        <form method="post" action="<?php $_SERVER["cart.php"] ?>" >
             <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> <br>
             <input type="checkbox" name="item[]" value="Five Loaves and Two Fishes"><img src="artwork2.png" class="img-paper-cutting"> <br>
             <input type="checkbox" name="item[]" value="Consider the Lilies"><img src="artwork3.png" class="img-paper-cutting"> <br>
