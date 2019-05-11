@@ -32,7 +32,7 @@
     </div>
 
     <?php
-    print_r($_SESSION);
+    print_r($_SESSION["item"]);
         include 'footer.php';
     ?>
 </body>
