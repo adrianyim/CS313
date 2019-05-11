@@ -17,8 +17,8 @@
 
     <div>
         <p>You are in the confirmation page</p>
-        <p>Name: <?php $NAME ?>
-        <p>Shipping to: <?php $EMAIL?></p>
+        <p>Name: <?php $_SESSION["NAME"] ?>
+        <p>Shipping to: <?php $_SESSION["EMAIL"] ?></p>
     </div>
 </body>
 </html>
