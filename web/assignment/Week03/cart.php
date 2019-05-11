@@ -8,13 +8,13 @@
 </head>
 <body>
 <?php
-    include 'header.php'
+    include '../assignment/Week02/header.php'
     ?>
     
     <p>You are in the cart page</p>
 
     <?php
-        include 'footer.php'
+        include '../assignment/Week02/footer.php'
     ?>
 </body>
 </html>
