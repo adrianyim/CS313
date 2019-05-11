@@ -17,9 +17,9 @@
         <p>You are in the checkout page</p>
         <form method="post" action="confirmation.php">
             Name:
-            <input type="text" placeholder="Name" name="Name"> <br>
+            <input type="text" placeholder="Name" name="name"> <br>
             Email:
-            <input tyoe="text" placeholder="Email" name="Email"> <br>
+            <input tyoe="text" placeholder="Email" name="email"> <br>
 
             <input type="submit" value="Confirm">
         </form>

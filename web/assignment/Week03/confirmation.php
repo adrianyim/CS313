@@ -11,8 +11,8 @@
 </head>
 <body>
     <?php
-    $NAME = $_SESSION["Name"];
-    $EMAIL = $_SESSION["Email"];
+    $NAME = $_SESSION["name"];
+    $EMAIL = $_SESSION["email"];
     ?>
 
     <div>
