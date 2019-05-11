@@ -23,6 +23,8 @@
             }
         ?>
         </ul>
+        <input type="button" value="continue shopping">
+        <input type="button" value="Checkout">
     </div>
 
     <?php
