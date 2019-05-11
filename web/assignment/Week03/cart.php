@@ -23,7 +23,7 @@
             }
         ?>
         </ul>
-        <input type="button" value="continue shopping">
+        <a href="assign03.html"><input type="button" value="Continue Shopping"></a>
         <input type="button" value="Checkout">
     </div>
 
