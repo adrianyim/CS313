@@ -21,8 +21,6 @@ $VISITED  = $_POST["Visited"];
 
 include '/assignment/Week02/header.php';
 
-// $majorsArray = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering", "Others");
-
 $converter = array("na" => "North America", "sa" => "South America", "e" => "Europe", "a" => "Asia", "au" => "Australia", "af" => "Africa", "an" => "Antarctica");
 ?>
 
@@ -39,7 +37,6 @@ Major:
 for ($i = 0; $i < count($majorsArray); $i++) : ?>
     <?php $major = $majorsArray[$i];?>
     <input type="radio" name="Major" value="<?php echo $major?>"> <?php echo $major ?>
-
 <?php endfor?>
 
 <br>
