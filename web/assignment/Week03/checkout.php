@@ -23,7 +23,7 @@ include 'header.php';
             Shipping Address:
             <input tyoe="text" name="address" placeholder="address"> <br>
 
-            <input type="submit" value="Confirm">
+            <a href="cart.php"><input type="button" value="Back"></a><input type="submit" value="Confirm">
         </form>
     </div>
 </body>
