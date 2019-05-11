@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +8,9 @@
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
-    <?php
-    include 'header.php';
-    ?>
+<?php
+include 'header.php';
+?>
 
     <div class="div-content">
         <h3>Chinese Paper Cutting online shipping</h3>

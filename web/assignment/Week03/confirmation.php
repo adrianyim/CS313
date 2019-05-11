@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
-    <?php
-    $_SESSION["NAME"] = $_POST["name"];
-    $_SESSION["EMAIL"] = $_POST["email"];
-    ?>
+<?php
+include 'header.php';
+
+$_SESSION["NAME"] = $_POST["name"];
+$_SESSION["EMAIL"] = $_POST["email"];
+?>
 
     <div>
         <p>You are in the confirmation page</p>
-        
+
         <p>Name: <?php $_SESSION["NAME"] ?>
         <p>Shipping to: <?php $_SESSION["EMAIL"] ?></p>
         <p>Your cart lists:</p><br>

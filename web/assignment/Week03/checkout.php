@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +8,17 @@
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
-    <?php
-
-    ?>
+<?php
+include 'header.php';
+?>
     <div>
         <p>You are in the checkout page</p>
-        
+
         <form method="post" action="confirmation.php">
             Name:
-            <input type="text" placeholder="Name" name="name"> <br>
+            <input type="text" name="name" placeholder="Name"> <br>
             Email:
-            <input tyoe="text" placeholder="Email" name="email"> <br>
+            <input tyoe="text" name="email" placeholder="Email"> <br>
 
             <input type="submit" value="Confirm">
         </form>
