@@ -19,7 +19,7 @@ $_SESSION["ADDRESS"] = $_POST["address"];
 ?>
 
     <div>
-        <p>You are in the confirmation page</p>
+        <p>Confirmation Order</p>
 
         <p>Name: <?php echo $_SESSION["NAME"] ?>
         <p>Shipping to: <?php echo $_SESSION["ADDRESS"] ?></p>

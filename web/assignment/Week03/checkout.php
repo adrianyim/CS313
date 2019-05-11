@@ -12,7 +12,7 @@
 include 'header.php';
 ?>
     <div>
-        <p>You are in the checkout page</p>
+        <p>Checkout:</p>
 
         <form method="post" action="confirmation.php">
             Name:
