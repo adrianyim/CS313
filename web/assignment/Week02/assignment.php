@@ -13,7 +13,7 @@
     ?>
     <div class="div-assign-content">
         <ul>
-            <li class="assign_List"><a href="/assignment/Week03/assign03.php">Assignment 03</a></li>
+            <li class="assign_List"><a href="/assignment/Week03/assign03.html">Assignment 03</a></li>
             <li class="assign_List"><a href="/assignment/Week02/assign04.php">Assignment 04</a></li>
             <li class="assign_List"><a href="/assignment/Week02/assign05.php">Assignment 05</a></li>
             <li class="assign_List"><a href="/assignment/Week02/assign06.php">Assignment 06</a></li>
