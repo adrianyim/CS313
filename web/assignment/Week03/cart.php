@@ -1,6 +1,13 @@
 <?php
     session_start();
     $_SESSION["ITEMS"] = $_POST["item"];
+
+    if(isset($this->session->data['last_page'])){
+        $this->data['continue'] = $this->session->data['last_page'];
+    } else {
+        $this->data['continue'] = HTTP_SERVER . 'index.php?route=common/home';
+    }        
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
