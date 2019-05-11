@@ -1,11 +1,6 @@
 <?php
     session_start();
-
-    function getcurrenturl() {
-        $url = 'http://' .$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-        return htmlentities(strip_tags($url));
-    }
-
+    
     $this->session->data['last_page'] = $this->getcurrenturl();
 ?>
 <!DOCTYPE html>
