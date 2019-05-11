@@ -17,7 +17,7 @@ include 'header.php';
 ?>
     
     <div class="div-info">
-        <p>Your cart lists:</p><br>
+        <p>Your cart lists:</p>
         <ul>
         <?php
             foreach ($_SESSION["ITEMS"] as $item) {
