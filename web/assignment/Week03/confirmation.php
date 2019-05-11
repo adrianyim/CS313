@@ -15,14 +15,14 @@
 include 'header.php';
 
 $_SESSION["NAME"] = $_POST["name"];
-$_SESSION["EMAIL"] = $_POST["email"];
+$_SESSION["ADDRESS"] = $_POST["address"];
 ?>
 
     <div>
         <p>You are in the confirmation page</p>
 
         <p>Name: <?php echo $_SESSION["NAME"] ?>
-        <p>Shipping to: <?php echo $_SESSION["EMAIL"] ?></p>
+        <p>Shipping to: <?php echo $_SESSION["ADDRESS"] ?></p>
         <p>Your cart lists:</p><br>
         <ul>
         <?php

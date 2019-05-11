@@ -17,8 +17,8 @@ include 'header.php';
         <form method="post" action="confirmation.php">
             Name:
             <input type="text" name="name" placeholder="Name"> <br>
-            Email:
-            <input tyoe="text" name="email" placeholder="Email"> <br>
+            Shipping Address:
+            <input tyoe="text" name="address" placeholder="address"> <br>
 
             <input type="submit" value="Confirm">
         </form>
