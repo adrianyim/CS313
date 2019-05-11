@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
-    <!-- <?php
+    <?php
     include 'header.php';
-    ?> -->
+    ?>
+
     <div class="div-content">
-            <form method="post" action="cart.php" >
+            <form method="post" action="<?php htmlspecialchar($_SERVER["cart.php"]); ?>" >
                 <h3>Chinese Paper Cutting online shipping</h3>
                 <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> <br>
                 <input type="checkbox" name="item[]" value="Five Loaves and Two Fishes"><img src="artwork2.png" class="img-paper-cutting"> <br>
@@ -22,8 +23,9 @@
                 <input type="submit" value="View Cart">
             </form>
     </div>
-    <!-- <?php
+
+    <?php
         include 'footer.php';
-    ?> -->
+    ?>
 </body>
 </html>

@@ -12,7 +12,7 @@
     ?>
     <div>
         <p>You are in the checkout page</p>
-        <form method="post" action="confirmation.php">
+        <form method="post" action="<?php htmlspecialchars($_SERVER["confirmation.php"]); ?>">
             Name:
             <input type="text" placeholder="Name" name="Name"> <br>
             Email:

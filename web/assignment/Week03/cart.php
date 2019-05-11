@@ -25,7 +25,7 @@
             }
         ?>
         </ul>
-        <a href="assign03.html"><input type="button" value="Continue Shopping"></a>
+        <a href="assign03.php"><input type="button" value="Continue Shopping"></a>
         <a href="checkout.php"><input type="button" value="Checkout"></a>
     </div>
 
