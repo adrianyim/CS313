@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-    include '../assignment/Week02/header.php';
+    include 'header.php';
 
     $ITEMS = htmlspecialchars($_POST["item"]);
     ?>
@@ -26,7 +26,7 @@
     </div>
 
     <?php
-        include '../assignment/Week02/footer.php';
+        include 'footer.php';
     ?>
 </body>
 </html>
