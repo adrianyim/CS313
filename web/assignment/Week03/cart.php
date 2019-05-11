@@ -14,7 +14,7 @@
 <?php
     include 'header.php';
 
-    $ITEMS = $_SESSION["item"];
+    $_SESSION["ITEMS"] = $_POST["item"];
     
     ?>
     
@@ -32,7 +32,7 @@
     </div>
 
     <?php
-    print_r($_SESSION["item"]);
+    print_r($_SESSION);
         include 'footer.php';
     ?>
 </body>
