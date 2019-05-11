@@ -14,6 +14,7 @@
     ?>
     <div>
         <p>You are in the checkout page</p>
+        
         <form method="post" action="confirmation.php">
             Name:
             <input type="text" placeholder="Name" name="name"> <br>

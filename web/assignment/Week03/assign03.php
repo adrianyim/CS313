@@ -17,11 +17,11 @@
         <h3>Chinese Paper Cutting online shipping</h3>
 
         <form method="post" action="cart.php" >
-            <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> $500<br>
-            <input type="checkbox" name="item[]" value="Five Loaves and Two Fishes"><img src="artwork2.png" class="img-paper-cutting"> $250<br>
-            <input type="checkbox" name="item[]" value="Consider the Lilies"><img src="artwork3.png" class="img-paper-cutting"> $300<br>
-            <input type="checkbox" name="item[]" value="Tiger"><img src="artwork4.png" class="img-paper-cutting"> $150<br>
-            <input type="checkbox" name="item[]" value="House"><img src="artwork5.png" class="img-paper-cutting"> $150<br>
+            <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> Plan of Salvation $500<br>
+            <input type="checkbox" name="item[]" value="Five Loaves and Two Fishes"><img src="artwork2.png" class="img-paper-cutting"> Five Loaves and Two Fishes $250<br>
+            <input type="checkbox" name="item[]" value="Consider the Lilies"><img src="artwork3.png" class="img-paper-cutting"> Consider the Lilies $300<br>
+            <input type="checkbox" name="item[]" value="Tiger"><img src="artwork4.png" class="img-paper-cutting"> Tiger $150<br>
+            <input type="checkbox" name="item[]" value="House"><img src="artwork5.png" class="img-paper-cutting"> House $150<br>
 
             <input type="submit" value="View Cart">
         </form>

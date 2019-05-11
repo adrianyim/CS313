@@ -18,6 +18,7 @@
 
     <div>
         <p>You are in the confirmation page</p>
+        
         <p>Name: <?php $_SESSION["NAME"] ?>
         <p>Shipping to: <?php $_SESSION["EMAIL"] ?></p>
         <p>Your cart lists:</p><br>
