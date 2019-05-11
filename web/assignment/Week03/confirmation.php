@@ -31,6 +31,7 @@ $_SESSION["ADDRESS"] = $_POST["address"];
             }
         ?>
         </ul>
+        <a href="checkout.php"><input type="button" value="Back"></a>
     </div>
 </body>
 </html>
