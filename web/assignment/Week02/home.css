@@ -85,5 +85,6 @@ a.a-header:hover {
 }
 
 table {
-    width: 65%;
+    width: 75%;
+    text-align: center;
 }
