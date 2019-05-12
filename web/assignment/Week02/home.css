@@ -83,3 +83,7 @@ a.a-header:hover {
     width: 40%;
     height: 40%;
 }
+
+th {
+    width: 10px;
+}

@@ -59,9 +59,10 @@ include 'header.php';
 
 <h2>Chinese Paper Cutting online shipping</h2>
 <table>
-    <tr><th>Items:</th><th width="10px">&nbsp;</th><th>Cost:</th><th width="10px">&nbsp;</th><th>Action</th></tr>
+    <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
     <?php for ($i=0; $i< count($Items); $i++) { ?>
-    <tr><td><?php echo($Items[$i]); ?></td><td width="10px">&nbsp;</td><td><?php echo($cost[$i]); ?></td><td width="10px">&nbsp;</td><td><a href="?add=<?php echo($i); ?>">Add to cart</a></td></tr>
+    <tr><td><?php echo($Items[$i]); ?></td><td>&nbsp;</td><td><?php echo($cost[$i]); ?></td><td>&nbsp;</td>
+    <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td></tr>
     <?php } ?>
     <tr><td colspan="5"></td></tr>
     <tr><td colspan="5"><a href="?reset=true">Reset Cart</a></td></tr>
@@ -69,17 +70,17 @@ include 'header.php';
  
 <?php if ( isset($_SESSION["CART"]) ) { ?>
  <br/><br/><br/>
- <h2>Cart</h2>
  
+ <h2>Cart</h2>
  <table>
- <tr><th>Item</th><th width="10px">&nbsp;</th><th>Qty</th><th width="10px">&nbsp;</th><th>Cost</th><th width="10px">&nbsp;</th><th>Action</th></tr>
+ <tr><th>Item</th><th>&nbsp;</th><th>Qty</th><th>&nbsp;</th><th>Cost</th><th>&nbsp;</th><th>Action</th></tr>
  <?php
  $total = 0;
 
  foreach ( $_SESSION["cart"] as $i ) {
  ?>
  
- <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td width="10px">&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td width="10px">&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td width="10px">&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
+ <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
  
  <?php
  $total = $total + $_SESSION["COST"][$i];
