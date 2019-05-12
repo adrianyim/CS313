@@ -4,6 +4,7 @@
     //Define the items and cost
     $Items = array("Plan of Salvation", "Consider the Lilies", "Five Loaves and Two Fishes", "Tiger", "House");
     $cost = array("500", "300", "250", "150", "150");
+    $image = array("artwork1.png", "artwork2.png", "artwork3.png", "artwork4.png", "artwork5.png");
 
     //Load up session
     if (!isset($_SESSION["TOTAL"])) {
@@ -60,10 +61,14 @@ include 'header.php';
 <h2>Chinese Paper Cutting online shipping</h2>
 <table>
     <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
+
     <?php for ($i=0; $i< count($Items); $i++) { ?>
-    <tr><td><?php echo($Items[$i]); ?></td><td>&nbsp;</td><td><?php echo($cost[$i]); ?></td><td>&nbsp;</td>
+    <tr><td><?php echo($Items[$i]); ?></td>
+    <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
+    <td>$<?php echo($cost[$i]); ?></td><td>&nbsp;</td>
     <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td></tr>
     <?php } ?>
+
     <tr><td colspan="5"></td></tr>
     <tr><td colspan="5"><a href="?reset=true">Reset Cart</a></td></tr>
 </table>
