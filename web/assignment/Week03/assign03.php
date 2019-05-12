@@ -73,31 +73,26 @@ include 'header.php';
     <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
 </table>
  
-<?php if ( !isset($_SESSION["CART"]) ) { ?>
- <br/><br/><br/>
- 
- <h2>Cart</h2>
- <table>
- <tr><th>Item</th><th>&nbsp;</th><th>Qty</th><th>&nbsp;</th><th>Cost</th><th>&nbsp;</th><th>Action</th></tr>
- <?php
- $total = 0;
+<?php if ( !isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
+    <h2>Cart</h2>
+    <table>
+        <tr><th>Item:</th><th>&nbsp;</th><th>Qty:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action:</th></tr>
+        <?php
+        $total = 0;
 
- foreach ( $_SESSION["cart"] as $i ) {
- ?>
- 
- <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
- 
- <?php
- $total = $total + $_SESSION["COST"][$i];
- }
+        foreach ( $_SESSION["cart"] as $i ) { ?>
+        
+            <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
+            
+            <?php
+            $total = $total + $_SESSION["COST"][$i];
+        }
 
- $_SESSION["TOTAL"] = $total;
- ?>
- <tr><td colspan="7">Total : <?php echo($total); ?></td></tr>
- </table>
- <?php
- }
- ?>
+        $_SESSION["TOTAL"] = $total;
+        ?>
+        <tr><td>Total : <?php echo($total); ?></td></tr>
+    </table>
+<?php }?>
 
     <div class="div-info">
         <h2>Chinese Paper Cutting online shipping</h2>
