@@ -72,6 +72,7 @@ include 'header.php';
                 <td>$<?php echo($cost[$i]); ?></td>
                 <td>&nbsp;</td>
                 <td><input type="checkbox" name="item[]" value="<?php echo($Items[$i]); ?>"></td>
+                <td><a href="?add=<?php echo($i + 1); ?>">Add to cart</a></td>
             </tr>
             <?php } ?>
 
