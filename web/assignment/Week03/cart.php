@@ -25,6 +25,19 @@ include 'header.php';
             }
         ?>
         </ul>
+
+        <table>
+            <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th></tr>
+
+            <?php for ($i = 0; $i < count($Items); $i++) { ?>
+            <tr>
+                <td><?php echo($Items[$i]); ?></td>
+                <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
+                <td>$<?php echo($cost[$i]); ?></td>
+            </tr>
+            <?php } ?>
+        </table>
+
         <a href="assign03.php"><input type="button" value="Continue Shopping"></a>
         <a href="checkout.php" <?php echo htmlspecialchars(SID); ?>><input type="button" value="Checkout"></a>
     </div>
