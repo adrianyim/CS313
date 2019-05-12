@@ -34,9 +34,7 @@ include 'header.php';
                 <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
             </tr>
             <?php } ?>
-            <tr><td><a href="checkout.php"><input type="button" value="Back"></a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td><td><a href="checkout.php"><input type="button" value="Back"></a></td><td>&nbsp;</td></tr>
         </table>
     </div>
 </body>
