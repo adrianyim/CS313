@@ -82,6 +82,7 @@ include 'header.php';
         <input type="submit" value="View Cart">
     </form>
 
+    <!-- Doesn't work now -->
     <?php if (isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
         <h2>Cart</h2>
         <table>
@@ -102,6 +103,7 @@ include 'header.php';
             <tr><td>Total : <?php echo($total); ?></td></tr>
         </table>
     <?php }?>
+    <!-- Doesn't work now -->
 </div>
 
 <?php
