@@ -31,7 +31,7 @@ include 'header.php';
             <tr>
                 <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($_SESSION["amount"][$i]); ?></td>
+                <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
             <?php } ?>
             <tr><td>&nbsp;</td><td><a href="checkout.php"><input type="button" value="Back"></a></td><td>&nbsp;</td></tr>

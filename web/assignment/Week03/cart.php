@@ -27,9 +27,9 @@ include 'header.php';
             <tr>
                 <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($_SESSION["amount"][$i]); ?></td>
+                <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
-            <?php $_SESSION["TOTAL"] = $total + $_SESSION["COST"][$i]; } ?>
+            <?php $_SESSION["TOTAL"] = $total + $_SESSION["amounts"][$i]; } ?>
 
             <tr><td></td><td></td><td><td>Total : <?php echo($_SESSION["TOTAL"]); ?></td></td></tr>
             <tr><td>&nbsp;</td><td><a href="assign03.php"><input type="button" value="Continue Shopping"></a><a href="checkout.php"><input type="button" value="Checkout"></a></td><td>&nbsp;</td></tr>
