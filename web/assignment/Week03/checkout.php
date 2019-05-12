@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
     <div class="div-info">
         <p>Checkout:</p>
@@ -26,9 +26,9 @@ include 'header.php';
             <a href="cart.php"><input type="button" value="Back"></a><input type="submit" value="Confirm">
         </form>
     </div>
-    
+
 <?php
-include 'footer.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
 ?>
 </body>
 </html>

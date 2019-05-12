@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php
-include 'header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
     
     <div class="div-info">
@@ -29,7 +29,7 @@ include 'header.php';
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
                 <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
-            
+
             <?php $total = $total + $_SESSION["amounts"][$i]; } 
                 $_SESSION["TOTAL"] = $total;
             ?>
@@ -40,7 +40,7 @@ include 'header.php';
     </div>
 
     <?php
-    include 'footer.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
     ?>
 </body>
 </html>
