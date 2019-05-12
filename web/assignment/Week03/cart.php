@@ -31,9 +31,9 @@ include 'header.php';
 
             <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
             <tr>
-                <td><?php echo($Items[$i]); ?></td>
-                <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($cost[$i]); ?></td>
+                <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
+                <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
+                <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
             </tr>
             <?php } ?>
         </table>

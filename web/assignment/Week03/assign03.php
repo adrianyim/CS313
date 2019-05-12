@@ -2,14 +2,14 @@
     session_start();
 
     //Define the items, cost, and images
-    $Items = array("Plan of Salvation", "Consider the Lilies", "Five Loaves and Two Fishes", "Tiger", "House");
-    $cost = array("500", "300", "250", "150", "150");
-    $image = array("artwork1.png", "artwork2.png", "artwork3.png", "artwork4.png", "artwork5.png");
+    $_SESSION["Items"] = array("Plan of Salvation", "Consider the Lilies", "Five Loaves and Two Fishes", "Tiger", "House");
+    $_SESSION["cost"] = array("500", "300", "250", "150", "150");
+    $_SESSION["image"] = array("artwork1.png", "artwork2.png", "artwork3.png", "artwork4.png", "artwork5.png");
 
     //Load up session
     if (!isset($_SESSION["TOTAL"])) {
         $_SESSION["TOTAL"] = 0;
-        for ($i = 0; $i < count($Items); $i++) {
+        for ($i = 0; $i < count($_SESSION["Items"]); $i++) {
             $_SESSION["QTY"] [$i] = 0;
             $_SESSION["COST"] [$i] = 0;
         }
@@ -29,7 +29,7 @@
     if (isset($_POST["add"])) {
         $i = $_POST["add"];
         $qty = $_SESSION["QTY"][$i] + 1;
-        $_SESSION["COST"][$i] = $cost[$i] * $qty;
+        $_SESSION["COST"][$i] = $_SESSION["cost"][$i] * $qty;
         $_SESSION["CART"][$i] = $i;
         $_SESSION["QTY"][$i] = $qty;
     }
@@ -41,7 +41,7 @@
         $qty--;
         $_SESSION["QTY"][$i] = $qty;
     } else {
-        $_SESSION["COST"][$i] = $cost[$i] * $qty;
+        $_SESSION["COST"][$i] = $_SESSION["cost"][$i] * $qty;
     }
 ?>
 <!DOCTYPE html>
@@ -65,13 +65,13 @@ include 'header.php';
         <table>
             <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
 
-            <?php for ($i = 0; $i < count($Items); $i++) { ?>
+            <?php for ($i = 0; $i < count($_SESSION["Items"]); $i++) { ?>
             <tr>
-                <td><?php echo($Items[$i]); ?></td>
-                <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($cost[$i]); ?></td>
+                <td><?php echo($_SESSION["Items"][$i]); ?></td>
+                <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
+                <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
                 <td>&nbsp;</td>
-                <td><input type="checkbox" name="item[]" value="<?php echo($Items[$i]); ?>"></td>
+                <td><input type="checkbox" name="item[]" value="<?php echo($_SESSION["Items"][$i]); ?>"></td>
                 <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td>
             </tr>
             <?php } ?>
@@ -91,7 +91,7 @@ include 'header.php';
 
             foreach ( $_SESSION["cart"] as $i ) { ?>
             
-                <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
+                <tr><td><?php echo( $_SESSION["Items"][$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
                 
                 <?php
                 $total = $total + $_SESSION["COST"][$i];
