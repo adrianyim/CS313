@@ -26,5 +26,9 @@ include 'header.php';
             <a href="cart.php"><input type="button" value="Back"></a><input type="submit" value="Confirm">
         </form>
     </div>
+    
+<?php
+include 'footer.php';
+?>
 </body>
 </html>

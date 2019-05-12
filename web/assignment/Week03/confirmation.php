@@ -33,7 +33,7 @@ include 'header.php';
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
                 <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
-            
+
             <?php $total = $total + $_SESSION["amounts"][$i]; } 
                 $_SESSION["TOTAL"] = $total;
             ?>
@@ -42,5 +42,9 @@ include 'header.php';
             <tr><td>&nbsp;</td><td><a href="checkout.php"><input type="button" value="Back"></a></td><td>&nbsp;</td></tr>
         </table>
     </div>
+    
+<?php
+include 'footer.php';
+?>
 </body>
 </html>
