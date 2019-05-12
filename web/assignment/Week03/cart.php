@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $_SESSION["ITEMS"] = $_POST["item"];    
+    $_SESSION["ITEMS"] = $_POST["item"]; 
+    $total = 0;   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@ include 'header.php';
         <table>
             <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th></tr>
 
-            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { $total = 0; ?>
+            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
             <tr>
                 <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
