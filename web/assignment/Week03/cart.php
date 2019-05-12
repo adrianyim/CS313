@@ -30,7 +30,7 @@ include 'header.php';
             </tr>
             <?php $_SESSION["TOTAL"] = $total + $_SESSION["COST"][$i]; } ?>
 
-            <tr><td></td><td></td><td><td>Total : <?php echo($total); ?></td></td></tr>
+            <tr><td></td><td></td><td><td>Total : <?php echo($_SESSION["TOTAL"]); ?></td></td></tr>
             <tr><td>&nbsp;</td><td><a href="assign03.php"><input type="button" value="Continue Shopping"></a><a href="checkout.php"><input type="button" value="Checkout"></a></td><td>&nbsp;</td></tr>
         </table>
     </div>
