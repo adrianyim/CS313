@@ -57,62 +57,53 @@
 <?php
 include 'header.php';
 ?>
+<div class="div-info">
+    <h2>Chinese Paper Cutting online shipping</h2>
 
-<h2>Chinese Paper Cutting online shipping</h2>
-<form method="post" action="cart.php" >
-    <table>
-        <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
+    <form method="post" action="cart.php" >
+        <table>
+            <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
 
-        <?php for ($i = 0; $i < count($Items); $i++) { ?>
-        <tr><td><?php echo($Items[$i]); ?></td>
-        <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
-        <td>$<?php echo($cost[$i]); ?></td><td>&nbsp;</td>
-        <td><input type="checkbox" name="item[]" value="<?php echo($Items[$i]); ?>"></td></tr>
-        <?php } ?>
+            <?php for ($i = 0; $i < count($Items); $i++) { ?>
+            <tr>
+                <td><?php echo($Items[$i]); ?></td>
+                <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
+                <td>$<?php echo($cost[$i]); ?></td>
+                <td>&nbsp;</td>
+                <td><input type="checkbox" name="item[]" value="<?php echo($Items[$i]); ?>"></td>
+            </tr>
+            <?php } ?>
 
-        <tr><td></td></tr>
-        <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
-    </table>
-    <input type="submit" value="View Cart">
-</form>
+            <tr><td></td></tr>
+            <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
+        </table>
+        <input type="submit" value="View Cart">
+    </form>
 
-<?php if ( !isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
-    <h2>Cart</h2>
-    <table>
-        <tr><th>Item:</th><th>&nbsp;</th><th>Qty:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action:</th></tr>
-        <?php
-        $total = 0;
-
-        foreach ( $_SESSION["cart"] as $i ) { ?>
-        
-            <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
-            
+    <?php if ( !isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
+        <h2>Cart</h2>
+        <table>
+            <tr><th>Item:</th><th>&nbsp;</th><th>Qty:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action:</th></tr>
             <?php
-            $total = $total + $_SESSION["COST"][$i];
-        }
+            $total = 0;
 
-        $_SESSION["TOTAL"] = $total;
-        ?>
-        <tr><td>Total : <?php echo($total); ?></td></tr>
-    </table>
-<?php }?>
+            foreach ( $_SESSION["cart"] as $i ) { ?>
+            
+                <tr><td><?php echo( $Items[$_SESSION["CART"][$i]] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["QTY"][$i] ); ?></td><td>&nbsp;</td><td><?php echo( $_SESSION["COST"][$i] ); ?></td><td>&nbsp;</td><td><a href="?delete=<?php echo($i); ?>">Delete from cart</a></td></tr>
+                
+                <?php
+                $total = $total + $_SESSION["COST"][$i];
+            }
 
-    <div class="div-info">
-        <h2>Chinese Paper Cutting online shipping</h2>
+            $_SESSION["TOTAL"] = $total;
+            ?>
+            <tr><td>Total : <?php echo($total); ?></td></tr>
+        </table>
+    <?php }?>
+</div>
 
-        <form method="post" action="cart.php" >
-            <input type="checkbox" name="item[]" value="Plan of Salvation"><img src="artwork1.png" class="img-paper-cutting"> Plan of Salvation $500<br>
-            <input type="checkbox" name="item[]" value="Five Loaves and Two Fishes"><img src="artwork2.png" class="img-paper-cutting"> Five Loaves and Two Fishes $250<br>
-            <input type="checkbox" name="item[]" value="Consider the Lilies"><img src="artwork3.png" class="img-paper-cutting"> Consider the Lilies $300<br>
-            <input type="checkbox" name="item[]" value="Tiger"><img src="artwork4.png" class="img-paper-cutting"> Tiger $150<br>
-            <input type="checkbox" name="item[]" value="House"><img src="artwork5.png" class="img-paper-cutting"> House $150<br>
-
-            <input type="submit" value="View Cart">
-        </form>
-    </div>
-    
-    <?php
-        include 'footer.php';
-    ?>
+<?php
+    include 'footer.php';
+?>
 </body>
 </html>
