@@ -72,7 +72,7 @@ include 'header.php';
                 <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
                 <td>&nbsp;</td>
                 <td><input type="checkbox" name="item[]" value="<?php echo($_SESSION["products"][$i]); ?>"></td>
-                <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td>
+                <!-- <td><a href="?add=<?php //echo($i); ?>">Add to cart</a></td> -->
             </tr>
             <?php } ?>
 
@@ -82,7 +82,7 @@ include 'header.php';
         <input type="submit" value="View Cart">
     </form>
 
-    <?php if ( isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
+    <?php if (isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
         <h2>Cart</h2>
         <table>
             <tr><th>Item:</th><th>&nbsp;</th><th>Qty:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action:</th></tr>
