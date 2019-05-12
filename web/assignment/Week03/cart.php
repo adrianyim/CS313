@@ -29,7 +29,7 @@ include 'header.php';
         <table>
             <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th></tr>
 
-            <?php for ($i = 0; $i < count($Items); $i++) { ?>
+            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
             <tr>
                 <td><?php echo($Items[$i]); ?></td>
                 <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
