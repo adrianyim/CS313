@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    //Define the items and cost
+    //Define the items, cost, and images
     $Items = array("Plan of Salvation", "Consider the Lilies", "Five Loaves and Two Fishes", "Tiger", "House");
     $cost = array("500", "300", "250", "150", "150");
     $image = array("artwork1.png", "artwork2.png", "artwork3.png", "artwork4.png", "artwork5.png");
@@ -62,7 +62,7 @@ include 'header.php';
 <table>
     <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
 
-    <?php for ($i=0; $i< count($Items); $i++) { ?>
+    <?php for ($i = 0; $i < count($Items); $i++) { ?>
     <tr><td><?php echo($Items[$i]); ?></td>
     <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
     <td>$<?php echo($cost[$i]); ?></td><td>&nbsp;</td>
@@ -73,7 +73,7 @@ include 'header.php';
     <tr><td colspan="5"><a href="?reset=true">Reset Cart</a></td></tr>
 </table>
  
-<?php if ( isset($_SESSION["CART"]) ) { ?>
+<?php if ( !isset($_SESSION["CART"]) ) { ?>
  <br/><br/><br/>
  
  <h2>Cart</h2>
