@@ -55,7 +55,7 @@
 </head>
 <body>
 <?php
-include '/assignment/Week02/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
 
 <div class="div-info">
@@ -107,7 +107,7 @@ include '/assignment/Week02/header.php';
 </div>
 
 <?php
-    include '/assignment/Week02/footer.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
 ?>
 </body>
 </html>
