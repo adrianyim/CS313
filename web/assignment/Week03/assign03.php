@@ -55,7 +55,7 @@
 </head>
 <body>
 <?php
-include 'header.php';
+include '/assignment/Week02/header.php';
 ?>
 
 <div class="div-info">
@@ -107,7 +107,7 @@ include 'header.php';
 </div>
 
 <?php
-    include 'footer.php';
+    include '/assignment/Week02/footer.php';
 ?>
 </body>
 </html>
