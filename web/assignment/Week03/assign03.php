@@ -3,7 +3,7 @@
 
     //Define the items, cost, and images
     $_SESSION["Items"] = array("Plan of Salvation", "Consider the Lilies", "Five Loaves and Two Fishes", "Tiger", "House");
-    $_SESSION["cost"] = array("500", "300", "250", "150", "150");
+    $_SESSION["amount"] = array("500", "300", "250", "150", "150");
     $_SESSION["image"] = array("artwork1.png", "artwork2.png", "artwork3.png", "artwork4.png", "artwork5.png");
 
     //Load up session
@@ -29,7 +29,7 @@
     if (isset($_POST["add"])) {
         $i = $_POST["add"];
         $qty = $_SESSION["QTY"][$i] + 1;
-        $_SESSION["COST"][$i] = $_SESSION["cost"][$i] * $qty;
+        $_SESSION["COST"][$i] = $_SESSION["amount"][$i] * $qty;
         $_SESSION["CART"][$i] = $i;
         $_SESSION["QTY"][$i] = $qty;
     }
@@ -41,7 +41,7 @@
         $qty--;
         $_SESSION["QTY"][$i] = $qty;
     } else {
-        $_SESSION["COST"][$i] = $_SESSION["cost"][$i] * $qty;
+        $_SESSION["COST"][$i] = $_SESSION["amount"][$i] * $qty;
     }
 ?>
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ include 'header.php';
             <tr>
                 <td><?php echo($_SESSION["Items"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
+                <td>$<?php echo($_SESSION["amount"][$i]); ?></td>
                 <td>&nbsp;</td>
                 <td><input type="checkbox" name="item[]" value="<?php echo($_SESSION["Items"][$i]); ?>"></td>
                 <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td>

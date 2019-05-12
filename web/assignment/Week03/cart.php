@@ -27,7 +27,7 @@ include 'header.php';
             <tr>
                 <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
-                <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
+                <td>$<?php echo($_SESSION["amount"][$i]); ?></td>
             </tr>
             <?php $_SESSION["TOTAL"] = $total + $_SESSION["COST"][$i]; } ?>
 
