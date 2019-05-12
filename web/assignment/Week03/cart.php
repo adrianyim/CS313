@@ -22,13 +22,15 @@ include 'header.php';
         <table>
             <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th></tr>
 
-            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
+            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { $total = 0; ?>
             <tr>
                 <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
                 <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
             </tr>
-            <?php } ?>
+            <?php $_SESSION["TOTAL"] = $total + $_SESSION["COST"][$i]; } ?>
+
+            <tr><td></td><td></td><td></td></tr>
             <tr><td>&nbsp;</td><td><a href="assign03.php"><input type="button" value="Continue Shopping"></a><a href="checkout.php"><input type="button" value="Checkout"></a></td><td>&nbsp;</td></tr>
         </table>
     </div>
