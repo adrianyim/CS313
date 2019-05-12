@@ -59,20 +59,23 @@ include 'header.php';
 ?>
 
 <h2>Chinese Paper Cutting online shipping</h2>
-<table>
-    <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
+<form method="post" action="cart.php" >
+    <table>
+        <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th><th>Action</th></tr>
 
-    <?php for ($i = 0; $i < count($Items); $i++) { ?>
-    <tr><td><?php echo($Items[$i]); ?></td>
-    <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
-    <td>$<?php echo($cost[$i]); ?></td><td>&nbsp;</td>
-    <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td></tr>
-    <?php } ?>
+        <?php for ($i = 0; $i < count($Items); $i++) { ?>
+        <tr><td><?php echo($Items[$i]); ?></td>
+        <td><img src="<?php echo($image[$i]); ?>" class="img-paper-cutting"></td>
+        <td>$<?php echo($cost[$i]); ?></td><td>&nbsp;</td>
+        <td><input type="checkbox" name="item[]" value="<?php echo($Items[$i]); ?>"></td></tr>
+        <?php } ?>
 
-    <tr><td></td></tr>
-    <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
-</table>
- 
+        <tr><td></td></tr>
+        <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
+    </table>
+    <input type="submit" value="View Cart">
+</form>
+
 <?php if ( !isset($_SESSION["CART"]) ) { ?> <br/><br/><br/>
     <h2>Cart</h2>
     <table>
