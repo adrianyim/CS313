@@ -22,15 +22,22 @@ include 'header.php';
 
         <p>Name: <?php echo $_SESSION["NAME"] ?>
         <p>Shipping to: <?php echo $_SESSION["ADDRESS"] ?></p>
-        <p>Your cart lists:</p><br>
-        <ul>
-        <?php
-            foreach ($_SESSION["ITEMS"] as $item) {
-                echo ("<li><p>$item</p></li>");
-            }
-        ?>
-        </ul>
-        <a href="checkout.php"><input type="button" value="Back"></a>
+        <p>Your cart lists:</p>
+
+        <table>
+            <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th></tr>
+
+            <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
+            <tr>
+                <td><?php echo($_SESSION["ITEMS"][$i]); ?></td>
+                <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
+                <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
+            </tr>
+            <?php } ?>
+            <tr><td><a href="checkout.php"><input type="button" value="Back"></a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td></tr>
+        </table>
     </div>
 </body>
 </html>

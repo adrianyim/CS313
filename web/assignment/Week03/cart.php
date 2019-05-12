@@ -18,16 +18,9 @@ include 'header.php';
     
     <div class="div-info">
         <p>Your cart lists:</p>
-        <ul>
-        <?php
-            foreach ($_SESSION["ITEMS"] as $item) {
-                echo ("<li><p>$item</p></li>");
-            }
-        ?>
-        </ul>
 
         <table>
-            <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th><th>&nbsp;</th></tr>
+            <tr><th>Items:</th><th>&nbsp;</th><th>Cost:</th></tr>
 
             <?php for ($i = 0; $i < count($_SESSION["ITEMS"]); $i++) { ?>
             <tr>
@@ -36,10 +29,8 @@ include 'header.php';
                 <td>$<?php echo($_SESSION["cost"][$i]); ?></td>
             </tr>
             <?php } ?>
+            <tr><td><a href="assign03.php"><input type="button" value="Continue Shopping"></a></td><td>&nbsp;</td><td><a href="checkout.php"><input type="button" value="Checkout"></a></td></tr>
         </table>
-
-        <a href="assign03.php"><input type="button" value="Continue Shopping"></a>
-        <a href="checkout.php" <?php echo htmlspecialchars(SID); ?>><input type="button" value="Checkout"></a>
     </div>
 
     <?php
