@@ -33,7 +33,12 @@ include 'header.php';
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
                 <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
-            <?php } ?>
+            
+            <?php $total = $total + $_SESSION["amounts"][$i]; } 
+                $_SESSION["TOTAL"] = $total;
+            ?>
+
+            <tr><td></td><td></td><td><td>Total : <?php echo($_SESSION["TOTAL"]); ?></td></td></tr>
             <tr><td>&nbsp;</td><td><a href="checkout.php"><input type="button" value="Back"></a></td><td>&nbsp;</td></tr>
         </table>
     </div>

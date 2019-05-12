@@ -29,6 +29,7 @@ include 'header.php';
                 <td><img src="<?php echo($_SESSION["image"][$i]); ?>" class="img-paper-cutting"></td>
                 <td>$<?php echo($_SESSION["amounts"][$i]); ?></td>
             </tr>
+            
             <?php $total = $total + $_SESSION["amounts"][$i]; } 
                 $_SESSION["TOTAL"] = $total;
             ?>
