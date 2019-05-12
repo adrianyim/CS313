@@ -69,8 +69,8 @@ include 'header.php';
     <td><a href="?add=<?php echo($i); ?>">Add to cart</a></td></tr>
     <?php } ?>
 
-    <tr><td colspan="5"></td></tr>
-    <tr><td colspan="5"><a href="?reset=true">Reset Cart</a></td></tr>
+    <tr><td></td></tr>
+    <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
 </table>
  
 <?php if ( !isset($_SESSION["CART"]) ) { ?>
