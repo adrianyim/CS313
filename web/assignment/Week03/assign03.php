@@ -77,7 +77,7 @@ include 'header.php';
             <?php } ?>
 
             <tr><td></td></tr>
-            <tr><td><a href="?reset=true">Reset Cart</a></td></tr>
+            <!-- <tr><td><a href="?reset=true">Reset Cart</a></td></tr> -->
         </table>
         <input type="submit" value="View Cart">
     </form>
