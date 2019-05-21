@@ -1,15 +1,15 @@
 <?PHP
 try
 {
-  $dbUrl = getenv('postgres://nzayuizcbkeynl:5c612bb1c51fb4276956ad2e5ab7249a396e016221493ee52ee12ef3b9e156a4@ec2-184-72-238-22.compute-1.amazonaws.com:5432/dedj1e8umcitpk');
+  $dbUrl = getenv('DATABASE_URL');
 
   $dbOpts = parse_url($dbUrl);
 
-  $dbHost = $dbOpts["ec2-184-72-238-22.compute-1.amazonaws.com"];
-  $dbPort = $dbOpts["5432"];
-  $dbUser = $dbOpts["nzayuizcbkeynl"];
-  $dbPassword = $dbOpts["5c612bb1c51fb4276956ad2e5ab7249a396e016221493ee52ee12ef3b9e156a4"];
-  $dbName = ltrim($dbOpts["dedj1e8umcitpk"],'/');
+  $dbHost = $dbOpts["host"];
+  $dbPort = $dbOpts["port"];
+  $dbUser = $dbOpts["user"];
+  $dbPassword = $dbOpts["pass"];
+  $dbName = ltrim($dbOpts["path"],'/');
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
