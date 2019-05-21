@@ -32,9 +32,10 @@ catch (PDOException $ex)
 </head>
 <body>
     <?PHP
+    echo 'Scripture: </br>';
     foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture') as $row)
     {
-      echo 'Scripture: <\br>' . $row['book'] . ' ' . $row['chapter'] . ': ' . $row['verse'] . ' - ' .$row['content'] . '\br';
+      echo $row['book'] . ' ' . $row['chapter'] . ': ' . $row['verse'] . ' - ' .$row['content'] . '/br';
     }
     ?>
 </body>
