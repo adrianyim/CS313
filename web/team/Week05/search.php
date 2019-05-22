@@ -28,20 +28,23 @@ catch (PDOException $ex)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Team Week05</title>
+    <title>Search Result</title>
 </head>
 <body>
-  <h1>Scripture Resources</h1></br>
-    <?PHP
-    foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture') as $row)
-    {
-      echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
-    }
-    ?>
+    <?php
+        $query = $_POST['Book'];
 
-    <form action="search.php" id="searchForm" method="post">
-      <input type="text" name="Book">
-      <input type="submit" name="Submit" value="Search">
-    </form>
+        $query = htmlspecialchars($query);
+
+        $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%".$query."%')');
+
+        if (mysql_num_rows($db_results) > 0) {
+            while ($results = mysql_fetch_array($db_results)) {
+                echo '<b>' . $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</b> - "' .$results['content'] . '"</br>';
+            }
+        } else {
+            echo "No results";
+        }
+    ?>
 </body>
 </html>
