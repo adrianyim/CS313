@@ -36,8 +36,12 @@ $query = $_POST['Book'];
     <?php
 
         $query = htmlspecialchars($query);
-        echo $query;
-        $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%$query%')');
+
+        foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')') as $row) {
+            echo $row['book'] . $row['chapter'] . $row['verse'] . $row['content'] . '</br>';
+        }
+
+        // $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%$query%')');
 
         echo $db_results;
 
