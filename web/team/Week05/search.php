@@ -38,6 +38,8 @@ catch (PDOException $ex)
 
         $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%".$query."%')');
 
+        echo $db_results;
+
         if (mysql_num_rows($db_results) > 0) {
             while ($results = mysql_fetch_array($db_results)) {
                 echo '<b>' . $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</b> - "' .$results['content'] . '"</br>';
