@@ -20,6 +20,8 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+
+$query = $_POST['Book'];
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +34,6 @@ catch (PDOException $ex)
 </head>
 <body>
     <?php
-        $query = $_POST['Book'];
 
         $query = htmlspecialchars($query);
 
