@@ -41,7 +41,7 @@ catch (PDOException $ex)
         {
             $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
 
-            echo "$result";
+            echo "<a href='scripture-details.php'>$result</a>";
         //   echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
         }
     ?>
