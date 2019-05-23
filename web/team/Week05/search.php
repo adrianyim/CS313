@@ -44,21 +44,6 @@ catch (PDOException $ex)
             // echo "$result";
           echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
         }
-
-        // $db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')');
-        // echo $row['book'];
-
-        // $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%$query%')');
-
-        // echo $db_results;
-
-        // if (mysql_num_rows($db_results) > 0) {
-        //     while ($results = mysql_fetch_array($db_results)) {
-        //         echo '<b>' . $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</b> - "' .$results['content'] . '"</br>';
-        //     }
-        // } else {
-        //     echo "No results";
-        // }
     ?>
 </body>
 </html>
