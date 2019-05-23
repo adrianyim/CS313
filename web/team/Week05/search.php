@@ -36,7 +36,7 @@ catch (PDOException $ex)
 <body>
     <?php
         $query = mysql_real_escape_string(htmlspecialchars($query));
-
+        echo $query;
         foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')') as $row) {
             echo $row['book'] . $row['chapter'] . $row['verse'] . $row['content'] . '</br>';
         }
