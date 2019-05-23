@@ -35,14 +35,14 @@ catch (PDOException $ex)
 </head>
 <body>
     <?php
-        $query = mysql_real_escape_string(htmlspecialchars($query));
+        // $query = mysql_real_escape_string(htmlspecialchars($query));
         echo $query;
-        foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')') as $row) {
-            echo $row['book'] . $row['chapter'] . $row['verse'] . $row['content'] . '</br>';
-        }
+        // foreach ($db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')') as $row) {
+        //     echo $row['book'] . $row['chapter'] . $row['verse'] . $row['content'] . '</br>';
+        // }
 
-        $db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')');
-        echo $row['book'];
+        // $db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')');
+        // echo $row['book'];
 
         // $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%$query%')');
 
