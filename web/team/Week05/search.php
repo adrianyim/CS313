@@ -41,6 +41,9 @@ catch (PDOException $ex)
             echo $row['book'] . $row['chapter'] . $row['verse'] . $row['content'] . '</br>';
         }
 
+        $db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')');
+        echo $row['book'];
+
         // $db_results = $db->query('SELECT * FROM Scripture WHERE (book LIKE '%$query%')');
 
         // echo $db_results;
