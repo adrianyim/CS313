@@ -34,7 +34,7 @@ catch (PDOException $ex)
 </head>
 <body>
     <?php
-    $query = htmlspecialchars($$_SESSION["query"]);
+    $query = htmlspecialchars($_SESSION["query"]);
     
     echo $query;
 
