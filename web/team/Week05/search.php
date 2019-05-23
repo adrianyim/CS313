@@ -39,7 +39,7 @@ catch (PDOException $ex)
         
         foreach ($db->query("SELECT book, chapter, verse, content FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
         {
-          echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
+          echo '<b><a href="scripture-details.php">' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</a></b> - "' .$row['content'] . '"</br>';
         }
 
         // $db->query('SELECT book, chapter, verse, content FROM Scripture WHERE (book LIKE '%$query%')');
