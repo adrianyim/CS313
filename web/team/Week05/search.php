@@ -1,6 +1,4 @@
 <?PHP
-$query = $_POST['Book'];
-
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -23,6 +21,9 @@ catch (PDOException $ex)
   die();
 }
 
+session_start();
+$query = $_POST['Book'];
+$_SESSION["query"] = $query;
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +42,7 @@ catch (PDOException $ex)
         {
             $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
 
-            echo "<a href='scripture-details.php'>$result</a>";
+            echo "<a href='scripture-details.php?id='>$result</a></br>";
         //   echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
         }
     ?>
