@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 try
 {
@@ -38,7 +37,7 @@ catch (PDOException $ex)
     
     echo $query;
 
-    foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
+    foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $_SESSION["query"] . "%'") as $row)
     {
         $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
 
