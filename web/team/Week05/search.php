@@ -1,4 +1,6 @@
 <?PHP
+$query = $_POST['Book'];
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -21,7 +23,6 @@ catch (PDOException $ex)
   die();
 }
 
-$query = $_POST['Book'];
 ?>
 
 <!DOCTYPE html>
