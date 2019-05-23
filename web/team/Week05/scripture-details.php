@@ -35,7 +35,9 @@ catch (PDOException $ex)
 <body>
     <?php
     $query = htmlspecialchars($query);
-        
+    
+    echo $query;
+
     foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
     {
         $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
