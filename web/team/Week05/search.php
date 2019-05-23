@@ -38,7 +38,7 @@ $_SESSION["query"] = $query;
     <?php
         $query = htmlspecialchars($query);
         
-        foreach ($db->query("SELECT book, chapter, verse, content FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
+        foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
         {
             $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
 

@@ -43,7 +43,6 @@ catch (PDOException $ex)
         $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
 
         echo $result . '</br>';
-    //   echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
     }
     ?>
 </body>
