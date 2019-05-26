@@ -42,7 +42,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <td><input type="radio" name="Gender" value="M">Male
                 <input type="radio" name="Gender" value="F">Female</td></tr>
             <tr><td><input type="text" name="Item" placeholder="Item"></td><td><select name="Item-type">
-                <option value="empty"></option>
+                <option value="empty">Item Type</option>
                 <option value="Salaries and wages">Salaries and wages</option>
                 <option value="Utility expenses">Utility expenses</option>
                 <option value="Administration expenses">Administration expenses</option>
