@@ -50,7 +50,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <option value="Impairment losses">Impairment losses</option>
                 <option value="Food">Food</option>
                 <option value="Others">Others</option>
-            </select>
+            </select><br>
             <input type="text" name="Cost" placeholder="Cost">
             <input type="button" name="Submit" value="Submit">
         </form>
