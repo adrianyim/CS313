@@ -37,11 +37,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
     <div class="div-info">
         <form action="" id="insertForm" method="post">
-            <input type="text" name="User" placeholder="User name">
-            <input type="radio" name="Gender" value="M">Male
-            <input type="radio" name="Gender" value="F">Female <br>
-            <input type="text" name="Item" placeholder="Item">
-            <select name="Item-type">
+            <table>
+                <tr><td><input type="text" name="User" placeholder="User name"></td>
+                <td><input type="radio" name="Gender" value="M">Male
+                <input type="radio" name="Gender" value="F">Female</td></tr>
+            <tr><td><input type="text" name="Item" placeholder="Item"></td><td><select name="Item-type">
+                <option value="empty"></option>
                 <option value="Salaries and wages">Salaries and wages</option>
                 <option value="Utility expenses">Utility expenses</option>
                 <option value="Administration expenses">Administration expenses</option>
@@ -50,11 +51,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <option value="Impairment losses">Impairment losses</option>
                 <option value="Food">Food</option>
                 <option value="Others">Others</option>
-            </select><br>
-            <input type="text" name="Cost" placeholder="Cost">
-            <input type="radio" name="Cost-type" value="Income">Income
-            <input type="radio" name="Cost-type" value="Expense">Expense <br>
-            <input type="button" name="Submit" value="Submit">
+            </select></td></tr>
+            <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
+            <td><input type="radio" name="Cost-type" value="Income">Income
+            <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
+            <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
         </form>
 
     <?PHP
