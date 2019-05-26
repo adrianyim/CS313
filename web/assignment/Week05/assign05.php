@@ -55,7 +55,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
             <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
             <td><input type="radio" name="Cost-type" value="Income">Income
             <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-            <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
+            <tr><td><input type="button" name="Submit" value="Submit"></td></tr></table>
         </form>
 
     <?PHP
