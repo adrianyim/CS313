@@ -41,7 +41,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
             <input type="radio" name="Gender" value="M">Male
             <input type="radio" name="Gender" value="F">Female <br>
             <input type="text" name="Item" placeholder="Item">
-            <select name="Item_type">
+            <select name="Item-type">
                 <option value="Salaries and wages">Salaries and wages</option>
                 <option value="Utility expenses">Utility expenses</option>
                 <option value="Administration expenses">Administration expenses</option>
@@ -52,6 +52,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <option value="Others">Others</option>
             </select><br>
             <input type="text" name="Cost" placeholder="Cost">
+            <input type="radio" name="Cost-type" value="Income">Income
+            <input type="radio" name="Cost-type" value="Expense">Expense <br>
             <input type="button" name="Submit" value="Submit">
         </form>
 
