@@ -37,10 +37,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
     <div class="div-info">
         <form action="" id="insertForm" method="post">
-            <input type="text" name="User" placehodler="User name">
+            <input type="text" name="User" placeholder="User name">
             <input type="radio" name="Gender" value="M">Male
-            <input type="radio" name="Gender" value="F">Female
-            <input type="text" name="Item" placehodler="Item">
+            <input type="radio" name="Gender" value="F">Female <br>
+            <input type="text" name="Item" placeholder="Item">
             <select name="Item_type">
                 <option value="Salaries and wages">Salaries and wages</option>
                 <option value="Utility expenses">Utility expenses</option>
@@ -51,7 +51,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <option value="Food">Food</option>
                 <option value="Others">Others</option>
             </select>
-            <input type="text" name="Cost" placehodler="Cost">
+            <input type="text" name="Cost" placeholder="Cost">
             <input type="button" name="Submit" value="Submit">
         </form>
 
