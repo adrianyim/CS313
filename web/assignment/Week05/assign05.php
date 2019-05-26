@@ -32,9 +32,9 @@ catch (PDOException $ex)
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
-    <?php
-    include 'header.php'
-    ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
+?>
     <div class="div-content">
 
     <form action="" id="insertForm" method="post">
@@ -52,8 +52,8 @@ catch (PDOException $ex)
     }
     ?>
     </div>
-    <?php
-        include 'footer.php'
-        ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
+?>
 </body>
 </html>
