@@ -38,7 +38,10 @@ catch (PDOException $ex)
     <div class="div-content">
 
     <form action="" id="insertForm" method="post">
-      <input type="text" name="Book">
+      <input type="text" name="User">
+      <input type="text" name="Item">
+      <input type="radio" name="">
+      <input type="text" name="Cost">
       <input type="submit" name="Submit" value="Search">
     </form>
 
