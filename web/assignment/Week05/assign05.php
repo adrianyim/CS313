@@ -57,11 +57,14 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
             <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
             <tr><td><input type="button" name="Submit" value="Submit"></td></tr></table>
         </form>
-
+        <form>
+            <>
+            <input type="button" name="Show" value="Show">
+        </form>
     <?PHP
-    foreach ($db->query('SELECT * FROM summary') as $row)
+    foreach ($db->query('SELECT * FROM item') as $row)
     {
-      echo $row['user_id'] . ' ' . $row['item_id'] . ' ' . $row['total'] . ' ' . $row['date_'] . ' '. $row['date_type'];
+      echo $row['item_id'] . ' ' . $row['item'] . ' ' . $row['cost'] . ' ' . $row['cost_type'] . ' '. $row['remark'];
     }
     ?>
     </div>
