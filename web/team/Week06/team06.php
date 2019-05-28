@@ -45,11 +45,11 @@ catch (PDOException $ex)
     </form>
     <form method="post">
       <label>Book</label><br>
-      <input type="text" name="Book">
+      <input type="text" name="Book"><br>
       <label>Chapter</label><br>
-      <input type="text" name="Chapter">
+      <input type="text" name="Chapter"><br>
       <label>Verse</label><br>
-      <input type="text" name="Verse">
+      <input type="text" name="Verse"><br>
       <label>Content</label><br>
       <input type="textarea" name="Content">
 
