@@ -51,12 +51,12 @@ catch (PDOException $ex)
       <label>Verse</label><br>
       <input type="text" name="Verse"><br>
       <label>Content</label><br>
-      <input type="textarea" name="Content">
+      <input type="textarea" name="Content"><br>
 
       <?php
       foreach ($db->query('SELECT * FROM topic') as $row)
       {
-        echo $row['name'] . ': <input type="checkbox" name="' . $row['name'] . '">';
+        echo ': <input type="checkbox" name="' . $row['name'] . '">' . $row['name'] . '<br>';
       }
       ?>
     </form>
