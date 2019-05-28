@@ -60,7 +60,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
             </table>
         </form>
         <form>
-            <>
+            <input type="radio" name="filter" value="Income">
+            <input type="radio" name="filter" value="Income">Income
+            <input type="radio" name="filter" value="Expense">Expense<br>
             <input type="button" name="Show" value="Show">
         </form>
     <?PHP
