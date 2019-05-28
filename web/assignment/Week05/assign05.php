@@ -41,7 +41,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <tr><td><input type="text" name="User" placeholder="User name"></td>
                 <td><input type="radio" name="Gender" value="M">Male
                 <input type="radio" name="Gender" value="F">Female</td></tr>
-            <tr><td><input type="text" name="Item" placeholder="Item"></td><td><select name="Item-type">
+                <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
+                <select name="Item-type">
                 <option value="empty">Item Type</option>
                 <option value="Salaries and wages">Salaries and wages</option>
                 <option value="Utility expenses">Utility expenses</option>
@@ -51,21 +52,26 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
                 <option value="Impairment losses">Impairment losses</option>
                 <option value="Food">Food</option>
                 <option value="Others">Others</option>
-            </select></td></tr>
-            <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
-            <td><input type="radio" name="Cost-type" value="Income">Income
-            <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-            <tr><td><input type="button" name="Submit" value="Submit"></td></tr></table>
+                </select></td></tr>
+                <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
+                <td><input type="radio" name="Cost-type" value="Income">Income
+                <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
+                <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
+            </table>
         </form>
         <form>
             <>
             <input type="button" name="Show" value="Show">
         </form>
     <?PHP
+    echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+
     foreach ($db->query('SELECT * FROM item') as $row)
     {
-      echo $row['item_id'] . ' ' . $row['item'] . ' ' . $row['cost'] . ' ' . $row['cost_type'] . ' '. $row['remark'] . '<br>';
+      echo "<tr><td>" . $row['item_id'] . '</td><td>' . $row['item'] . '</td><td>' . $row['cost'] . '</td><td>' . $row['cost_type'] . '</td><td>'. $row['remark'] . '</td></tr>';
     }
+
+    echo "</table>";
     ?>
     </div>
 <?php
