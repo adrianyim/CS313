@@ -1,4 +1,11 @@
 <?PHP
+
+$book = $_POST['Book'];
+$chapter = $_POST['Chapter'];
+$verse = $_POST['Verse'];
+$content = $_POST['Content'];
+$topic_id = $_POST['topic_id'];
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -43,7 +50,9 @@ catch (PDOException $ex)
       <input type="text" name="Book">
       <input type="submit" name="Submit" value="Search">
     </form>
-    <form method="post">
+
+
+    <form action="function.php" method="post">
       <label>Book</label><br>
       <input type="text" name="Book"><br>
       <label>Chapter</label><br>
@@ -56,9 +65,11 @@ catch (PDOException $ex)
       <?php
       foreach ($db->query('SELECT * FROM topic') as $row)
       {
-        echo ': <input type="checkbox" name="' . $row['name'] . '">' . $row['name'] . '<br>';
+        echo ': <input type="checkbox" name="topic_id">' . $row['name'] . '<br>';
       }
       ?>
+
+      <input type="submit" value="Submit">
     </form>
 </body>
 </html>
