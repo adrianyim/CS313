@@ -25,10 +25,10 @@ catch (PDOException $ex)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Team Week05</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team Week05</title>
 </head>
 <body>
   <h1>Scripture Resources</h1></br>
@@ -42,6 +42,23 @@ catch (PDOException $ex)
     <form action="search.php" id="searchForm" method="post">
       <input type="text" name="Book">
       <input type="submit" name="Submit" value="Search">
+    </form>
+    <form method="post">
+      <label>Book</label><br>
+      <input type="text" name="Book">
+      <label>Chapter</label><br>
+      <input type="text" name="Chapter">
+      <label>Verse</label><br>
+      <input type="text" name="Verse">
+      <label>Content</label><br>
+      <input type="textarea" name="Content">
+
+      <?php
+      foreach ($db->query('SELECT * FROM topic') as $row)
+      {
+        echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' .$row['content'] . '"</br>';
+      }
+      ?>
     </form>
 </body>
 </html>

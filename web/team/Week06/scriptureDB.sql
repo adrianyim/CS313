@@ -1,11 +1,29 @@
 CREATE TABLE Scripture (
     id INT NOT NULL,
-    book VARCHAR(45) NOT NULL,
+    book VARCHAR(225) NOT NULL,
     chapter INT NOT NULL,
     verse INT NOT NULL,
     content TEXT,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE topic (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(225) NOT NULL
+);
+
+CREATE TABLE scripture_topic (
+    id SERIAL NOT NULL PRIMARY KEY,
+    scripture_id INT REFERENCES scripture (id),
+    topic_id INT REFERENCES topic(id)
+);
+
+INSERT INTO topic 
+VALUES  (DEFAULT, 'Faith'),
+        (DEFAULT, 'Sacrifice'),
+        (DEFAULT, 'Charity');
+
+
 
 INSERT INTO Scripture
 VALUES (001, 'John', 1, 5, 'And the light shineth in darkness; and the darkness comprehended it not.'), 
