@@ -64,7 +64,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
     <?PHP
     foreach ($db->query('SELECT * FROM item') as $row)
     {
-      echo $row['item_id'] . ' ' . $row['item'] . ' ' . $row['cost'] . ' ' . $row['cost_type'] . ' '. $row['remark'];
+      echo $row['item_id'] . ' ' . $row['item'] . ' ' . $row['cost'] . ' ' . $row['cost_type'] . ' '. $row['remark'] . '<br>';
     }
     ?>
     </div>
