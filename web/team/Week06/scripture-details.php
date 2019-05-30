@@ -41,5 +41,6 @@ session_start();
 
   echo $book . ' ' . $chapter . ':' . $verse . ' - ' . $content;
   ?>
+  <label><a ref="team06.php">Back</a></label>
 </body>
 </html>
