@@ -34,13 +34,15 @@ session_start();
 </head>
 <body>
   <?php
+  $content = $_GET['id'];
 
-  foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
-  {
-    $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
+  echo $content;
+  // foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
+  // {
+  //   $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
 
-    echo $result . '</br>';
-  }
+  //   echo $result . '</br>';
+  // }
   ?>
 </body>
 </html>
