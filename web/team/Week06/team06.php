@@ -52,7 +52,7 @@ catch (PDOException $ex)
     </form>
 
 
-    <form action="function.php" method="post">
+    <form action="insertfunction.php" method="post">
       <label>Book</label><br>
       <input type="text" name="Book"><br>
       <label>Chapter</label><br>
@@ -63,10 +63,22 @@ catch (PDOException $ex)
       <input type="textarea" name="Content"><br>
 
       <?php
+      try {
+        $statement = $db->prepare('SELECT id, name FROM topic');
+        $statement->execute();
+
+        while ($row = $statement->fetch(POD::FETCH_ASSOC)) {
+          $id = $row['id'];
+          $name = $row['name'];
+          // Start coding from here
+        }
+      }
       foreach ($db->query('SELECT * FROM topic') as $row)
       {
-        echo ': <input type="checkbox" name="topic_id">' . $row['name'] . '<br>';
+        echo '<input type="checkbox" name="topic_id">: ' . $row['name'] . '<br>';
       }
+
+
       ?>
 
       <input type="submit" value="Submit">
