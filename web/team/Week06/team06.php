@@ -50,7 +50,7 @@ catch (PDOException $ex)
       <input type="text" name="Book">
       <input type="submit" name="Submit" value="Search">
     </form>
-
+<br><br>
 
     <form action="insertfunction.php" method="post">
       <label>Book</label><br>
