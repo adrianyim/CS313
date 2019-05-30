@@ -34,16 +34,14 @@ session_start();
 </head>
 <body>
     <?php
-    // $query = htmlspecialchars($_SESSION["query"]);
-    $chapter = $_SESSION["chapter"];
-    $verse = $_SESSION["verse"];
+    echo $_SESSION["details"];
 
-    foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
-    {
-        $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
+    // foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
+    // {
+    //   $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
 
-        echo $result . '</br>';
-    }
+    //   echo $result . '</br>';
+    // }
     ?>
 </body>
 </html>
