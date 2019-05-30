@@ -44,7 +44,7 @@ $_SESSION["query"] = $query;
 
             $_SESSION["details"] =+ '<b>' . $result . '</b><br>' . $row['content'] . '<br>';
 
-            echo "<a href='scripture-details.php?id='>$result</a></br>";
+            echo "<a href='scripture-details.php?id={$row['id']}'>$result</a></br>";
         }
     ?>
 </body>
