@@ -32,10 +32,10 @@ catch (PDOException $ex)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Team Week05</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Team Week05</title>
 </head>
 <body>
   <h1>Scripture Resources</h1></br>
@@ -63,16 +63,6 @@ catch (PDOException $ex)
       <input type="textarea" name="Content"><br>
 
       <?php
-      try {
-        $statement = $db->prepare('SELECT id, name FROM topic');
-        $statement->execute();
-
-        while ($row = $statement->fetch(POD::FETCH_ASSOC)) {
-          $id = $row['id'];
-          $name = $row['name'];
-          // Start coding from here
-        }
-      }
       foreach ($db->query('SELECT * FROM topic') as $row)
       {
         echo '<input type="checkbox" name="topic_id">: ' . $row['name'] . '<br>';
