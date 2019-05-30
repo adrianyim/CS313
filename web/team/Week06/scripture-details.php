@@ -34,7 +34,7 @@ session_start();
 </head>
 <body>
     <?php
-    echo $_SESSION["details"];
+    echo $db->query("SELECT * FROM scripture");
 
     // foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
     // {
