@@ -29,22 +29,23 @@ $_SESSION["query"] = $query;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Result</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Result</title>
 </head>
 <body>
-    <?php
-        $query = htmlspecialchars($query);
-        
-        foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
-        {
-            $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
+  <?php
+  $query = htmlspecialchars($query);
+  
+  foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
+  {
+    $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
 
-            $row[''];
-            echo "<a href='scripture-details.php?id={$row['id']}'>$result</a></br>";
-        }
-    ?>
+    $row['content'];
+
+    echo "<a href='scripture-details.php?id='>$result</a></br>";
+  }
+  ?>
 </body>
 </html>

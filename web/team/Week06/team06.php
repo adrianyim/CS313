@@ -52,26 +52,26 @@ catch (PDOException $ex)
     </form>
 <br><br>
 
-    <form action="insertfunction.php" method="post">
-      <label>Book</label><br>
-      <input type="text" name="Book"><br>
-      <label>Chapter</label><br>
-      <input type="text" name="Chapter"><br>
-      <label>Verse</label><br>
-      <input type="text" name="Verse"><br>
-      <label>Content</label><br>
-      <input type="textarea" name="Content"><br>
+  <form action="insertfunction.php" method="post">
+    <label>Book</label><br>
+    <input type="text" name="Book"><br>
+    <label>Chapter</label><br>
+    <input type="text" name="Chapter"><br>
+    <label>Verse</label><br>
+    <input type="text" name="Verse"><br>
+    <label>Content</label><br>
+    <input type="textarea" name="Content"><br>
 
-      <?php
-      foreach ($db->query('SELECT * FROM topic') as $row)
-      {
-        echo '<input type="checkbox" name="topic_id">: ' . $row['name'] . '<br>';
-      }
+    <?php
+    foreach ($db->query('SELECT * FROM topic') as $row)
+    {
+      echo '<input type="checkbox" name="topic_id">: ' . $row['name'] . '<br>';
+    }
 
 
-      ?>
+    ?>
 
-      <input type="submit" value="Submit">
-    </form>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
