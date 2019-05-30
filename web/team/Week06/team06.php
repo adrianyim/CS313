@@ -35,7 +35,7 @@ catch (PDOException $ex)
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Team Week05</title>
+<title>Team Week06</title>
 </head>
 <body>
   <h1>Scripture Resources</h1></br>
@@ -67,8 +67,6 @@ catch (PDOException $ex)
     {
       echo '<input type="checkbox" name="topic_id">: ' . $row['name'] . '<br>';
     }
-
-
     ?>
 
     <input type="submit" value="Submit">

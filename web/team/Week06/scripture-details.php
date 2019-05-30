@@ -40,12 +40,6 @@ session_start();
   $content = $_GET['content'];
 
   echo $book . ' ' . $chapter . ':' . $verse . ' - ' . $content;
-  // foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
-  // {
-  //   $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
-
-  //   echo $result . '</br>';
-  // }
   ?>
 </body>
 </html>
