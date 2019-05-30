@@ -34,9 +34,11 @@ catch (PDOException $ex)
 </head>
 <body>
     <?php
-    $query = htmlspecialchars($_SESSION["query"]);
+    // $query = htmlspecialchars($_SESSION["query"]);
+    $chapter = $_SESSION["chapter"];
+    $verse = $_SESSION["verse"];
 
-    foreach ($db->query("SELECT * FROM Scripture WHERE book LIKE '%" . $query . "%'") as $row)
+    foreach ($db->query("SELECT * FROM Scripture WHERE chapter = $chapter AND verse = $verse") as $row)
     {
         $result = '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b><br>' . $row['content'];
 
