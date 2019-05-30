@@ -45,7 +45,8 @@ $_SESSION["query"] = $query;
             $_SESSION["chapter"] = $row['chapter'];
             $_SESSION["verse"] = $row['verse'];
 
-            echo "<a href='scripture-details.php?id='>$result</a></br>";
+            $id = $row['id'];
+            echo "<a href='scripture-details.php?id=$id'>$result</a></br>";
         }
     ?>
 </body>
