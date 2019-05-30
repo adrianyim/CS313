@@ -42,9 +42,9 @@ $_SESSION["query"] = $query;
   {
     $result = $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'];
 
-    $row['content'];
+    $content = $row['content'];
 
-    echo "<a href='scripture-details.php?id='>$result</a></br>";
+    echo "<a href='scripture-details.php?id=$content'>$result</a></br>";
   }
   ?>
 </body>
