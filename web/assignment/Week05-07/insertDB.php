@@ -10,7 +10,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 require('connectDB.php');
 $db = getDB();
 
-$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+$statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
 $statement->execute();
@@ -19,4 +19,22 @@ $statement->execute();
 
 // header("Location: $new_page");
 die();
+
+echo "<table>";
+
+foreach ($statement as $rows)
+{
+  echo "<tr><td>" . $rows['user_id'] . '</td><td>' . $rows['user_name'] . '</td><td>' . $rows['gender'] . '</td></tr>';
+}
+
+echo "</table>";
+
+// echo "<table>";
+
+// foreach ($statement as $rows)
+// {
+//   echo "<tr><td>" . $rows['item_id'] . '</td><td>' . $rows['item'] . '</td><td>' . $rows['cost'] . '</td><td>' . $rows['cost_type'] . '</td><td>'. $rows['remark'] . '</td></tr>';
+// }
+
+// echo "</table>";
 ?>
