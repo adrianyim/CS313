@@ -1,11 +1,11 @@
 <?php
 $user = htmlspecialchars($_POST['User']);
 $gender = htmlspecialchars($_POST['Gender']);
-$item = htmlspecialchars($_POST['Item']);
-$item_type = htmlspecialchars($_POST['Item-type']);
-$cost = htmlspecialchars($_POST['Cost']);
-$cost_type = htmlspecialchars($_POST['Cost-type']);
-$remark = htmlspecialchars($_POST['Remark']);
+// $item = htmlspecialchars($_POST['Item']);
+// $item_type = htmlspecialchars($_POST['Item-type']);
+// $cost = htmlspecialchars($_POST['Cost']);
+// $cost_type = htmlspecialchars($_POST['Cost-type']);
+// $remark = htmlspecialchars($_POST['Remark']);
 
 require('connectDB.php');
 $db = getDB();
