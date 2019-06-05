@@ -1,13 +1,13 @@
 -- Create section
 
-CREATE TABLE user (
-    user_id SERIAL NOT NULL CONSTRAINT user_pk PRIMARY KEY,
+CREATE TABLE users (
+    user_id SERIAL NOT NULL CONSTRAINT users_pk PRIMARY KEY,
     user_name VARCHAR(45) NOT NULL,
     gender VARCHAR(1) NOT NULL
 );
 
-CREATE TABLE item (
-    item_id SERIAL NOT NULL CONSTRAINT item_pk PRIMARY KEY,
+CREATE TABLE items (
+    item_id SERIAL NOT NULL CONSTRAINT items_pk PRIMARY KEY,
     item VARCHAR(45) NOT NULL,
     item_type VARCHAR(45) NOT NULL,
     cost DECIMAL NOT NULL,
@@ -21,12 +21,12 @@ CREATE TABLE summary (
     date_ date NOT NULL,
     date_type VARCHAR(45) NOT NULL,
     user_id INT NOT NULL CONSTRAINT summary_fk REFERENCES users(user_id),
-    item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES item(item_id)
+    item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
 );
 
 -- Insert section
 
-INSERT INTO user (user_id, user_name, gender)
+INSERT INTO users (user_id, user_name, gender)
     VALUES  (DEFAULT, 'Tester 1', 'M'),
             (DEFAULT, 'Tester 2', 'F'),
             (DEFAULT, 'Adrian', 'M'),
@@ -40,7 +40,7 @@ INSERT INTO user (user_id, user_name, gender)
             (DEFAULT, 'Adrianna', 'F'),
             (DEFAULT, 'Ariana', 'F');
 
-INSERT INTO item (item_id, item, item_type, cost, cost_type, remark)
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark)
     VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'expense', 'shoes'),
             (DEFAULT, 'BBQ', 'Food', 11.02, 'expense', ''),
             (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'income', 'May'),
@@ -53,6 +53,8 @@ INSERT INTO item (item_id, item, item_type, cost, cost_type, remark)
             (DEFAULT, 'tithing', 'Others', 23.2, 'expense', 'May'),
             (DEFAULT, 'Rent', 'Utility expenses', 573, 'income', '??');
 
+INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
+VALUES (DEFAULT, )
 
 -- Command my DB
 

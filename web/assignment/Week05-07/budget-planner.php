@@ -1,7 +1,7 @@
 <?php
 require('connectDB.php');
 $db = getDB();
-$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM item');
+$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
 // $query = 'SELECT item_id, item, item_type, cost, cost_type, remark FROM item';
 // $statement = $db->prepare($query);

@@ -10,7 +10,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 require('connectDB.php');
 $db = getDB();
 
-$statement = $db->prepare('INSERT INTO user(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
 $statement->execute();
