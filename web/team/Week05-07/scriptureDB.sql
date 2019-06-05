@@ -1,10 +1,9 @@
 CREATE TABLE Scripture (
-    id INT NOT NULL,
+    id INT NOT NULL PRIMARY KEY,
     book VARCHAR(225) NOT NULL,
     chapter INT NOT NULL,
     verse INT NOT NULL,
-    content TEXT,
-    PRIMARY KEY (id)
+    content TEXT
 );
 
 CREATE TABLE topic (
