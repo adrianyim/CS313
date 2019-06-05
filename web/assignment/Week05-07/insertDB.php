@@ -15,8 +15,8 @@ $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
 $statement->execute();
 
-$new_page = "budget-planner.php?course_id=$course_id";
+// $new_page = "budget-planner.php?course_id=$course_id";
 
-header("Location: $new_page");
+// header("Location: $new_page");
 die();
 ?>
