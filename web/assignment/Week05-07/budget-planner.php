@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <td><input type="radio" name="Cost-type" value="Income">Income
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
         <tr><td><textarea name="Remark" placehodler="Remark"></textarea></td></tr>
-        <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
       </table>
     </form>
 
@@ -55,7 +55,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
       <input type="radio" name="filter" value="Income">
       <input type="radio" name="filter" value="Income">Income
       <input type="radio" name="filter" value="Expense">Expense<br>
-      <input type="button" name="Show" value="Show">
+      <input type="submit" value="Show">
     </form>
   <?PHP
   echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
