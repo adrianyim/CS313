@@ -60,7 +60,7 @@ INSERT INTO item (item_id, item, item_type, cost, cost_type, remark)
 
 -- Command my DB
 
-SELECT * FROM  users;
+SELECT * FROM item;
 
 DROP TABLE item;
 

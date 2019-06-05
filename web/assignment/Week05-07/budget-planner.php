@@ -1,25 +1,8 @@
 <?PHP
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
+require('connectDB.php');
+$db = getDB();
+$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM item');
 
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +11,7 @@ catch (PDOException $ex)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 05</title>
+    <title>Budget Planner</title>
     <link rel="stylesheet" href="../Week02/home.css">
 </head>
 <body>
@@ -43,7 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <input type="radio" name="Gender" value="F">Female</td></tr>
         <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
         <select name="Item-type">
-        <option value="empty">Item Type</option>
+        <option value="empty">--Item Type--</option>
         <option value="Salaries and wages">Salaries and wages</option>
         <option value="Utility expenses">Utility expenses</option>
         <option value="Administration expenses">Administration expenses</option>
@@ -59,7 +42,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
       </table>
     </form>
-    <form>
+
+
+    <form method="post" id="showform" action="">
       <input type="radio" name="filter" value="Income">
       <input type="radio" name="filter" value="Income">Income
       <input type="radio" name="filter" value="Expense">Expense<br>
@@ -68,9 +53,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
   <?PHP
   echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
-  foreach ($db->query('SELECT * FROM item') as $row)
+  foreach ($items as $item)
   {
-    echo "<tr><td>" . $row['item_id'] . '</td><td>' . $row['item'] . '</td><td>' . $row['cost'] . '</td><td>' . $row['cost_type'] . '</td><td>'. $row['remark'] . '</td></tr>';
+    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
   }
 
   echo "</table>";
