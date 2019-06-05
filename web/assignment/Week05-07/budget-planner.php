@@ -24,7 +24,7 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
   <div class="div-info">
-    <form action="" id="insertForm" method="post">
+    <form action="insertDB.php" id="insertForm" method="post">
       <table>
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td><input type="radio" name="Gender" value="M">Male
@@ -44,7 +44,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
         <td><input type="radio" name="Cost-type" value="Income">Income
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-        <tr><td><textarea name="Remark"></textarea></td></tr>
+        <tr><td><textarea name="Remark" placehodler="Remark"></textarea></td></tr>
         <tr><td><input type="button" name="Submit" value="Submit"></td></tr>
       </table>
     </form>
