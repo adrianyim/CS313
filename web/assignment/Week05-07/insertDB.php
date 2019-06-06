@@ -12,7 +12,7 @@ $db = getDB();
 
 var_dump('$user, $gender');
 
-$statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 var_dump('get state 1');
 $statement->bindValue(':user', $user, PDO::PARAM_STR);
 var_dump('get state 2');
