@@ -15,15 +15,15 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Budget Planner</title>
-    <link rel="stylesheet" href="../Week02/home.css">
+    <link rel="stylesheet" href="../assignment/home.css">
 </head>
 <body>
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
   <div class="div-info">
-    <form method="post" id="insertForm" action="insertDB.php">
-      <table border="1">
+    <table border="1">
+      <form method="post" id="insertForm" action="insertDB.php">
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td>Gender: <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female</td></tr>
@@ -44,8 +44,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
         <tr><td><textarea name="Remark" placeholder="Remark"></textarea></td></tr>
         <tr><td><input type="submit" value="Submit"></td></tr>
-      </table>
-    </form>
+      </form>      
+    </table>
 
 
     <!-- <form method="get" id="showform" action="">
@@ -77,7 +77,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
   ?>
   </div>
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';
 ?>
 </body>
 </html>

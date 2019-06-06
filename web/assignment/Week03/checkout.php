@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Checkout</title>
-    <link rel="stylesheet" href="../Week02/home.css">
+    <link rel="stylesheet" href="../assignment/home.css">
 </head>
 <body>
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
     <div class="div-info">
         <p>Checkout:</p>
@@ -28,7 +28,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
     </div>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/footer.php';
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';
 ?>
 </body>
 </html>
