@@ -10,7 +10,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 require('connectDB.php');
 $db = getDB();
 
-var_dump('get DB');
+var_dump('$user, $gender');
 
 $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 var_dump('get state 1');
