@@ -1,4 +1,8 @@
 <?php
+
+header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
+exit;
+
 $user = htmlspecialchars($_POST['User']);
 $gender = htmlspecialchars($_POST['Gender']);
 $item = htmlspecialchars($_POST['Item']);
@@ -13,6 +17,7 @@ $db = getDB();
 var_dump('$user, $gender');
 
 $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, $user, $gender);');
+
 // $statement->bindValue(':user', $user, PDO::PARAM_STR);
 // $statement->bindValue(':gender', $gender, PDO::PARAM_STR_CHAR);
 // var_dump('get state 3');
@@ -21,9 +26,6 @@ $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (D
 var_dump('executed');
 
 // $new_page = "budget-planner.php";
-
-// header("Location: $new_page");
-// die();
 
 // echo "<table>";
 
