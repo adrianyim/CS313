@@ -18,11 +18,11 @@ $statement->bindValue(':gender', $gender, PDO::PARAM_STR_CHAR);
 var_dump('get state 3');
 $statement->execute();
 
-var_dump('inserted');
+var_dump('executed');
 
-$new_page = "budget-planner.php";
+// $new_page = "budget-planner.php";
 
-header("Location: $new_page");
+// header("Location: $new_page");
 die();
 
 // echo "<table>";
