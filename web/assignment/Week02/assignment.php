@@ -13,7 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
     <div class="div-assign-content">
         <ul>
-            <li class="assign_List"><a href="/assignment/Week01/assign01.html">Assignment 01</a></li>
+            <li class="assign_List"><a href="/assignment/Week01/hello.html">Assignment 01</a></li>
             <li class="assign_List"><a href="/assignment/Week03/assign03.php">Assignment 03</a></li>
             <li class="assign_List"><a href="/assignment/Week02/assign04.php">Assignment 04</a></li>
             <li class="assign_List"><a href="/assignment/Week05/assign05.php">Assignment 05</a></li>
