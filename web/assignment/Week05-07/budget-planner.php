@@ -2,8 +2,8 @@
 require('connectDB.php');
 $db = getDB();
 
+//Select tables
 $users = $db->query('SELECT user_id, user_name, gender FROM users');
-
 $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
 // *********** Example of reading the query from the DB ***********
@@ -76,7 +76,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 
   foreach ($items as $item)
   {
-    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['item_type'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
   }
 
   echo "</table>";
