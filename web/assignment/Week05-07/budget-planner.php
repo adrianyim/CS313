@@ -31,7 +31,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
     <form method="post" id="insertForm" action="insertDB.php">
       <table>
         <tr><td><input type="text" name="User" placeholder="User name"></td>
-        <td><input type="radio" name="Gender" value="M">Male
+        <td>Gender: <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female</td></tr>
         <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
         <select name="Item-type">
@@ -46,9 +46,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <option value="Others">Others</option>
         </select></td></tr>
         <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
-        <td><input type="radio" name="Cost-type" value="Income">Income
+        <td>Cost Type: <input type="radio" name="Cost-type" value="Income">Income
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-        <tr><td><textarea name="Remark"></textarea></td></tr>
+        <tr><td><textarea name="Remark" placeholder="Remark"></textarea></td></tr>
         <tr><td><input type="submit" value="Submit"></td></tr>
       </table>
     </form>
