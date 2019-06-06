@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/assignment/home.css">
 </head>
 <body>
     <?php
-    include 'header.php'
+    include '/assignment/header.php'
     ?>
     <div class="div-assign-content">
         <ul>
@@ -29,7 +29,7 @@
         </ul>
     </div>
     <?php
-        include 'footer.php'
+        include '/assignment/footer.php'
         ?>
 </body>
 </html>
