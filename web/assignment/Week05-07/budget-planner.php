@@ -4,7 +4,7 @@ $db = getDB();
 
 $users = $db->query('SELECT user_id, user_name, gender FROM users');
 
-// $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
+$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
 // *********** Example of reading the query from the DB ***********
 // $query = 'SELECT item_id, item, item_type, cost, cost_type, remark FROM item';
