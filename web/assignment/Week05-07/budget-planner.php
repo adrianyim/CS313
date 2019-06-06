@@ -15,14 +15,14 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Budget Planner</title>
-    <link rel="stylesheet" href="../assignment/home.css">
+    <link rel="stylesheet" href="/assignment/home.css">
 </head>
 <body>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
   <div class="div-info">
-    <table border="1">
+    <table name="table-insert" border="1">
       <form method="post" id="insertForm" action="insertDB.php">
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td>Gender: <input type="radio" name="Gender" value="M">Male
