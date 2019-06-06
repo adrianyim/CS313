@@ -2,7 +2,7 @@
 require('connectDB.php');
 $db = getDB();
 
-$users = $db->prepare('SELECT user_id, user_name, gender FROM users');
+$users = $db->query('SELECT user_id, user_name, gender FROM users');
 
 // $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
@@ -73,10 +73,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 
   // echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
-  // // foreach ($items as $item)
-  // // {
-  // //   echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
-  // // }
+  // foreach ($items as $item)
+  // {
+  //   echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+  // }
 
   // echo "</table>";
   ?>
