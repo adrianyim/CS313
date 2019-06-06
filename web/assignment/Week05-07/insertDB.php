@@ -1,11 +1,11 @@
 <?php
 $user = htmlspecialchars($_POST['User']);
 $gender = htmlspecialchars($_POST['Gender']);
-// $item = htmlspecialchars($_POST['Item']);
-// $item_type = htmlspecialchars($_POST['Item-type']);
-// $cost = htmlspecialchars($_POST['Cost']);
-// $cost_type = htmlspecialchars($_POST['Cost-type']);
-// $remark = htmlspecialchars($_POST['Remark']);
+$item = htmlspecialchars($_POST['Item']);
+$item_type = htmlspecialchars($_POST['Item-type']);
+$cost = htmlspecialchars($_POST['Cost']);
+$cost_type = htmlspecialchars($_POST['Cost-type']);
+$remark = htmlspecialchars($_POST['Remark']);
 
 require('connectDB.php');
 $db = getDB();
@@ -17,7 +17,7 @@ $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':gender', $gender, PDO::PARAM_STR_CHAR);
 var_dump('get state 3');
 $statement->execute();
-$user_rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 var_dump('inserted');
 
 $new_page = "budget-planner.php";
