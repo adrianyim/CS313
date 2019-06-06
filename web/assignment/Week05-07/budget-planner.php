@@ -2,15 +2,9 @@
 require('connectDB.php');
 $db = getDB();
 
-//Select tables
+//DB commands
 $users = $db->query('SELECT user_id, user_name, gender FROM users');
 $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
-
-// *********** Example of reading the query from the DB ***********
-// $query = 'SELECT item_id, item, item_type, cost, cost_type, remark FROM item';
-// $statement = $db->prepare($query);
-// $statement->execute();
-// $items = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -61,7 +55,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
       <input type="submit" value="Show">
     </form> -->
   <?php
-  //users table
+  //Show users table
   echo "<table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>";
 
   foreach ($users as $user)
@@ -71,7 +65,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 
   echo "</table>";
 
-  //items table
+  //Show items table
   echo "<table><tr><th>item_id</th><th>item</th><th>item_type</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
   foreach ($items as $item)

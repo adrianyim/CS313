@@ -1,9 +1,4 @@
 <?php
-
-// header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
-// header("Location: budget-planner.php");
-// exit;
-
 $user = htmlspecialchars($_POST['User']);
 $gender = htmlspecialchars($_POST['Gender']);
 $item = htmlspecialchars($_POST['Item']);
@@ -33,5 +28,6 @@ $statement->bindValue(':remark', $remark);
 $statement->execute();
 
 header("Location: budget-planner.php");
+// header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
 exit;
 ?>
