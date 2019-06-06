@@ -15,7 +15,7 @@ $remark = htmlspecialchars($_POST['Remark']);
 require('connectDB.php');
 $db = getDB();
 
-$statement = $db->pdo->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 
 $statement->bindValue(':user', $user);
 $statement->bindValue(':gender', $gender);
