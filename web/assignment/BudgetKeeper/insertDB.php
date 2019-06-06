@@ -27,7 +27,7 @@ $statement->bindValue(':cost_type', $cost_type);
 $statement->bindValue(':remark', $remark);
 $statement->execute();
 
-header("Location: budget-planner.php");
+header("Location: budget-keeper.php");
 // header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
 exit;
 ?>
