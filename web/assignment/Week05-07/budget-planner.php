@@ -54,27 +54,27 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       <input type="radio" name="filter" value="Expense">Expense<br>
       <input type="submit" value="Show">
     </form> -->
-  <?php
-  //Show users table
-  echo "<table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>";
+    <?php
+    //Show users table
+    echo "<table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>";
 
-  foreach ($users as $user)
-  {
-    echo "<tr><td>" . $user['user_id'] . '</td><td>' . $user['user_name'] . '</td><td>' . $user['gender'] . '</td></tr>';
-  }
+    foreach ($users as $user)
+    {
+      echo "<tr><td>" . $user['user_id'] . '</td><td>' . $user['user_name'] . '</td><td>' . $user['gender'] . '</td></tr>';
+    }
 
-  echo "</table>";
+    echo "</table>";
 
-  //Show items table
-  echo "<table><tr><th>item_id</th><th>item</th><th>item_type</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+    //Show items table
+    echo "<table><tr><th>item_id</th><th>item</th><th>item_type</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
-  foreach ($items as $item)
-  {
-    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['item_type'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
-  }
+    foreach ($items as $item)
+    {
+      echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['item_type'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+    }
 
-  echo "</table>";
-  ?>
+    echo "</table>";
+    ?>
   </div>
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';

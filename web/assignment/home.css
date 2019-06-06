@@ -99,3 +99,7 @@ table {
     width: 50%;
     text-align: center;
 }
+
+tr:hover {
+    background-color:#eeeeee;
+}
