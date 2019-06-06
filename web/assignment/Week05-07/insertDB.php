@@ -10,6 +10,8 @@ $gender = htmlspecialchars($_POST['Gender']);
 require('connectDB.php');
 $db = getDB();
 
+var_dump('get DB');
+
 $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 // $statement->bindValue(':user', $user, PDO::PARAM_STR);
 // $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
