@@ -1,6 +1,7 @@
 <?php
 
-header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
+// header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
+header("Location: budget-planner.php");
 exit;
 
 $user = htmlspecialchars($_POST['User']);
