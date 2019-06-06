@@ -13,13 +13,11 @@ $db = getDB();
 var_dump('$user, $gender');
 
 $statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
-var_dump('get state 1');
 $statement->bindValue(':user', $user, PDO::PARAM_STR);
-var_dump('get state 2');
 $statement->bindValue(':gender', $gender, PDO::PARAM_STR_CHAR);
 var_dump('get state 3');
 $statement->execute();
-
+$user_rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 var_dump('inserted');
 
 $new_page = "budget-planner.php";
