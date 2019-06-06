@@ -15,6 +15,8 @@ $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (D
 // $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
 // $statement->execute();
 
+var_dump('inserted');
+
 $new_page = "budget-planner.php";
 
 header("Location: $new_page");
