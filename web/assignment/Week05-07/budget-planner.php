@@ -22,7 +22,7 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
   <div class="div-info">
-    <table name="table-insert" border="1">
+    <table class="table-insert" border="1">
       <form method="post" id="insertForm" action="insertDB.php">
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td>Gender: <input type="radio" name="Gender" value="M">Male
