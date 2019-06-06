@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <?php
-    include 'header.php'
-    ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
+?>
     <div class="div-content">
         Coming Soon!!
     </div>
-    <?php
-        include 'footer.php'
-        ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';
+?>
 </body>
 </html>
