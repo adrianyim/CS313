@@ -17,6 +17,7 @@ $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':gender', $gender, PDO::PARAM_STR_CHAR);
 var_dump('get state 3');
 $statement->execute();
+$statement->close();
 
 var_dump('executed');
 
