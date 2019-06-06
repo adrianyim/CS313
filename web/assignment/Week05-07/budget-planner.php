@@ -1,7 +1,10 @@
 <?php
 require('connectDB.php');
 $db = getDB();
-$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
+
+$users = $db->prepare('SELECT user_id, user_name, gender FROM users');
+
+// $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
 // *********** Example of reading the query from the DB ***********
 // $query = 'SELECT item_id, item, item_type, cost, cost_type, remark FROM item';
@@ -45,27 +48,37 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
         <td><input type="radio" name="Cost-type" value="Income">Income
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-        <tr><td><textarea name="Remark" placehodler="Remark"></textarea></td></tr>
+        <tr><td><textarea name="Remark"></textarea></td></tr>
         <tr><td><input type="submit" value="Submit"></td></tr>
       </table>
     </form>
 
 
-    <form method="get" id="showform" action="">
+    <!-- <form method="get" id="showform" action="">
       <input type="radio" name="filter" value="Income">
       <input type="radio" name="filter" value="Income">Income
       <input type="radio" name="filter" value="Expense">Expense<br>
       <input type="submit" value="Show">
-    </form>
+    </form> -->
   <?PHP
-  echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+  
+  echo "<table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>";
 
-  foreach ($items as $item)
+  foreach ($users as $user)
   {
-    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+    echo "<tr><td>" . $user['user_id'] . '</td><td>' . $user['user_name'] . '</td><td>' . $user['gender'] . '</td></tr>';
   }
 
   echo "</table>";
+
+  // echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+
+  // // foreach ($items as $item)
+  // // {
+  // //   echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+  // // }
+
+  // echo "</table>";
   ?>
   </div>
 <?php

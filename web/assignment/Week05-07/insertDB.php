@@ -10,24 +10,25 @@ $gender = htmlspecialchars($_POST['Gender']);
 require('connectDB.php');
 $db = getDB();
 
-$statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 $statement->bindValue(':user', $user, PDO::PARAM_STR);
 $statement->bindValue(':content', $gender, PDO::PARAM_STR_CHAR);
 $statement->execute();
 
-// $new_page = "budget-planner.php?course_id=$course_id";
+$new_page = "budget-planner.php?user_id=$course_id";
 
-// header("Location: $new_page");
+header("Location: $new_page");
 die();
 
-echo "<table>";
+// echo "<table>";
 
-foreach ($statement as $rows)
-{
-  echo "<tr><td>" . $rows['user_id'] . '</td><td>' . $rows['user_name'] . '</td><td>' . $rows['gender'] . '</td></tr>';
-}
+// foreach ($statement as $rows)
+// {
+//   echo "<tr><td>" . $rows['user_id'] . '</td><td>' . $rows['user_name'] . '</td><td>' . $rows['gender'] . '</td></tr>';
+// }
 
-echo "</table>";
+
+// echo "</table>";
 
 // echo "<table>";
 

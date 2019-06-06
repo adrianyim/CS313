@@ -54,11 +54,11 @@ INSERT INTO items (item_id, item, item_type, cost, cost_type, remark)
             (DEFAULT, 'Rent', 'Utility expenses', 573, 'income', '??');
 
 INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
-VALUES (DEFAULT, )
+VALUES (DEFAULT, );
 
 -- Command my DB
 
-SELECT * FROM notes;
+SELECT * FROM users;
 
 DROP TABLE users;
 
