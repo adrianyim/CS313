@@ -68,3 +68,5 @@ WHERE user_name = "Tester 1";
 
 ALTER TABLE item
     ADD item_id CONSTRAINT item_pk;
+
+DELETE FROM items WHERE item_id=13;
