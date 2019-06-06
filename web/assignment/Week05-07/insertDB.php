@@ -1,8 +1,8 @@
 <?php
 
 // header("Location: http://" . $_SERVER['HTTP_HOST'] . "/budget-planner.php");
-header("Location: budget-planner.php");
-exit;
+// header("Location: budget-planner.php");
+// exit;
 
 $user = htmlspecialchars($_POST['User']);
 $gender = htmlspecialchars($_POST['Gender']);
@@ -25,25 +25,4 @@ $statement = $db->query('INSERT INTO users(user_id, user_name, gender) VALUES (D
 // $statement->execute();
 
 var_dump('executed');
-
-// $new_page = "budget-planner.php";
-
-// echo "<table>";
-
-// foreach ($statement as $rows)
-// {
-//   echo "<tr><td>" . $rows['user_id'] . '</td><td>' . $rows['user_name'] . '</td><td>' . $rows['gender'] . '</td></tr>';
-// }
-
-
-// echo "</table>";
-
-// echo "<table>";
-
-// foreach ($statement as $rows)
-// {
-//   echo "<tr><td>" . $rows['item_id'] . '</td><td>' . $rows['item'] . '</td><td>' . $rows['cost'] . '</td><td>' . $rows['cost_type'] . '</td><td>'. $rows['remark'] . '</td></tr>';
-// }
-
-// echo "</table>";
 ?>
