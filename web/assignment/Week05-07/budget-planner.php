@@ -33,7 +33,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td><input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female</td></tr>
-        <!-- <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
+        <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
         <select name="Item-type">
         <option value="empty">--Item Type--</option>
         <option value="Salaries and wages">Salaries and wages</option>
@@ -48,7 +48,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
         <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
         <td><input type="radio" name="Cost-type" value="Income">Income
         <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-        <tr><td><textarea name="Remark"></textarea></td></tr> -->
+        <tr><td><textarea name="Remark"></textarea></td></tr>
         <tr><td><input type="submit" value="Submit"></td></tr>
       </table>
     </form>
@@ -60,8 +60,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
       <input type="radio" name="filter" value="Expense">Expense<br>
       <input type="submit" value="Show">
     </form> -->
-  <?PHP
-  
+  <?php
+  //users table
   echo "<table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>";
 
   foreach ($users as $user)
@@ -71,14 +71,15 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 
   echo "</table>";
 
-  // echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+  //items table
+  echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
-  // foreach ($items as $item)
-  // {
-  //   echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
-  // }
+  foreach ($items as $item)
+  {
+    echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td></tr>';
+  }
 
-  // echo "</table>";
+  echo "</table>";
   ?>
   </div>
 <?php
