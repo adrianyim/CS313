@@ -72,7 +72,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
   echo "</table>";
 
   //items table
-  echo "<table><tr><th>item_id</th><th>item</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
+  echo "<table><tr><th>item_id</th><th>item</th><th>item_type</th><th>cost</th><th>cost_type</th><th>remark</th></tr>";
 
   foreach ($items as $item)
   {
