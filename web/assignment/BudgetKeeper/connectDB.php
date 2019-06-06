@@ -22,5 +22,4 @@ function getDB() {
     }
     return $db;
 }
-
 ?>

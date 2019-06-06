@@ -5,7 +5,6 @@ $db = getDB();
 //DB commands
 $users = $db->query('SELECT user_id, user_name, gender FROM users');
 $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
-
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Budget Planner</title>
+    <title>Budget Keeper</title>
     <link rel="stylesheet" href="/assignment/home.css">
 </head>
 <body>
