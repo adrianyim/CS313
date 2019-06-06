@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/assignment/home.css">
 </head>
 <body>
-    <?php
-    include '/assignment/header.php'
-    ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
+?>
     <div class="div-assign-content">
         <ul>
             <li class="assign_List"><a href="/assignment/Week01/assign01.html">Assignment 01</a></li>
@@ -28,8 +28,8 @@
             <li class="assign_List"><a href="/assignment/Week02/assign14.php">Assignment 14</a></li>
         </ul>
     </div>
-    <?php
-        include '/assignment/footer.php'
-        ?>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';
+?>
 </body>
 </html>
