@@ -23,7 +23,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/Week02/header.php';
 ?>
   <div class="div-info">
     <form method="post" id="insertForm" action="insertDB.php">
-      <table>
+      <table border="1">
         <tr><td><input type="text" name="User" placeholder="User name"></td>
         <td>Gender: <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female</td></tr>
