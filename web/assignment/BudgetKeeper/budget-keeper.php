@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('connectDB.php');
 $db = getDB();
 
@@ -71,12 +72,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <?php
     foreach ($items as $item)
     {
-      $item_id = $item['item_id'];
-      $item_name = $item['item'];
-      $item_type = $item['item_type'];
-      $cost = $item['cost'];
-      $cost_type = $item['cost_type'];
-      $remark = $item['remark'];
+      $_SESSION['item_id'] = $item['item_id'];
+      $_SESSION['item'] = $item['item'];
+      $_SESSION['item_type'] = $item['item_type'];
+      $_SESSION['cost'] = $item['cost'];
+      $_SESSION['cost_type'] = $item['cost_type'];
+      $_SESSION['remark'] = $item['remark'];
 
       echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?item_id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
     }

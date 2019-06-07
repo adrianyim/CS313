@@ -1,12 +1,5 @@
 <?php
 session_start();
-
-$_SESSION['item_id'] = htmlspecialchars($_GET['item_id']);
-$_SESSION['item'] = htmlspecialchars($_GET['item_name']);
-$_SESSION['item_type'] = htmlspecialchars($_GET['item_type']);
-$_SESSION['cost'] = htmlspecialchars($_GET['cost']);
-$_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
-$_SESSION['remark'] = htmlspecialchars($_GET['remark']);
 ?>
 
 <!DOCTYPE html>
