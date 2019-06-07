@@ -11,12 +11,12 @@ $remark = htmlspecialchars($_GET['remark']);
 require('connectDB.php');
 $db = getDB();
 
-echo $_SESSION['item_id'];
-echo $_SESSION['item'];
-echo $_SESSION['item_type'];
-echo $_SESSION['cost'];
-echo $_SESSION['cost_type'];
-echo $_SESSION['remark'];
+echo $item;
+echo $item_type;
+echo $item_type;
+echo $cost;
+echo $cost_type;
+echo $remark;
 
 var_dump('not working');
 
