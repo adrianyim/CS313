@@ -11,11 +11,11 @@ require('connectDB.php');
 $db = getDB();
 
 //Insert users table
-$statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
+// $statement = $db->prepare('INSERT INTO users(user_id, user_name, gender) VALUES (DEFAULT, :user, :gender);');
 
-$statement->bindValue(':user', $user);
-$statement->bindValue(':gender', $gender);
-$statement->execute();
+// $statement->bindValue(':user', $user);
+// $statement->bindValue(':gender', $gender);
+// $statement->execute();
 
 //Insert items table
 $statement = $db->prepare('INSERT INTO items(item_id, item, item_type, cost, cost_type, remark) VALUES (DEFAULT, :item, :item_type, :cost, :cost_type, :remark);');
