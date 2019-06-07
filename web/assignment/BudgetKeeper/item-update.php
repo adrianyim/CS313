@@ -55,7 +55,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
     </table>
-    <a href="/budget-keeper.php">Back</a>
+    <a href="/assignment/budget-keeper.php">Back</a>
 </div>
 
 <?php
