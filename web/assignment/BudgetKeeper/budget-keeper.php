@@ -71,7 +71,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <?php
     foreach ($items as $item)
     {
-      echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['item_type'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td><td><button type="button">Edit</button></td><td><button type="button"><a href="deleteDB.php?item_id=' . $item['item_id'] . '>Delete</a></button></td></tr>';
+      echo "<tr><td>" . $item['item_id'] . '</td><td>' . $item['item'] . '</td><td>' . $item['item_type'] . '</td><td>' . $item['cost'] . '</td><td>' . $item['cost_type'] . '</td><td>'. $item['remark'] . '</td><td><button type="button">Edit</button></td><td><a href="deleteDB.php?item_id=' . $item['item_id'] . '>Delete</a></td></tr>';
     }
     ?>
     </table>
