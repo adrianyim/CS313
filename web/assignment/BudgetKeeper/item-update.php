@@ -15,18 +15,6 @@ $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
-// require('connectDB.php');
-// $db = getDB();
-
-// //Update items table
-// $statement = $db->prepare('UPDATE items SET item=:item, item_type=:item_type, cost=:cost, cost_type=:cost_type, remark=:remark WHERE item_id=:id;');
-// $statement->bindValue(':id', $item_id);
-// $statement->bindValue(':item', $item);
-// $statement->bindValue(':item_type', $item_type);
-// $statement->bindValue(':cost', $cost);
-// $statement->bindValue(':cost_type', $cost_type);
-// $statement->bindValue(':remark', $remark);
-// $statement->execute();
 ?>
 
 <!DOCTYPE html>
