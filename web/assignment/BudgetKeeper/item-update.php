@@ -8,6 +8,13 @@ $_SESSION['cost'] = htmlspecialchars($_GET['cost']);
 $_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
 $_SESSION['remark'] = htmlspecialchars($_GET['remark']);
 
+$item_id = $_GET['item_id'];
+$item = htmlspecialchars($_GET['item']);
+$item_type = htmlspecialchars($_GET['item_type']);
+$cost = htmlspecialchars($_GET['cost']);
+$cost_type = htmlspecialchars($_GET['cost_type']);
+$remark = htmlspecialchars($_GET['remark']);
+
 require('connectDB.php');
 $db = getDB();
 
@@ -39,9 +46,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 <div>
     <table>
         <form method="post" action="updateDB.php">
-            <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $_SESSION['item']; ?>"></td><td>
+            <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $item; ?>"></td><td>
             <select name="Item-type">
-            <option value="<?php echo $_SESSION['item_type']; ?>"><?php echo $_SESSION['item_type']; ?></option>
+            <option value="<?php echo $item_type; ?>"><?php echo $item_type; ?></option>
             <option value="Salaries and wages">Salaries and wages</option>
             <option value="Utility expenses">Utility expenses</option>
             <option value="Administration expenses">Administration expenses</option>
@@ -51,11 +58,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <option value="Food">Food</option>
             <option value="Others">Others</option>
             </select></td></tr>
-            <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $_SESSION['cost']; ?>"></td>
+            <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $cost; ?>"></td>
             <td><label>Cost Type:</label>
                 <input type="radio" name="Cost-type" value="Income">Income
                 <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-            <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $_SESSION['remark']; ?></textarea></td></tr>
+            <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
     </table>
