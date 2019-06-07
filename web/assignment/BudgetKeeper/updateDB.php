@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$item_id = $_SESSION['item_id'];
+$item_id = htmlspecialchars($_GET['Item_id']);
 $item = htmlspecialchars($_GET['Item']);
 $item_type = htmlspecialchars($_GET['Item_type']);
 $cost = htmlspecialchars($_GET['Cost']);
