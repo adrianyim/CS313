@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-$_SESSION['item_id'] = $_GET['item_id'];
-$_SESSION['item'] = htmlspecialchars($_GET['item']);
-$_SESSION['item_type'] = htmlspecialchars($_GET['item_type']);
-$_SESSION['cost'] = htmlspecialchars($_GET['cost']);
-$_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
-$_SESSION['remark'] = htmlspecialchars($_GET['remark']);
+// $_SESSION['item_id'] = $_GET['item_id'];
+// $_SESSION['item'] = htmlspecialchars($_GET['item']);
+// $_SESSION['item_type'] = htmlspecialchars($_GET['item_type']);
+// $_SESSION['cost'] = htmlspecialchars($_GET['cost']);
+// $_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
+// $_SESSION['remark'] = htmlspecialchars($_GET['remark']);
 
 $item_id = $_GET['item_id'];
 $item = htmlspecialchars($_GET['item']);
