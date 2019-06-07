@@ -69,4 +69,4 @@ WHERE item_id = 16;
 ALTER TABLE item
     ADD item_id CONSTRAINT item_pk;
 
-DELETE FROM items WHERE item_id=13;
+DELETE FROM users WHERE user_id IN (34-46);
