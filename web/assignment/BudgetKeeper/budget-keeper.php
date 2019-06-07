@@ -81,6 +81,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       $_SESSION['remark'] = $item['remark'];
 
       echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?item_id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
+
+      $_SESSION['item_id'] = $item['item_id'];
     }
     ?>
     </table>
