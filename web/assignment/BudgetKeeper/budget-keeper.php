@@ -72,7 +72,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     foreach ($items as $item)
     {
       $item_id = $item['item_id'];
-      $item = $item['item'];
+      $item_name = $item['item'];
       $item_type = $item['item_type'];
       $cost = $item['cost'];
       $cost_type = $item['cost_type'];
