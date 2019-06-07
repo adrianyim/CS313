@@ -3,9 +3,9 @@ session_start();
 
 $item_id = htmlspecialchars($_GET['Item_id']);
 $item = htmlspecialchars($_GET['Item']);
-$item_type = htmlspecialchars($_GET['Item_type']);
+$item_type = htmlspecialchars($_GET['Item-type']);
 $cost = htmlspecialchars($_GET['Cost']);
-$cost_type = htmlspecialchars($_GET['Cost_type']);
+$cost_type = htmlspecialchars($_GET['Cost-type']);
 $remark = htmlspecialchars($_GET['Remark']);
 
 require('connectDB.php');
