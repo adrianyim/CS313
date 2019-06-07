@@ -1,5 +1,5 @@
 <?php
-$item_id = htmlspecialchars($_POST['item_id']);
+$item_id = htmlspecialchars($_GET['item_id']);
 
 require('connectDB.php');
 $db = getDB();
