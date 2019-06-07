@@ -27,7 +27,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       <table class="table-insert">
         <form method="post" action="insertDB.php">
           <tr><td><input type="text" name="User" placeholder="User name"></td>
-          <td>Gender: <input type="radio" name="Gender" value="M">Male
+          <td><label>Gender:</label><input type="radio" name="Gender" value="M">Male
           <input type="radio" name="Gender" value="F">Female</td></tr>
           <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
           <select name="Item-type">
@@ -42,7 +42,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
           <option value="Others">Others</option>
           </select></td></tr>
           <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
-          <td>Cost Type: <input type="radio" name="Cost-type" value="Income">Income
+          <td><label>Cost Type:</label><input type="radio" name="Cost-type" value="Income">Income
           <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
           <tr><td><textarea name="Remark" placeholder="Remark"></textarea></td></tr>
           <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
@@ -74,15 +74,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     foreach ($items as $item)
     {
       $item_id = $item['item_id'];
-      $_SESSION['item'] = $item['item'];
-      $_SESSION['item_type'] = $item['item_type'];
-      $_SESSION['cost'] = $item['cost'];
-      $_SESSION['cost_type'] = $item['cost_type'];
-      $_SESSION['remark'] = $item['remark'];
+      // $_SESSION['item'] = $item['item'];
+      // $_SESSION['item_type'] = $item['item_type'];
+      // $_SESSION['cost'] = $item['cost'];
+      // $_SESSION['cost_type'] = $item['cost_type'];
+      // $_SESSION['remark'] = $item['remark'];
 
       echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?item_id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
-
-      $_SESSION['item_id'] = $item['item_id'];
     }
     ?>
     </table>
