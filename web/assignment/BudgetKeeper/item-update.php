@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+$item_id = $_GET['$Item_id'];
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +21,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 <div>
     <table>
         <form method="post" action="updateDB.php">
+            <input type="hidden" name="Item-id" value="<?php echo $item_id?>">
             <tr><td>Item: <input type="text" name="Item" value="<?php echo $_SESSION['item'] ?>"></td></tr>
             <tr><td>Item Type: <select name="Item-type">
             <option value="<?php echo $_SESSION['item_type'] ?>"><?php echo $_SESSION['item_type'] ?></option>
@@ -35,7 +38,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <tr><td>Cost Type: <?php echo $_SESSION['cost_type'] ?><input type="radio" name="Cost-type" value="Income">Income
           <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
             <tr><td>Remark: <textarea name="Remark" value="<?php echo $_SESSION['remark'] ?>"></textarea></td></tr>
-            <tr><td><input type="submit" value="Submit"></td></tr>
+            <tr><td><input type="submit" value="Update"></td></tr>
         </form>
     </table>
 </div>
