@@ -2,21 +2,14 @@
 session_start();
 
 $item_id = $_SESSION['item_id'];
-$item = htmlspecialchars($_GET['item']);
-$item_type = htmlspecialchars($_GET['item_type']);
-$cost = htmlspecialchars($_GET['cost']);
-$cost_type = htmlspecialchars($_GET['cost_type']);
-$remark = htmlspecialchars($_GET['remark']);
+$item = htmlspecialchars($_GET['Item']);
+$item_type = htmlspecialchars($_GET['Item_type']);
+$cost = htmlspecialchars($_GET['Cost']);
+$cost_type = htmlspecialchars($_GET['Cost_type']);
+$remark = htmlspecialchars($_GET['Remark']);
 
 require('connectDB.php');
 $db = getDB();
-
-echo $item;
-echo $item_type;
-echo $item_type;
-echo $cost;
-echo $cost_type;
-echo $remark;
 
 var_dump('not working');
 

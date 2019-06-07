@@ -8,7 +8,7 @@ session_start();
 // $_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
 // $_SESSION['remark'] = htmlspecialchars($_GET['remark']);
 
-$item_id = $_GET['item_id'];
+$item_id = htmlspecialchars($_GET['item_id']);
 $item = htmlspecialchars($_GET['item']);
 $item_type = htmlspecialchars($_GET['item_type']);
 $cost = htmlspecialchars($_GET['cost']);
@@ -45,7 +45,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
 <div>
     <table>
-        <form method="post" action="updateDB.php">
+        <form method="get" action="updateDB.php">
+            <?php echo "<input type='hidden' name='Item_id' value='$item_id'>"; ?>
             <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $item; ?>"></td><td>
             <select name="Item-type">
             <option value="<?php echo $item_type; ?>"><?php echo $item_type; ?></option>
