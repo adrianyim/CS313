@@ -20,11 +20,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
 <div>
     <table>
-        <form method="post" action="updateDB.php">
-            <input type="hidden" name="Item-id" value="<?php echo $item_id?>">
-            <tr><td>Item: <input type="text" name="Item" value="<?php echo $_SESSION['item'] ?>"></td></tr>
-            <tr><td>Item Type: <select name="Item-type">
-            <option value="<?php echo $_SESSION['item_type'] ?>"><?php echo $_SESSION['item_type'] ?></option>
+        <<form method="post" action="updateDB.php">
+            <tr><td><input type="text" name="Item" placeholder="Item"></td><td>
+            <select name="Item-type">
+            <option value="empty">--Item Type--</option>
             <option value="Salaries and wages">Salaries and wages</option>
             <option value="Utility expenses">Utility expenses</option>
             <option value="Administration expenses">Administration expenses</option>
@@ -34,12 +33,12 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <option value="Food">Food</option>
             <option value="Others">Others</option>
             </select></td></tr>
-            <tr><td>Cost: <input type="text" name="Cost" value="<?php echo $_SESSION['cost'] ?>"></td></tr>
-            <tr><td>Cost Type: <?php echo $_SESSION['cost_type'] ?><input type="radio" name="Cost-type" value="Income">Income
-          <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
-            <tr><td>Remark: <textarea name="Remark" value="<?php echo $_SESSION['remark'] ?>"></textarea></td></tr>
-            <tr><td><input type="submit" value="Update"></td></tr>
-        </form>
+            <tr><td><input type="text" name="Cost" placeholder="Cost"></td>
+            <td>Cost Type: <input type="radio" name="Cost-type" value="Income">Income
+            <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
+            <tr><td><textarea name="Remark" placeholder="Remark"></textarea></td></tr>
+            <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
+        </form>   
     </table>
 </div>
 
