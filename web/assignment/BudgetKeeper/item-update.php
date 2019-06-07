@@ -16,6 +16,7 @@ $_SESSION['remark'] = htmlspecialchars($_GET['remark']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Budget Keeper - Update</title>
+    <link rel="stylesheet" href="/assignment/home.css">
 </head>
 <body>
 <?php
@@ -38,7 +39,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <option value="Others">Others</option>
             </select></td></tr>
             <tr><td>Cost: <?php echo $_SESSION['cost'] ?><input type="text" name="Cost" placeholder="Cost"></td></tr>
-            <tr><td>Cost Type: <?php echo $_SESSION['cost_type'] ?><input type="radio" name="Cost-type" value="Expense"></td></tr>
+            <tr><td>Cost Type: <?php echo $_SESSION['cost_type'] ?><input type="radio" name="Cost-type" value="Income">Income
+          <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
             <tr><td>Remark: <?php echo $_SESSION['remark'] ?><textarea name="Remark" placeholder="Remark"></textarea></td></tr>
             <tr><td><input type="submit" value="Submit"></td></tr>
         </form>
