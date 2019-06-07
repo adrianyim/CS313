@@ -2,11 +2,11 @@
 session_start();
 
 $item_id = $_SESSION['item_id'];
-$item = $_SESSION['item'];
-$item_type = $_SESSION['item_type'];
-$cost = $_SESSION['cost'];
-$cost_type = $_SESSION['cost_type'];
-$remark = $_SESSION['remark'];
+$item = htmlspecialchars($_GET['item']);
+$item_type = htmlspecialchars($_GET['item_type']);
+$cost = htmlspecialchars($_GET['cost']);
+$cost_type = htmlspecialchars($_GET['cost_type']);
+$remark = htmlspecialchars($_GET['remark']);
 
 require('connectDB.php');
 $db = getDB();
