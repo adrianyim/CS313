@@ -14,4 +14,7 @@ $statement->bindValue(':id', $item_id);
 $statement->execute();
 
 var_dump('working');
+
+header("Location: budget-keeper.php");
+exit;
 ?>
