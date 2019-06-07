@@ -58,7 +58,7 @@ VALUES (DEFAULT, );
 
 -- Command my DB
 
-SELECT * FROM users;
+SELECT * FROM items;
 
 DROP TABLE users;
 
