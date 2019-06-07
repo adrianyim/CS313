@@ -4,6 +4,8 @@ $item_id = htmlspecialchars($_GET['item_id']);
 require('connectDB.php');
 $db = getDB();
 
+echo $item_id;
+
 var_dump('not working');
 
 //Delete items table
