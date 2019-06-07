@@ -11,8 +11,6 @@ $remark = $_SESSION['remark'];
 require('connectDB.php');
 $db = getDB();
 
-echo $_SESSION['item_id'];
-
 var_dump('not working');
 
 //Update items table
