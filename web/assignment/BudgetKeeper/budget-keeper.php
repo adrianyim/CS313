@@ -56,7 +56,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     </form> -->
 
     <!-- Show users table -->
-    <table><tr><th>user_id</th><th>user_name</th><th>gender</th></tr>
+    <table><tr><th>User ID</th><th>User Name</th><th>Gender</th></tr>
       <?php
       foreach ($users as $user)
       {
@@ -67,13 +67,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
   
     <!-- Show items table -->
-    <table><tr><th>item_id</th><th>item</th><th>item_type</th><th>cost</th><th>cost_type</th><th>remark</th></tr>
+    <table><tr><th>Item ID</th><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th></tr>
     <?php
     foreach ($items as $item)
     {
       $item_id = $item['item_id'];
 
-      echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
+      echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='updateDB.php?item_id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
     }
     ?>
     </table>

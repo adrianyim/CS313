@@ -62,9 +62,9 @@ SELECT * FROM users;
 
 DROP TABLE users;
 
-UPDATE users 
-SET user_id = 101
-WHERE user_name = "Tester 1";
+UPDATE items 
+SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'
+WHERE item_id = 16;
 
 ALTER TABLE item
     ADD item_id CONSTRAINT item_pk;
