@@ -64,7 +64,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         <input type="submit" value="Log in">
     </form>
     <br><br>
-    <a href="createAccount.php">Create Account</a>
+    <a href="signUp.php">Create Account</a>
 </div>
 
 <?php
