@@ -15,22 +15,22 @@ $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
-if ($cost_type === "income")
+if ($cost_type == "income")
 {
-    $income = "<input type='radio' name='Cost-type' value='Income' checked>Income";
+    $income = "checked";
 }
 else 
 {
-    $income = "<input type='radio' name='Cost-type' value='Income'>Income";
+    $income = " ";
 }
 
-if ($cost_type === "expense")
+if ($cost_type == "expense")
 {
-    $expense = "<input type='radio' name='Cost-type' value='expense' checked>Expense";
+    $expense = "checked";
 }
 else 
 {
-    $expense = "<input type='radio' name='Cost-type' value='expense'>Expense";
+    $expense = " ";
 }
 
 ?>
@@ -67,8 +67,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             </select></td></tr>
             <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $cost; ?>"></td>
             <td><label>Cost Type:</label>
-                <?php echo $income . $expense; ?>
-                </td></tr>
+                <input type="radio" name="Cost-type" value="Income" <?php $income; ?>>Income
+                <input type="radio" name="Cost-type" value="Expense" <?php $expense; ?>>Expense</td></tr>
             <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
