@@ -58,7 +58,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     </form> -->
 
     <!-- Show users table -->
-    <table><tr><th>User ID</th><th>User Name</th><th>Gender</th></tr>
+    <table><tr><th>User Name</th><th>Gender</th></tr>
       <?php
       foreach ($users as $user)
       {
@@ -69,7 +69,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
   
     <!-- Show items table -->
-    <table><tr><th>Item ID</th><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th></tr>
+    <table><tr><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th></tr>
     <?php
     foreach ($items as $item)
     {
