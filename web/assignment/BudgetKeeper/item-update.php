@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-// $_SESSION['item_id'] = $_GET['item_id'];
-// $_SESSION['item'] = htmlspecialchars($_GET['item']);
-// $_SESSION['item_type'] = htmlspecialchars($_GET['item_type']);
-// $_SESSION['cost'] = htmlspecialchars($_GET['cost']);
-// $_SESSION['cost_type'] = htmlspecialchars($_GET['cost_type']);
-// $_SESSION['remark'] = htmlspecialchars($_GET['remark']);
+// require('connectDB.php');
+// $db = getDB();
+// $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FROM items');
 
+// foreach ($items as $item)
+// {
+
+// }
 $item_id = htmlspecialchars($_GET['id']);
 $item = htmlspecialchars($_GET['item']);
 $item_type = htmlspecialchars($_GET['item_type']);
@@ -15,6 +16,7 @@ $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
+echo $item . $item_type . $cost . $cost_type;
 ?>
 
 <!DOCTYPE html>

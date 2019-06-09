@@ -62,7 +62,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       <?php
       foreach ($users as $user)
       {
-      echo "<tr><td>" . $user['user_id'] . '</td><td>' . $user['user_name'] . '</td><td>' . $user['gender'] . '</td></tr>';
+      echo "<tr><td>" . $user['user_name'] . "</td><td>" . $user['gender'] . "</td></tr>";
       }
       ?>
     </table>
@@ -80,7 +80,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       // $_SESSION['cost_type'] = $item['cost_type'];
       // $_SESSION['remark'] = $item['remark'];
 
-      echo "<tr><td>" . $item['item_id'] . "</td><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
+      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
     }
     ?>
     </table>
