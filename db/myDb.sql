@@ -24,6 +24,12 @@ CREATE TABLE summary (
     item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
 );
 
+CREATE TABLE login (
+    id SERIAL PRIMARY KEY NOT NULL,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
 -- Insert section
 
 INSERT INTO users (user_id, user_name, gender)
@@ -57,6 +63,11 @@ INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
 VALUES (DEFAULT, );
 
 -- Command my DB
+
+CREATE USER adrian_user WITH PASSWORD 'adrianyim';
+
+GRANT SELECT, INSERT< UPDATE ON login TO adrian_user;
+GRANT USAGE, SELECT ON login_id_seq TO adrian_user;
 
 SELECT * FROM items;
 
