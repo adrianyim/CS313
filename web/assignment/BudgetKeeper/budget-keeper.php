@@ -79,6 +79,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       // $cost = $item['cost'];
       // $cost_type = $item['cost_type'];
       // $remark = $item['remark'];
+      
       // $_SESSION['item'] = $item['item'];
       // $_SESSION['item_type'] = $item['item_type'];
       // $_SESSION['cost'] = $item['cost'];
@@ -87,7 +88,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
       // echo "<tr><td>" . $item_id . $item . $item_type . $cost . $cost_type . $remark . "</td></tr>";
 
-      echo "<tr><td>" . $item . "</td><td>" . $item_type . "</td><td>" . $cost . "</td><td>" . $cost_type . "</td><td>". $remark . "</td><td><a href='item-update.php?id=" . $item_id . "'>Edit</a></td><td><a href='deleteDB.php?item_id=" . $item_id . "'>Delete</a></td></tr>";
+      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?id=" . $item_id . "'>Edit</a></td><td><a href='deleteDB.php?item_id=" . $item_id . "'>Delete</a></td></tr>";
     }
     ?>
     </table>
