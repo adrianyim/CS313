@@ -7,7 +7,12 @@ session_start();
 
 // foreach ($items as $item)
 // {
-
+//     $_SESSION['item_id'] = $item['item_id'];
+//     $_SESSION['item'] = $item['item'];
+//     $_SESSION['item_type'] = $item['item_type'];
+//     $_SESSION['cost'] = $item['cost'];
+//     $_SESSION['cost_type'] = $item['cost_type'];
+//     $_SESSION['remark'] = $item['remark'];
 // }
 $item_id = htmlspecialchars($_GET['id']);
 $item = htmlspecialchars($_GET['item']);
@@ -16,7 +21,6 @@ $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
-echo $item . $item_type . $cost . $cost_type;
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +41,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <table>
         <form method="get" action="updateDB.php">
             <?php echo "<input type='hidden' name='Item_id' value='$item_id'>"; ?>
-            <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $item; ?>"></td><td>
+            <tr><td><input type="text" name="Item" placeholder="Item" value="testing"></td><td>
             <select name="Item-type">
             <option value="<?php echo $item_type; ?>"><?php echo $item_type; ?></option>
             <option value="Salaries and wages">Salaries and wages</option>
