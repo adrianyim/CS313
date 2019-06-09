@@ -53,7 +53,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <option value="Food">Food</option>
             <option value="Others">Others</option>
             </select></td></tr>
-            <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $_SESSION['cost']; ?>"></td>
+            <tr><td><input type="text" name="Cost" placeholder="Cost" value="as"></td>
             <td><label>Cost Type:</label>
                 <input type="radio" name="Cost-type" value="Income">Income
                 <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
