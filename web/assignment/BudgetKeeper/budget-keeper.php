@@ -74,7 +74,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     foreach ($items as $item)
     {
       $item_id = $item['item_id'];
-      // $_SESSION['item'] = $item['item'];
+      $_SESSION['item'] = $item['item'];
       // $_SESSION['item_type'] = $item['item_type'];
       // $_SESSION['cost'] = $item['cost'];
       // $_SESSION['cost_type'] = $item['cost_type'];
