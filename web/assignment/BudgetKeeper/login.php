@@ -14,8 +14,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
 <div class="div-info">
     <form>
-        <input type="text" name="username" placehoder="Username"><br><br>
-        <input type="password" name="password" placehoder="Password"><br><br>
+        <input type="text" name="username" placeholder="Username"><br><br>
+        <input type="password" name="password" placeholder="Password"><br><br>
         <input type="submit" value="Log in">
     </form>
     <br><br>
