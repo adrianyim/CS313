@@ -75,6 +75,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     {
       $item_id = $item['item_id'];
       $item = $item['item'];
+      $item_type = $item['item_type'];
       $cost = $item['cost'];
       $cost_type = $item['cost_type'];
       $remark = $item['remark'];
@@ -84,7 +85,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
       // $_SESSION['cost_type'] = $item['cost_type'];
       // $_SESSION['remark'] = $item['remark'];
 
-      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><a href='item-update.php?id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
+      echo "<tr><td>" . $item . "</td><td>" . $item_type . "</td><td>" . $cost . "</td><td>" . $cost_type . "</td><td>". $remark . "</td><td><a href='item-update.php?id=$item_id'>Edit</a></td><td><a href='deleteDB.php?item_id=$item_id'>Delete</a></td></tr>";
     }
     ?>
     </table>
