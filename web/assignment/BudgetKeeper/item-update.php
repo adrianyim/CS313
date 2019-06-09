@@ -15,6 +15,24 @@ $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
+if ($cost_type === "income")
+{
+    $income = "echo '<input type='radio' name='Cost-type' value='Income' checked>Income'";
+}
+else 
+{
+    $income = "echo '<input type='radio' name='Cost-type' value='Income'>Income'";
+}
+
+if ($cost_type === "expense")
+{
+    $expense = "echo '<input type='radio' name='Cost-type' value='expense' checked>Expense'";
+}
+else 
+{
+    $expense = "echo '<input type='radio' name='Cost-type' value='expense'>Expense'";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +67,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             </select></td></tr>
             <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $cost; ?>"></td>
             <td><label>Cost Type:</label>
-                <input type="radio" name="Cost-type" value="Income">Income
-                <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
+                <?php echo $income . $expense; ?>
+                </td></tr>
             <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
