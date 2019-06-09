@@ -17,16 +17,16 @@ $remark = htmlspecialchars($_GET['remark']);
 
 if ($cost_type === "income")
 {
-    $income = "echo '<input type='radio' name='Cost-type' value='Income' checked>Income'";
+    $income = "<input type='radio' name='Cost-type' value='Income' checked>Income";
 }
 else 
 {
-    $income = "echo '<input type='radio' name='Cost-type' value='Income'>Income'";
+    $income = "<input type='radio' name='Cost-type' value='Income'>Income";
 }
 
 if ($cost_type === "expense")
 {
-    $expense = "echo '<input type='radio' name='Cost-type' value='expense' checked>Expense'";
+    $expense = "<input type='radio' name='Cost-type' value='expense' checked>Expense";
 }
 else 
 {
