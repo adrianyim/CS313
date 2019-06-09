@@ -51,7 +51,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
 
 <div class="div-info">
-    <form>
+    <form method="post" action="login.php">
         <?php
         if ($badLogin)
         {
@@ -62,7 +62,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         <input type="text" name="username" placeholder="Username"><br><br>
         <input type="password" name="password" placeholder="Password"><br><br>
         <input type="submit" value="Log in">
-    </form method="post" >
+    </form>
     <br><br>
     <a href="createAccount.php">Create Account</a>
 </div>
