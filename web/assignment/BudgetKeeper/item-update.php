@@ -41,7 +41,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <table>
         <form method="get" action="updateDB.php">
             <?php echo "<input type='hidden' name='Item_id' value='$item_id'>"; ?>
-            <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $_SESSION['item']?>"></td><td>
+            <tr><td><input type="text" name="Item" placeholder="Item" value="<?php echo $_SESSION['item'];?>"></td><td>
             <select name="Item-type">
             <option value="<?php echo $item_type; ?>"><?php echo $item_type; ?></option>
             <option value="Salaries and wages">Salaries and wages</option>
@@ -53,7 +53,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <option value="Food">Food</option>
             <option value="Others">Others</option>
             </select></td></tr>
-            <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $cost; ?>"></td>
+            <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $_SESSION['cost']; ?>"></td>
             <td><label>Cost Type:</label>
                 <input type="radio" name="Cost-type" value="Income">Income
                 <input type="radio" name="Cost-type" value="Expense">Expense</td></tr>
