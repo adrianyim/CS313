@@ -67,8 +67,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             </select></td></tr>
             <tr><td><input type="text" name="Cost" placeholder="Cost" value="<?php echo $cost; ?>"></td>
             <td><label>Cost Type:</label>
-                <input type="radio" name="Cost-type" value="Income" <?php $income; ?>>Income
-                <input type="radio" name="Cost-type" value="Expense" <?php $expense; ?>>Expense</td></tr>
+                <input type="radio" name="Cost-type" value="Income" <?php echo $income; ?>>Income
+                <input type="radio" name="Cost-type" value="Expense" <?php echo $expense; ?>>Expense</td></tr>
             <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
