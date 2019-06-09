@@ -9,9 +9,9 @@ session_start();
 // $remark = htmlspecialchars($_GET['remark']);
 
 $item_id = htmlspecialchars($_GET['id']);
-$item = $_SESSION['item'];
+$item = htmlspecialchars($_GET['item']);
 $item_type = htmlspecialchars($_GET['item_type']);
-$cost = $_SESSION['cost'];
+$cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
 
