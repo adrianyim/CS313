@@ -30,7 +30,7 @@ if ($cost_type === "expense")
 }
 else 
 {
-    $expense = "echo '<input type='radio' name='Cost-type' value='expense'>Expense'";
+    $expense = "<input type='radio' name='Cost-type' value='expense'>Expense";
 }
 
 ?>
