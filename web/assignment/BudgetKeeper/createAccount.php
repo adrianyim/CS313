@@ -5,6 +5,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 
 if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
+    echo "Username or password is incorrected!!";
     header("Location: signUp.php");
     die();
 }
