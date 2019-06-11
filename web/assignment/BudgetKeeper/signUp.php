@@ -16,15 +16,14 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <form method="post" action="createAccount.php">
         <input type="text" name="Username" placeholder="Username"><br><br>
         <input type="password" name="Password" placeholder="Password"><br><br>
-        <input type="password" name="Repassword" placeholder="Re-Password"><br>
-        <?php
-        if ($_GET['Passwprd'] != $_GET['Repassword'])
+        <input type="password" name="Repassword" placeholder="Re-Password"><br><?php
+        if ($_GET['Password'] != $_GET['Repassword'] || !isset($_GET['Password']) || !isset($_GET['Repassword']))
         {
-            echo "Password does not match!!";
+            echo "Password incorrected!!";
         }
         else
         {
-            echo "Password does match!";
+            echo "Password corrected!";
         }
         ?><br>
         <label>Gender:</label>
