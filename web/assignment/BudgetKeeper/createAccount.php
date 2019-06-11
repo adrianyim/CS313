@@ -7,7 +7,7 @@ if (!isset($username) || $username == "" || !isset($password) || $password == ""
 {
     var_dump('Username or password or gender is incorrected!!');
     header("Location: signUp.php");
-    die();
+    exit;
 }
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -25,5 +25,5 @@ $statement->execute();
 var_dump('A new user is created!!');
 
 header("Location: login.php");
-die();
+exit;
 ?>
