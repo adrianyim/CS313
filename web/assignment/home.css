@@ -33,7 +33,7 @@ ul {
     text-decoration: none;
 }
 
-.assign_List a:hover {
+.links a:hover {
     background-color: gray;
     color: white;
     text-decoration: none;
