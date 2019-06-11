@@ -69,7 +69,7 @@ CREATE USER adrian_user WITH PASSWORD 'adrianyim';
 GRANT SELECT, INSERT< UPDATE ON login TO adrian_user;
 GRANT USAGE, SELECT ON login_id_seq TO adrian_user;
 
-SELECT * FROM items;
+SELECT * FROM login;
 
 DROP TABLE users;
 

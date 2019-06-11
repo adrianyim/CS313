@@ -13,8 +13,6 @@
         <input type="password" name="password" placeholder="Password"><br><br>
         <input type="submit" value="Create Account">
     </form>
-    <br><br>
-    <a href="createAccount.php">Create Account</a>
 </div>
 </body>
 </html>
