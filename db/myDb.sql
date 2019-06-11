@@ -61,10 +61,10 @@ INSERT INTO users (user_id, user_name, password, gender) VALUES (DEFAULT, 'adria
 
 -- Command my DB
 
-CREATE USER adrian_user WITH PASSWORD 'adrianyim';
+CREATE USER adrian WITH password 'adrianyim';
 
-GRANT SELECT, INSERT, UPDATE ON users TO adrian_user;
-GRANT USAGE, SELECT ON users_id_seq TO adrian_user;
+GRANT SELECT, INSERT, UPDATE ON users TO adrian;
+GRANT USAGE, SELECT ON users_id_seq TO adrian;
 
 SELECT * FROM users;
 

@@ -16,18 +16,18 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 	if ($result)
 	{
 		$row = $statement->fetch();
-        $hashedPasswordFromDB = $row['password'];
+        // $hashedPasswordFromDB = $row['password'];
         
-		if (password_verify($password, $hashedPasswordFromDB))
-		{
+		// if (password_verify($password, $hashedPasswordFromDB))
+		// {
 			$_SESSION['username'] = $username;
 			header("Location: budget-keeper.php");
-			die();
-		}
-		else
-		{
-			$badLogin = true;
-		}
+			exit;
+		// }
+		// else
+		// {
+		// 	$badLogin = true;
+		// }
 	}
 	else
 	{
