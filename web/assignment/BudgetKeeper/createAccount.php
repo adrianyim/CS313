@@ -13,8 +13,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 require('connectDB.php');
-$db = get_db();
-
+$db = getDB();
 
 $statement = $db->prepare('INSERT INTO users(user_id, user_name, password, gender) VALUES(DEFAULT, :username, :password, :gender);');
 $statement->bindValue(':username', $username);
