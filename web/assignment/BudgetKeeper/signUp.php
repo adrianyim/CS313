@@ -18,7 +18,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         <input type="password" name="Password" placeholder="Password"><br><br>
         <input type="password" name="Repassword" placeholder="Re-Password"><br>
         <?php
-        if ($_POST['Passwprd'] != $_POST['Repassword'])
+        if ($_GET['Passwprd'] != $_GET['Repassword'])
         {
             echo "Password does not match!!";
         }
