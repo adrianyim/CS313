@@ -16,7 +16,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <form method="post" action="createAccount.php">
         <input type="text" name="Username" placeholder="Username"><br><br>
         <input type="password" name="Password" placeholder="Password"><br><br>
-        <input type="password" name="Repassword" placeholder="Re-Password" onclick="<?php if ($_GET['Password'] != $_GET['Repassword'] || !isset($_GET['Password']) || !isset($_GET['Repassword']))
+        <input type="password" name="Repassword" placeholder="Re-Password" onchange="<?php if ($_GET['Password'] != $_GET['Repassword'] || !isset($_GET['Password']) || !isset($_GET['Repassword']))
         {
             echo "Password incorrected!!";
         }
