@@ -2,7 +2,8 @@
 
 CREATE TABLE users (
     user_id SERIAL NOT NULL CONSTRAINT users_pk PRIMARY KEY,
-    user_name VARCHAR(45) NOT NULL,
+    user_name VARCHAR(225) UNIQUE NOT NULL,
+    password VARCHAR(255), 
     gender VARCHAR(1) NOT NULL
 );
 
@@ -24,27 +25,21 @@ CREATE TABLE summary (
     item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
 );
 
-CREATE TABLE login (
-    id SERIAL PRIMARY KEY NOT NULL,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
-
 -- Insert section
 
-INSERT INTO users (user_id, user_name, gender)
-    VALUES  (DEFAULT, 'Tester 1', 'M'),
-            (DEFAULT, 'Tester 2', 'F'),
-            (DEFAULT, 'Adrian', 'M'),
-            (DEFAULT, 'Olivia', 'F'),
-            (DEFAULT, 'Quinton', 'M'),
-            (DEFAULT, 'Angus', 'M'),
-            (DEFAULT, 'Travis', 'M'),
-            (DEFAULT, 'Eva', 'F'),
-            (DEFAULT, 'Abigail', 'F'),
-            (DEFAULT, 'Hazel', 'F'),
-            (DEFAULT, 'Adrianna', 'F'),
-            (DEFAULT, 'Ariana', 'F');
+INSERT INTO users (user_id, user_name, password, gender)
+    VALUES  (DEFAULT, 'Tester 1', '1', 'M'),
+            (DEFAULT, 'Tester 2', '2', 'F'),
+            (DEFAULT, 'Adrian', '3', 'M'),
+            (DEFAULT, 'Olivia', '4', 'F'),
+            (DEFAULT, 'Quinton', '5', 'M'),
+            (DEFAULT, 'Angus', '6', 'M'),
+            (DEFAULT, 'Travis', '7', 'M'),
+            (DEFAULT, 'Eva', '8', 'F'),
+            (DEFAULT, 'Abigail', '9', 'F'),
+            (DEFAULT, 'Hazel', '10''F'),
+            (DEFAULT, 'Adrianna', '11', 'F'),
+            (DEFAULT, 'Ariana', '12', 'F');
 
 INSERT INTO items (item_id, item, item_type, cost, cost_type, remark)
     VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'expense', 'shoes'),
@@ -66,12 +61,12 @@ VALUES (DEFAULT, );
 
 CREATE USER adrian_user WITH PASSWORD 'adrianyim';
 
-GRANT SELECT, INSERT< UPDATE ON login TO adrian_user;
-GRANT USAGE, SELECT ON login_id_seq TO adrian_user;
+GRANT SELECT, INSERT, UPDATE ON users TO adrian_user;
+GRANT USAGE, SELECT ON users_id_seq TO adrian_user;
 
 SELECT * FROM users;
 
-DROP TABLE login;
+DROP TABLE users;
 
 UPDATE items 
 SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'

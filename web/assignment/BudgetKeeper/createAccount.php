@@ -1,24 +1,25 @@
 <?php
 $username = $_POST['username'];
 $password = $_POST['password'];
+$gender = $_POST['gender'];
 
-if (!isset($username) || $username == "" || !isset($password) || $password == "")
+if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
-    header("Location: login.php");
+    header("Location: signUp.php");
     die();
 }
 
 $username = htmlspecialchars($username);
-// $password = htmlspecialchars($password);
-
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+$gender = htmlspecialchars($gender);
 
 require("connectDB.php");
 $db = get_db();
 
-$statement = $db->prepare('INSERT INTO login(username, password) VALUES(:username, :password)');
+$statement = $db->prepare('INSERT INTO users (username, password, gender) VALUES(DEFAULT, :username, :password, :gender)');
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
+$statement->bindValue(':gender', $gender);
 $statement->execute();
 
 header("Location: login.php");
