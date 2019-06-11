@@ -7,12 +7,23 @@
     <title>Budget Keeper | Sign Up</title>
 </head>
 <body>
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
+?>
+
 <div class="div-info">
     <form method="post" action="createAccount.php">
         <input type="text" name="username" placeholder="Username"><br><br>
         <input type="password" name="password" placeholder="Password"><br><br>
+        <label>Gender:</label>
+        <input type="radio" name="Gender" value="M">Male
+        <input type="radio" name="Gender" value="F">Female
         <input type="submit" value="Create Account">
     </form>
 </div>
+
+<?php
+include $_SERVER['DOCUMENT_ROOT'].'/assignment/footer.php';
+?>
 </body>
 </html>

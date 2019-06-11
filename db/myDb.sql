@@ -69,9 +69,9 @@ CREATE USER adrian_user WITH PASSWORD 'adrianyim';
 GRANT SELECT, INSERT< UPDATE ON login TO adrian_user;
 GRANT USAGE, SELECT ON login_id_seq TO adrian_user;
 
-SELECT * FROM login;
+SELECT * FROM users;
 
-DROP TABLE users;
+DROP TABLE login;
 
 UPDATE items 
 SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'
