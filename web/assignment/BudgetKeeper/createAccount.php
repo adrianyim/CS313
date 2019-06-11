@@ -3,12 +3,12 @@ $username = htmlspecialchars($_POST['Username']);
 $password = htmlspecialchars($_POST['Password']);
 $gender = htmlspecialchars($_POST['Gender']);
 
-if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
-{
-    var_dump('Username or password or gender is incorrected!!');
-    header("Location: signUp.php");
-    exit;
-}
+// if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
+// {
+//     var_dump('Username or password or gender is incorrected!!');
+//     header("Location: signUp.php");
+//     exit;
+// }
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -24,6 +24,6 @@ var_dump('A new user is inserted!!');
 $statement->execute();
 var_dump('A new user is created!!');
 
-header("Location: login.php");
-exit;
+// header("Location: login.php");
+// exit;
 ?>
