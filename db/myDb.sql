@@ -57,6 +57,8 @@ INSERT INTO items (item_id, item, item_type, cost, cost_type, remark)
 INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
 VALUES (DEFAULT, );
 
+INSERT INTO users (user_id, user_name, password, gender) VALUES (DEFAULT, 'adrian', '123456', 'M');
+
 -- Command my DB
 
 CREATE USER adrian_user WITH PASSWORD 'adrianyim';
@@ -72,7 +74,7 @@ UPDATE items
 SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'
 WHERE item_id = 16;
 
-ALTER TABLE item
-    ADD item_id CONSTRAINT item_pk;
+ALTER TABLE users
+    ALTER COLUMN password NOT NULL;
 
 DELETE FROM users WHERE user_id IN (34-46);

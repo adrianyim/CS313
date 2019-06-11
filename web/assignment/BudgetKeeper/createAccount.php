@@ -17,7 +17,7 @@ require("connectDB.php");
 $db = get_db();
 
 
-$statement = $db->prepare('INSERT INTO users (user_id, username, password, gender) VALUES(DEFAULT, :username, :password, :gender)');
+$statement = $db->prepare('INSERT INTO users (user_id, user_name, password, gender) VALUES(DEFAULT, :username, :password, :gender)');
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->bindValue(':gender', $gender);
