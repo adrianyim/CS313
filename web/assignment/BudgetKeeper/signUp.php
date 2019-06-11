@@ -16,11 +16,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <form method="post" action="createAccount.php">
         <input type="text" name="username" placeholder="Username"><br><br>
         <input type="password" name="password" placeholder="Password"><br><br>
-        <input type="password" name="password" placeholder="Re-Password"><br><br>
+        <input type="password" name="repassword" placeholder="Re-Password"><br><br>
         <label>Gender:</label>
         <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female<br><br>
-        <input type="submit" value="Create Account"><button><a href="/assignment/BudgetKeeper/login.php">Back</a></button>
+        <input type="submit" value="Create Account"><button><a href="/assignment/BudgetKeeper/login.php" class="a">Back</a></button>
     </form>
 </div>
 
