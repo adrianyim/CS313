@@ -18,7 +18,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         <input type="password" name="password" placeholder="Password"><br><br>
         <label>Gender:</label>
         <input type="radio" name="Gender" value="M">Male
-        <input type="radio" name="Gender" value="F">Female
+        <input type="radio" name="Gender" value="F">Female<br><br>
         <input type="submit" value="Create Account">
     </form>
 </div>
