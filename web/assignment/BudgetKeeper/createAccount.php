@@ -1,7 +1,7 @@
 <?php
-$username = $_POST['Username'];
-$password = $_POST['Password'];
-$gender = $_POST['Gender'];
+$username = htmlspecialchars($_POST['Username']);
+$password = htmlspecialchars($_POST['Password']);
+$gender = htmlspecialchars($_POST['Gender']);
 
 if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
@@ -9,9 +9,7 @@ if (!isset($username) || $username == "" || !isset($password) || $password == ""
     die();
 }
 
-$username = htmlspecialchars($username);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-$gender = htmlspecialchars($gender);
 
 require("connectDB.php");
 $db = get_db();
