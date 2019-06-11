@@ -6,6 +6,7 @@ $gender = $_POST['Gender'];
 if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
     header("Location: signUp.php");
+    var_dump("<?php echo 'False'?>");
     die();
 }
 
@@ -21,6 +22,8 @@ $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->bindValue(':gender', $gender);
 $statement->execute();
+
+var_dump("<?php echo 'true'?>");
 
 header("Location: login.php");
 die();
