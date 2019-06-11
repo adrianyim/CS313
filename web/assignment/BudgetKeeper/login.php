@@ -4,8 +4,8 @@ $badLogin = false;
 
 if (isset($_POST['Username']) && isset($_POST['Password']))
 {
-	$username = $_POST['Username'];
-	$password = $_POST['Password'];
+	$username = htmlspecialchars($_POST['Username']);
+	$password = htmlspecialchars($_POST['Password']);
 
 	require("connectDB.php");
 	$db = get_db();
@@ -16,18 +16,18 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 	if ($result)
 	{
 		$row = $statement->fetch();
-        // $hashedPasswordFromDB = $row['password'];
+        $hashedPasswordFromDB = $row['password'];
         
-		// if (password_verify($password, $hashedPasswordFromDB))
-		// {
+		if (password_verify($password, $hashedPasswordFromDB))
+		{
 			$_SESSION['username'] = $username;
 			header("Location: budget-keeper.php");
 			exit;
-		// }
-		// else
-		// {
-		// 	$badLogin = true;
-		// }
+		}
+		else
+		{
+			$badLogin = true;
+		}
 	}
 	else
 	{
