@@ -2,21 +2,21 @@
 session_start();
 $badLogin = false;
 
-if (isset($_POST['username']) && isset($_POST['password']))
+if (isset($_POST['Username']) && isset($_POST['Password']))
 {
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$username = $_POST['Username'];
+	$password = $_POST['Password'];
 
 	require("connectDB.php");
 	$db = get_db();
-	$statement = $db->prepare('SELECT password FROM login WHERE username=:username');
+	$statement = $db->prepare('SELECT password FROM users WHERE user_name=:username');
 	$statement->bindValue(':username', $username);
     $result = $statement->execute();
     
 	if ($result)
 	{
 		$row = $statement->fetch();
-        $hashedPasswordFromDB = $row['password'];
+        $hashedPasswordFromDB = $row['Password'];
         
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
@@ -59,8 +59,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         }
         ?>
 
-        <input type="text" name="username" placeholder="Username"><br><br>
-        <input type="password" name="password" placeholder="Password"><br><br>
+        <input type="text" name="Username" placeholder="Username"><br><br>
+        <input type="password" name="Password" placeholder="Password"><br><br>
         <input type="submit" value="Log in">
     </form>
     <br><br>
