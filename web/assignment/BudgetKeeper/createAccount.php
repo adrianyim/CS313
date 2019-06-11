@@ -5,7 +5,7 @@ $gender = htmlspecialchars($_POST['Gender']);
 
 if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
-    echo "Username or password is incorrected!!";
+    var_dump('Username or password is incorrected!!');
     header("Location: signUp.php");
     die();
 }
@@ -20,8 +20,9 @@ $statement = $db->prepare('INSERT INTO users (user_id, user_name, password, gend
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->bindValue(':gender', $gender);
+var_dump('A new user is inserted!!');
 $statement->execute();
-
+var_dump('A new user is created!!');
 
 header("Location: login.php");
 die();
