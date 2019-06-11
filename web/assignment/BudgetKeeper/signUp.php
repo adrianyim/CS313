@@ -20,7 +20,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         <label>Gender:</label>
         <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female<br><br>
-        <input type="submit" value="Create Account"><button><a href="/assignment/BudgetKeeper/login.php" class="a">Back</a></button>
+        <input type="submit" value="Create Account"><button class="button"><a href="/assignment/BudgetKeeper/login.php">Back</a></button>
     </form>
 </div>
 
