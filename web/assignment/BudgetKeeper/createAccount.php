@@ -1,7 +1,7 @@
 <?php
-$username = $_POST['username'];
-$password = $_POST['password'];
-$gender = $_POST['gender'];
+$username = $_POST['Username'];
+$password = $_POST['Password'];
+$gender = $_POST['Gender'];
 
 if (!isset($username) || $username == "" || !isset($password) || $password == "" || !isset($gender) || $gender == "")
 {
