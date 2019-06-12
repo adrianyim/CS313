@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 ?>
 
