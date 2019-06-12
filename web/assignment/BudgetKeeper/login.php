@@ -52,7 +52,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
 
 <div class="div-info">
-	<?php if ($badLogin){echo "<label>Incorrect username or password!</label>";}?>
+	<?php if ($badLogin){echo "<label>Incorrect username or password!</label><br><br>";}?>
     <form method="post" action="login.php">
         <input type="text" name="Username" placeholder="Username"><br><br>
         <input type="password" name="Password" placeholder="Password"><br><br>
