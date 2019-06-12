@@ -1,7 +1,6 @@
 <?php
 session_start();
-$usernameError = false;
-$passwordError = false;
+$badLogin = false;
 
 if (isset($_POST['Username']) && isset($_POST['Password']))
 {
@@ -27,12 +26,12 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 		}
 		else
 		{
-			$passwordError = true;
+			$badLogin = true;
 		}
 	}
 	else
 	{
-		$usernameError = true;
+		$badLogin = true;
 	}
 }
 
@@ -53,9 +52,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
 
 <div class="div-info">
+	<?php if ($badLogin){echo "<label>Incorrect username or password!</label><br><br>";}?>
     <form method="post" action="login.php">
-        <input type="text" name="Username" placeholder="Username"><?php if ($usernameError){echo "<label>Incorrect username!</label>";}?><br><br>
-        <input type="password" name="Password" placeholder="Password"><?php if ($passwordError){echo "<label>Incorrect password!</label>";}?><br><br>
+        <input type="text" name="Username" placeholder="Username"><br><br>
+        <input type="password" name="Password" placeholder="Password"><br><br>
         <input type="submit" value="Log in">
     </form>
     <br><br>
