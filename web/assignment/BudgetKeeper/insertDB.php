@@ -11,7 +11,7 @@ require('connectDB.php');
 $db = getDB();
 
 //Insert items table
-$statement = $db->prepare('INSERT INTO items(item_id, item, item_type, cost, cost_type, remark) VALUES (DEFAULT, :item, :item_type, :cost, :cost_type, :remark);');
+$statement = $db->prepare('INSERT INTO items(item_id, item, item_type, cost, cost_type, remark, date) VALUES (DEFAULT, :item, :item_type, :cost, :cost_type, :remark, current_timestamp);');
 
 $statement->bindValue(':item', $item);
 $statement->bindValue(':item_type', $item_type);
