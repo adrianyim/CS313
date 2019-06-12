@@ -8,7 +8,7 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 	$password = htmlspecialchars($_POST['Password']);
 
 	require("connectDB.php");
-	$db = get_db();
+	$db = getDB();
 	$statement = $db->prepare('SELECT password FROM users WHERE user_name=:username');
 	$statement->bindValue(':username', $username);
     $result = $statement->execute();
