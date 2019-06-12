@@ -21,7 +21,7 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
 			$_SESSION['username'] = $username;
-			header("Location: budget-keeper.php");
+			header("Location: budget-keeper.php?");
 			exit;
 		}
 		else

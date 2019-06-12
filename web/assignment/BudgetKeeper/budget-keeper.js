@@ -13,3 +13,7 @@ function chPw() {
         }
     });
 }
+
+function total() {
+    
+}

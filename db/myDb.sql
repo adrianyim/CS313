@@ -66,7 +66,7 @@ CREATE USER adrian WITH password 'adrianyim';
 GRANT SELECT, INSERT, UPDATE ON users TO adrian;
 GRANT USAGE, SELECT ON users_id_seq TO adrian;
 
-SELECT * FROM users;
+SELECT * FROM summary s INNER JOIN users u ON u.user_id = s.user_id INNER JOIN items i ON i.item_id = s.item_id;
 
 DROP TABLE users;
 
