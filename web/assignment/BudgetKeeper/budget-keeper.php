@@ -70,11 +70,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 
   
     <!-- Show items table -->
-    <table><tr><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th></tr>
+    <table><tr><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th><th>Date</th></tr>
     <?php
     foreach ($items as $item)
     {
-      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td><label class='links'><a href='item-update.php?id=" . $item['item_id'] . "&item=" . $item['item'] . "&item_type=" . $item['item_type'] . "&cost=" . $item['cost'] . "&cost_type=" . $item['cost_type'] . "&remark=" . $item['remark'] . "'>Edit</a></label></td><td><label class='links'><a href='deleteDB.php?item_id=" . $item['item_id'] . "'>Delete</a></label></td></tr>";
+      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td>". $item['date'] . "</td><td><label class='links'><a href='item-update.php?id=" . $item['item_id'] . "&item=" . $item['item'] . "&item_type=" . $item['item_type'] . "&cost=" . $item['cost'] . "&cost_type=" . $item['cost_type'] . "&remark=" . $item['remark'] . "'>Edit</a></label></td><td><label class='links'><a href='deleteDB.php?item_id=" . $item['item_id'] . "'>Delete</a></label></td></tr>";
     }
     ?>
     </table>

@@ -13,13 +13,14 @@ CREATE TABLE items (
     item_type VARCHAR(45) NOT NULL,
     cost DECIMAL NOT NULL,
     cost_type VARCHAR(45) NOT NULL,
-    remark VARCHAR(45)
+    remark VARCHAR(45),
+    date date NOT NULL
 );
 
 CREATE TABLE summary (
     id SERIAL NOT NULL CONSTRAINT summary_pk PRIMARY Key,
     total DECIMAL NOT NULL,
-    date_ date NOT NULL,
+    date date NOT NULL,
     date_type VARCHAR(45) NOT NULL,
     user_id INT NOT NULL CONSTRAINT summary_fk REFERENCES users(user_id),
     item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
@@ -41,18 +42,18 @@ INSERT INTO users (user_id, user_name, password, gender)
             (DEFAULT, 'Adrianna', '11', 'F'),
             (DEFAULT, 'Ariana', '12', 'F');
 
-INSERT INTO items (item_id, item, item_type, cost, cost_type, remark)
-    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'expense', 'shoes'),
-            (DEFAULT, 'BBQ', 'Food', 11.02, 'expense', ''),
-            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'income', 'May'),
-            (DEFAULT, 'Walmart', 'Food', 30.51, 'expense', ''),
-            (DEFAULT, 'phone bill', 'Utility expenses', 22.39, 'expense', ''),
-            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'expense', 'BOM'),
-            (DEFAULT, 'pizza', 'Food', 10.59, 'expense', 'BYUI crossroad'),
-            (DEFAULT, 'burger king', 'Food', 13.76, 'expense', ''),
-            (DEFAULT, 'gas', 'Utility expenses', 20.11, 'expense', ''),
-            (DEFAULT, 'tithing', 'Others', 23.2, 'expense', 'May'),
-            (DEFAULT, 'Rent', 'Utility expenses', 573, 'income', '??');
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date)
+    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'expense', 'shoes', current_timestamp),
+            (DEFAULT, 'BBQ', 'Food', 11.02, 'expense', '', '2019-06-01'),
+            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'income', 'May', '2019-06-01'),
+            (DEFAULT, 'Walmart', 'Food', 30.51, 'expense', '', '2019-06-03'),
+            (DEFAULT, 'phone bill', 'Utility expenses', 22.39, 'expense', '', '2019-06-004'),
+            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'expense', 'BOM', current_timestamp),
+            (DEFAULT, 'pizza', 'Food', 10.59, 'expense', 'BYUI crossroad', '2019-06-004'),
+            (DEFAULT, 'burger king', 'Food', 13.76, 'expense', '', '2019-06-08'),
+            (DEFAULT, 'gas', 'Utility expenses', 20.11, 'expense', '', '2019-06-008'),
+            (DEFAULT, 'tithing', 'Others', 23.2, 'expense', 'May', '2019-06-01'),
+            (DEFAULT, 'Rent', 'Utility expenses', 573, 'income', '??', current_timestamp);
 
 INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
 VALUES (DEFAULT, );
@@ -68,7 +69,7 @@ GRANT USAGE, SELECT ON users_id_seq TO adrian;
 
 SELECT * FROM summary s INNER JOIN users u ON u.user_id = s.user_id INNER JOIN items i ON i.item_id = s.item_id;
 
-DROP TABLE users;
+DROP TABLE items;
 
 UPDATE items 
 SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'
@@ -80,3 +81,7 @@ ALTER TABLE users
 DELETE FROM users WHERE user_id IN (34-46);
 
 DELETE FROM users WHERE user_name="adrian";
+
+-- Set timezone to mountain standard time
+SET TIMEZONE='MST';
+SELECT NOW();
