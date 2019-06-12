@@ -78,3 +78,5 @@ ALTER TABLE users
     ALTER COLUMN password NOT NULL;
 
 DELETE FROM users WHERE user_id IN (34-46);
+
+DELETE FROM users WHERE user_name="adrian";

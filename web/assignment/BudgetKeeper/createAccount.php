@@ -18,9 +18,7 @@ $statement = $db->prepare('INSERT INTO users(user_id, user_name, password, gende
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->bindValue(':gender', $gender);
-var_dump('A new user is inserted!!');
 $statement->execute();
-var_dump('A new user is created!!');
 
 header("Location: login.php");
 exit;

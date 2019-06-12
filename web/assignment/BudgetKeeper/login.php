@@ -34,6 +34,7 @@ if (isset($_POST['Username']) && isset($_POST['Password']))
 		$badLogin = true;
 	}
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -51,14 +52,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
 
 <div class="div-info">
+	<?php if ($badLogin){echo "<label>Incorrect username or password!</label>";}?>
     <form method="post" action="login.php">
-        <?php
-        if ($badLogin)
-        {
-            echo "Incorrect username or password!";
-        }
-        ?>
-
         <input type="text" name="Username" placeholder="Username"><br><br>
         <input type="password" name="Password" placeholder="Password"><br><br>
         <input type="submit" value="Log in">
