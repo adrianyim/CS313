@@ -13,6 +13,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
             echo "Mountain Time " . date("l, m-d-Y"); 
             ?>
         </span>
+        <span><label>User: <?php echo $_SESSION['username']; ?></label></span>
     </div>
     <hr>
     <script src="home.js"></script>
