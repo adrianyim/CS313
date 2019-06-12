@@ -59,14 +59,14 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     </form> -->
 
     <!-- Show users table -->
-    <table><tr><th>User Name</th><th>Gender</th></tr>
+    <!-- <table><tr><th>User Name</th><th>Gender</th></tr>
       <?php
-      foreach ($users as $user)
-      {
-      echo "<tr><td>" . $user['user_name'] . "</td><td>" . $user['gender'] . "</td></tr>";
-      }
+      // foreach ($users as $user)
+      // {
+      // echo "<tr><td>" . $user['user_name'] . "</td><td>" . $user['gender'] . "</td></tr>";
+      // }
       ?>
-    </table>
+    </table> -->
 
   
     <!-- Show items table -->
