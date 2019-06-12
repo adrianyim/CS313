@@ -43,17 +43,17 @@ INSERT INTO users (user_id, user_name, password, gender)
             (DEFAULT, 'Ariana', '12', 'F');
 
 INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date)
-    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'expense', 'shoes', current_timestamp),
-            (DEFAULT, 'BBQ', 'Food', 11.02, 'expense', '', '2019-06-01'),
-            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'income', 'May', '2019-06-01'),
-            (DEFAULT, 'Walmart', 'Food', 30.51, 'expense', '', '2019-06-03'),
-            (DEFAULT, 'phone bill', 'Utility expenses', 22.39, 'expense', '', '2019-06-004'),
-            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'expense', 'BOM', current_timestamp),
-            (DEFAULT, 'pizza', 'Food', 10.59, 'expense', 'BYUI crossroad', '2019-06-004'),
-            (DEFAULT, 'burger king', 'Food', 13.76, 'expense', '', '2019-06-08'),
-            (DEFAULT, 'gas', 'Utility expenses', 20.11, 'expense', '', '2019-06-008'),
-            (DEFAULT, 'tithing', 'Others', 23.2, 'expense', 'May', '2019-06-01'),
-            (DEFAULT, 'Rent', 'Utility expenses', 573, 'income', '??', current_timestamp);
+    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp),
+            (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01'),
+            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01'),
+            (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '2019-06-03'),
+            (DEFAULT, 'phone bill', 'Utility Expenses', 22.39, 'Expense', '', '2019-06-004'),
+            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'Expense', 'BOM', current_timestamp),
+            (DEFAULT, 'pizza', 'Food', 10.59, 'Expense', 'BYUI crossroad', '2019-06-004'),
+            (DEFAULT, 'burger king', 'Food', 13.76, 'Expense', '', '2019-06-08'),
+            (DEFAULT, 'gas', 'Utility Expenses', 20.11, 'Expense', '', '2019-06-008'),
+            (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '2019-06-01'),
+            (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', current_timestamp);
 
 INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
 VALUES (DEFAULT, );
@@ -72,7 +72,7 @@ SELECT * FROM summary s INNER JOIN users u ON u.user_id = s.user_id INNER JOIN i
 DROP TABLE items;
 
 UPDATE items 
-SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='income', remark='Testing the updates'
+SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='Income', remark='Testing the updates'
 WHERE item_id = 16;
 
 ALTER TABLE users
