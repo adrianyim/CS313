@@ -22,7 +22,7 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark FR
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
-<label>User: <?php echo $_SESSION['username']; ?></label><span><label class="links"><a href="login.php">Log Out</a></label></span>
+<label>User: <?php echo $_SESSION['username']; ?></label><label class="links"><a href="login.php"> Log Out</a></label>
   <div class="div-info">
     <div>
       <table class="table-insert">
