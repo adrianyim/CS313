@@ -7,7 +7,7 @@ $cost_type = htmlspecialchars($_POST['Cost-type']);
 $remark = htmlspecialchars($_POST['Remark']);
 $username = htmlspecialchars($_SESSION['username']);
 
-if ($item !="" || $item_type != "" || $cost != "" || $cost_type != "")
+if ($item =="" || $item_type == "" || $cost == "" || $cost_type == "")
 {
     echo "Missing data!!";
 }
