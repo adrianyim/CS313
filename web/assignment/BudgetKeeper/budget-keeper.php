@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username = htmlspecialchars($_SESSION['username']);
-
+var_dump('working');
 require('connectDB.php');
 $db = getDB();
 

@@ -84,4 +84,4 @@ DELETE FROM users WHERE user_name="adrian";
 SET TIMEZONE='MST';
 SELECT NOW();
 
-SELECT item_id, item, item_type, cost, cost_type, remark, date, user_name FROM items i LEFT OUTER JOIN users u ON i.user_name=u.user_name WHERE u.user_name='adrian';
+SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON i.user_name=u.user_name WHERE u.user_name='adrian';
