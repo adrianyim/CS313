@@ -39,8 +39,7 @@ CREATE TABLE total (
 INSERT INTO users (user_id, user_name, password, gender)
     VALUES  (DEFAULT, 'admin', 'admin', 'M');
 
-INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name)
-    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp, 'adrian');
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp, 'adrian');
     ,
             (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01'),
             (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01'),
