@@ -40,17 +40,17 @@ INSERT INTO users (user_id, user_name, password, gender)
     VALUES  (DEFAULT, 'admin', 'admin', 'M');
 
 INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) 
-    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', '2019-05-29', 'adrian'),
-            (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01', 'tester'),
-            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01', 'adrian'),
-            (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '2019-06-03', 'adrian'),
-            (DEFAULT, 'phone bill', 'Utility Expenses', 22.39, 'Expense', '', '2019-05-29', 'tester'),
-            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'Expense', 'BOM', '2019-05-29', 'adrian'),
-            (DEFAULT, 'pizza', 'Food', 10.59, 'Expense', 'BYUI crossroad', '2019-06-04', 'tester'),
-            (DEFAULT, 'burger king', 'Food', 13.76, 'Expense', '', '2019-06-08', 'adrian'),
-            (DEFAULT, 'gas', 'Utility Expenses', 20.11, 'Expense', '', '2019-06-08', 'adrian'),
-            (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '2019-06-01', 'tester'),
-            (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', '2019-05-28', 'adrian');
+    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', '05-29-2019', 'adrian'),
+            (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '06-01-2019', 'tester'),
+            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '06-01-2019', 'adrian'),
+            (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '06-03-2019', 'adrian'),
+            (DEFAULT, 'phone bill', 'Utility Expenses', 22.39, 'Expense', '', '05-29-2019', 'tester'),
+            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'Expense', 'BOM', '05-29-2019', 'adrian'),
+            (DEFAULT, 'pizza', 'Food', 10.59, 'Expense', 'BYUI crossroad', '06-04-2019', 'tester'),
+            (DEFAULT, 'burger king', 'Food', 13.76, 'Expense', '', '06-08-2019', 'adrian'),
+            (DEFAULT, 'gas', 'Utility Expenses', 20.11, 'Expense', '', '06-08-2019', 'adrian'),
+            (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '06-01-2019', 'tester'),
+            (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', '05-28-2019', 'adrian');
 
 INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) 
     VALUES (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', current_timestamp, 'adrian');
@@ -83,8 +83,11 @@ DELETE FROM users WHERE user_id IN (34-46);
 
 DELETE FROM users WHERE user_name="adrian";
 
--- Set timezone to mountain standard time
+-- Set timezone/date style to mountain standard time
 SET TIMEZONE='MST';
+SET DATESTYLE TO SQL,US;
+SET DATESTYLE TO "SQL, US";
 SELECT NOW();
+SHOW datestyle;
 
 SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON i.user_name=u.user_name WHERE u.user_name='adrian';
