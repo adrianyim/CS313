@@ -64,7 +64,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
                 <input type="radio" name="Cost-type" value="Income" <?php echo $income; ?>>Income
                 <input type="radio" name="Cost-type" value="Expense" <?php echo $expense; ?>>Expense</td></tr>
             <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td>
-            <td><input type="input" name="Date" placeholder="yy/mm/dd" value="<?php echo $date; ?>"></td></tr>
+            <td><input type="input" name="Date" placeholder="YYYY/MM/DD" value="<?php echo $date; ?>"></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
     </table>
