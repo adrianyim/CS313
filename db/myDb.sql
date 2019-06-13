@@ -15,7 +15,7 @@ CREATE TABLE items (
     cost_type VARCHAR(45) NOT NULL,
     remark VARCHAR(45),
     date date NOT NULL,
-    user_name VARCHAR(225) NOT NULL CONSTRAINT items_fk REFERENCES users(user_name)
+    user_name VARCHAR(225) NOT NULL CONSTRAINT items_fk REFERENCES users(user_name),
 );
 
 CREATE TABLE cost (

@@ -1,11 +1,9 @@
 <?php
 session_start();
-// $username = htmlspecialchars($_SESSION['username']);
 require('connectDB.php');
 $db = getDB();
 
 //DB commands
-// $users = $db->query('SELECT user_id, user_name, gender FROM users');
 $statement = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON i.user_name=u.user_name WHERE u.user_name=:username ORDER BY date');
 $statement->bindValue(':username', $_SESSION['username']);
 $statement->execute();
@@ -50,25 +48,6 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
         </form>      
       </table>
     </div>
-
-    <!-- <form method="get" id="showform" action="">
-      <input type="radio" name="filter" value="Income">
-      <input type="radio" name="filter" value="Income">Income
-      <input type="radio" name="filter" value="Expense">Expense<br>
-      <input type="submit" value="Show">
-    </form> -->
-
-    <!-- Show users table -->
-    <!-- <table><tr><th>User Name</th><th>Gender</th></tr>
-      <?php
-      // foreach ($users as $user)
-      // {
-      // echo "<tr><td>" . $user['user_name'] . "</td><td>" . $user['gender'] . "</td></tr>";
-      // }
-      ?>
-    </table> -->
-
-  
     <!-- Show items table -->
     <table><tr><th>Item</th><th>Item Type</th><th>Cost</th><th>Cost Type</th><th>Remark</th><th>Date</th></tr>
     <?php
