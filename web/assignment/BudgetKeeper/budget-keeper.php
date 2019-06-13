@@ -6,9 +6,9 @@ $db = getDB();
 
 //DB commands
 // $users = $db->query('SELECT user_id, user_name, gender FROM users');
-$statement = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON u.user_name=":username"');
+$statement = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON u.user_name=":username"');
 $statement->bindValue(':username', $username);
-$statement->execute();
+// $statement->execute();
 $items = $statement->fetch();
 ?>
 
