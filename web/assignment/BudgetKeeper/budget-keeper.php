@@ -1,12 +1,15 @@
 <?php
 session_start();
+$username = htmlspecialchars($_SESSION['username']);
 
 require('connectDB.php');
 $db = getDB();
 
 //DB commands
-$users = $db->query('SELECT user_id, user_name, gender FROM users');
-$items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark, date FROM items');
+// $users = $db->query('SELECT user_id, user_name, gender FROM users');
+$items = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, user_name FROM items WHERE users.user_name=":username"');
+$items->bindValue(':username', $username);
+$items->execute();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ $items = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark, d
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
-<label>User: <?php echo $_SESSION['username']; ?></label><label class="links"><a href="login.php"> Log Out</a></label>
+<label>User: <?php echo htmlspecialchars($_SESSION['username']); ?></label><label class="links"><a href="login.php"> Log Out</a></label>
   <div class="div-info">
     <div>
       <table class="table-insert">

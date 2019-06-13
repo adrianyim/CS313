@@ -1,10 +1,10 @@
 -- Create section
 
 CREATE TABLE users (
-    user_id SERIAL NOT NULL CONSTRAINT users_pk PRIMARY KEY,
-    user_name VARCHAR(225) UNIQUE NOT NULL,
+    user_id SERIAL NOT NULL,
+    user_name VARCHAR(225) UNIQUE NOT NULL CONSTRAINT users_pk PRIMARY KEY,
     password VARCHAR(255) NOT NULL, 
-    gender VARCHAR(1) NOT NULL
+    gender VARCHAR(1)
 );
 
 CREATE TABLE items (
@@ -14,11 +14,12 @@ CREATE TABLE items (
     cost DECIMAL NOT NULL,
     cost_type VARCHAR(45) NOT NULL,
     remark VARCHAR(45),
-    date date NOT NULL
+    date date NOT NULL,
+    user_name VARCHAR(225) UNIQUE NOT NULL CONSTRAINT items_fk REFERENCES users(user_name)
 );
 
 CREATE TABLE totals (
-    id SERIAL NOT NULL CONSTRAINT summary_pk PRIMARY Key,
+    id SERIAL NOT NULL CONSTRAINT summary_pk PRIMARY KEY,
     total DECIMAL NOT NULL,
     user_id INT NOT NULL CONSTRAINT summary_fk REFERENCES users(user_id),
     item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
@@ -27,18 +28,7 @@ CREATE TABLE totals (
 -- Insert section
 
 INSERT INTO users (user_id, user_name, password, gender)
-    VALUES  (DEFAULT, 'Tester 1', '1', 'M'),
-            (DEFAULT, 'Tester 2', '2', 'F'),
-            (DEFAULT, 'Adrian', '3', 'M'),
-            (DEFAULT, 'Olivia', '4', 'F'),
-            (DEFAULT, 'Quinton', '5', 'M'),
-            (DEFAULT, 'Angus', '6', 'M'),
-            (DEFAULT, 'Travis', '7', 'M'),
-            (DEFAULT, 'Eva', '8', 'F'),
-            (DEFAULT, 'Abigail', '9', 'F'),
-            (DEFAULT, 'Hazel', '10''F'),
-            (DEFAULT, 'Adrianna', '11', 'F'),
-            (DEFAULT, 'Ariana', '12', 'F');
+    VALUES  (DEFAULT, 'admin', 'admin', 'M');
 
 INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date)
     VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp),
@@ -67,7 +57,7 @@ GRANT USAGE, SELECT ON users_id_seq TO adrian;
 
 SELECT * FROM summary s INNER JOIN users u ON u.user_id = s.user_id INNER JOIN items i ON i.item_id = s.item_id;
 
-DROP TABLE items;
+DROP TABLE users, items;
 
 UPDATE items 
 SET item = 'Update item1', item_type='Changed item type', cost=9090, cost_type='Income', remark='Testing the updates'
