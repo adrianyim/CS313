@@ -11,7 +11,7 @@ require('connectDB.php');
 $db = getDB();
 
 //Update items table
-$statement = $db->prepare('UPDATE items SET item=:item, item_type=:item_type, cost=:cost, cost_type=:cost_type, remark=:remark, date=:date WHERE item_id=:id;');
+$statement = $db->prepare('UPDATE items SET item=:item, item_type=:item_type, cost=:cost, cost_type=:cost_type, remark=:remark, date=to_date(:date, "MM-DD-YYYY") WHERE item_id=:id;');
 $statement->bindValue(':id', $item_id);
 $statement->bindValue(':item', $item);
 $statement->bindValue(':item_type', $item_type);
