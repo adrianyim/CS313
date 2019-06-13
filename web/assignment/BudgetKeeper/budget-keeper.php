@@ -6,7 +6,7 @@ $db = getDB();
 
 //DB commands
 // $users = $db->query('SELECT user_id, user_name, gender FROM users');
-$statement = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON i.user_name=u.user_name WHERE u.user_name=:username');
+$statement = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, to_date(date, "MM/DD/YYY"), i.user_name FROM items i LEFT JOIN users u ON i.user_name=u.user_name WHERE u.user_name=:username');
 $statement->bindValue(':username', $_SESSION['username']);
 $statement->execute();
 // $items = $statement->fetch();
