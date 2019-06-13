@@ -9,7 +9,9 @@ $db = getDB();
 $statement = $db->query('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON u.user_name=":username"');
 $statement->bindValue(':username', $username);
 // $statement->execute();
+var_dump('working');
 $items = $statement->fetch();
+var_dump('working2');
 ?>
 
 <!DOCTYPE html>
