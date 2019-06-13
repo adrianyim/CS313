@@ -7,7 +7,7 @@ $db = getDB();
 
 //DB commands
 // $users = $db->query('SELECT user_id, user_name, gender FROM users');
-$items = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, user_name FROM items WHERE users.user_name=":username"');
+$items = $db->prepare('SELECT item_id, item, item_type, cost, cost_type, remark, date, i.user_name FROM items i LEFT JOIN users u ON u.user_name=":username"');
 $items->bindValue(':username', $username);
 $items->execute();
 ?>

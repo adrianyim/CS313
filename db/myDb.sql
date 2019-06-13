@@ -15,14 +15,23 @@ CREATE TABLE items (
     cost_type VARCHAR(45) NOT NULL,
     remark VARCHAR(45),
     date date NOT NULL,
-    user_name VARCHAR(225) UNIQUE NOT NULL CONSTRAINT items_fk REFERENCES users(user_name)
+    user_name VARCHAR(225) NOT NULL CONSTRAINT items_fk REFERENCES users(user_name)
 );
 
-CREATE TABLE totals (
-    id SERIAL NOT NULL CONSTRAINT summary_pk PRIMARY KEY,
-    total DECIMAL NOT NULL,
-    user_id INT NOT NULL CONSTRAINT summary_fk REFERENCES users(user_id),
-    item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
+CREATE TABLE cost (
+    cost_id SERIAL NOT NULL CONSTRAINT cost_pk PRIMARY KEY,
+    cost DECIMAL NOT NULL,
+    cost_type VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE date (
+    date_id SERIAL NOT NULL CONSTRAINT date_pk PRIMARY KEY,
+    date date NOT NULL
+);
+
+CREATE TABLE total (
+    id SERIAL NOT NULL CONSTRAINT total_pk PRIMARY KEY,
+    total DECIMAL NOT NULL
 );
 
 -- Insert section
@@ -30,8 +39,9 @@ CREATE TABLE totals (
 INSERT INTO users (user_id, user_name, password, gender)
     VALUES  (DEFAULT, 'admin', 'admin', 'M');
 
-INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date)
-    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp),
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name)
+    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp, 'adrian');
+    ,
             (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01'),
             (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01'),
             (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '2019-06-03'),
@@ -73,3 +83,5 @@ DELETE FROM users WHERE user_name="adrian";
 -- Set timezone to mountain standard time
 SET TIMEZONE='MST';
 SELECT NOW();
+
+SELECT item_id, item, item_type, cost, cost_type, remark, date, user_name FROM items i LEFT OUTER JOIN users u ON i.user_name=u.user_name WHERE u.user_name='adrian';
