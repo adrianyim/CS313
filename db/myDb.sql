@@ -17,11 +17,9 @@ CREATE TABLE items (
     date date NOT NULL
 );
 
-CREATE TABLE summary (
+CREATE TABLE totals (
     id SERIAL NOT NULL CONSTRAINT summary_pk PRIMARY Key,
     total DECIMAL NOT NULL,
-    date date NOT NULL,
-    date_type VARCHAR(45) NOT NULL,
     user_id INT NOT NULL CONSTRAINT summary_fk REFERENCES users(user_id),
     item_id INT NOT NULL CONSTRAINT summary_fk_02 REFERENCES items(item_id)
 );
@@ -55,8 +53,8 @@ INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date)
             (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '2019-06-01'),
             (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', current_timestamp);
 
-INSERT INTO summary (id, total, date_, date_type, user_id, item_id)
-VALUES (DEFAULT, );
+INSERT INTO totals (id, total, user_id, item_id)
+VALUES (DEFAULT, 10, (SELECT user_id FROM users WHERE user_name='tester'), (SELECT item_id FROM items WHERE item_type='food'));
 
 INSERT INTO users (user_id, user_name, password, gender) VALUES (DEFAULT, 'adrian', '123456', 'M');
 
