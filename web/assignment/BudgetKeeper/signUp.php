@@ -1,13 +1,3 @@
-<?php
-
-    if (isset($_POST['Repassword']))
-    {
-        $pw1 = $_POST['Password'];
-        $pw2 = $_POST['Repassword'];
-        echo $pw1 . $pw2;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +16,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <form method="post" action="createAccount.php">
         <input type="text" name="Username" placeholder="Username"><br><br>
         <input type="password" name="Password" placeholder="Password"><br><br>
-        <input type="password" name="Repassword" placeholder="Re-Password" onchange="ckPW()"><br><br>
+        <input type="password" name="Repassword" placeholder="Re-Password"><br><br>
         <label>Gender:</label>
         <input type="radio" name="Gender" value="M">Male
         <input type="radio" name="Gender" value="F">Female<br><br>
