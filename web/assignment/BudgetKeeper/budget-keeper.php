@@ -74,7 +74,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
     <?php
     foreach ($statement as $item)
     {
-      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td>". $item['date'] . "</td><td><label class='links'><a href='item-update.php?id=" . $item['item_id'] . "&item=" . $item['item'] . "&item_type=" . $item['item_type'] . "&cost=" . $item['cost'] . "&cost_type=" . $item['cost_type'] . "&remark=" . $item['remark'] . "'>Edit</a></label></td><td><label class='links'><a href='deleteDB.php?item_id=" . $item['item_id'] . "'>Delete</a></label></td></tr>";
+      echo "<tr><td>" . $item['item'] . "</td><td>" . $item['item_type'] . "</td><td>" . $item['cost'] . "</td><td>" . $item['cost_type'] . "</td><td>". $item['remark'] . "</td><td>". $item['date'] . "</td><td><label class='links'><a href='item-update.php?id=" . $item['item_id'] . "&item=" . $item['item'] . "&item_type=" . $item['item_type'] . "&cost=" . $item['cost'] . "&cost_type=" . $item['cost_type'] . "&remark=" . $item['remark'] . "&date=" . $item['date'] . "'>Edit</a></label></td><td><label class='links'><a href='deleteDB.php?item_id=" . $item['item_id'] . "'>Delete</a></label></td></tr>";
     }
     ?>
     </table>

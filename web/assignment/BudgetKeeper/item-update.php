@@ -7,6 +7,7 @@ $item_type = htmlspecialchars($_GET['item_type']);
 $cost = htmlspecialchars($_GET['cost']);
 $cost_type = htmlspecialchars($_GET['cost_type']);
 $remark = htmlspecialchars($_GET['remark']);
+$date = htmlspecialchars($_GET['date']);
 
 if ($cost_type == "income")
 {
@@ -62,7 +63,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
             <td><label>Cost Type:</label>
                 <input type="radio" name="Cost-type" value="Income" <?php echo $income; ?>>Income
                 <input type="radio" name="Cost-type" value="Expense" <?php echo $expense; ?>>Expense</td></tr>
-            <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td></tr>
+            <tr><td><textarea name="Remark" placeholder="Remark"><?php echo $remark; ?></textarea></td>
+            <td><input type="text" name="Date" placeholder="Date" value="<?php echo $date; ?>"></td></tr>
             <tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
         </form>   
     </table>

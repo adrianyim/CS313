@@ -39,18 +39,22 @@ CREATE TABLE total (
 INSERT INTO users (user_id, user_name, password, gender)
     VALUES  (DEFAULT, 'admin', 'admin', 'M');
 
-INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', current_timestamp, 'adrian');
-    ,
-            (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01'),
-            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01'),
-            (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '2019-06-03'),
-            (DEFAULT, 'phone bill', 'Utility Expenses', 22.39, 'Expense', '', '2019-06-004'),
-            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'Expense', 'BOM', current_timestamp),
-            (DEFAULT, 'pizza', 'Food', 10.59, 'Expense', 'BYUI crossroad', '2019-06-004'),
-            (DEFAULT, 'burger king', 'Food', 13.76, 'Expense', '', '2019-06-08'),
-            (DEFAULT, 'gas', 'Utility Expenses', 20.11, 'Expense', '', '2019-06-008'),
-            (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '2019-06-01'),
-            (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', current_timestamp);
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) 
+    VALUES  (DEFAULT, 'Walmark', 'Food', 20.99, 'Expense', 'shoes', '2019-05-29', 'adrian'),
+            (DEFAULT, 'BBQ', 'Food', 11.02, 'Expense', '', '2019-06-01', 'tester'),
+            (DEFAULT, 'Tester 1 salary', 'Salaries and wages', 504.32, 'Income', 'May', '2019-06-01', 'adrian'),
+            (DEFAULT, 'Walmart', 'Food', 30.51, 'Expense', '', '2019-06-03', 'adrian'),
+            (DEFAULT, 'phone bill', 'Utility Expenses', 22.39, 'Expense', '', '2019-05-29', 'tester'),
+            (DEFAULT, 'Deseret Book', 'Others', 12.71, 'Expense', 'BOM', '2019-05-29', 'adrian'),
+            (DEFAULT, 'pizza', 'Food', 10.59, 'Expense', 'BYUI crossroad', '2019-06-04', 'tester'),
+            (DEFAULT, 'burger king', 'Food', 13.76, 'Expense', '', '2019-06-08', 'adrian'),
+            (DEFAULT, 'gas', 'Utility Expenses', 20.11, 'Expense', '', '2019-06-08', 'adrian'),
+            (DEFAULT, 'tithing', 'Others', 23.2, 'Expense', 'May', '2019-06-01', 'tester'),
+            (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', '2019-05-28', 'adrian');
+
+INSERT INTO items (item_id, item, item_type, cost, cost_type, remark, date, user_name) 
+    VALUES (DEFAULT, 'Rent', 'Utility Expenses', 573, 'Income', '??', current_timestamp, 'adrian');
+
 
 INSERT INTO totals (id, total, user_id, item_id)
 VALUES (DEFAULT, 10, (SELECT user_id FROM users WHERE user_name='tester'), (SELECT item_id FROM items WHERE item_type='food'));
