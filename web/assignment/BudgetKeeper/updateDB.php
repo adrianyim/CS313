@@ -5,7 +5,7 @@ $item_type = htmlspecialchars($_GET['Item-type']);
 $cost = htmlspecialchars($_GET['Cost']);
 $cost_type = htmlspecialchars($_GET['Cost-type']);
 $remark = htmlspecialchars($_GET['Remark']);
-$date = htmlspecialchars($_GET['date']);
+$date = htmlspecialchars($_GET['Date']);
 
 require('connectDB.php');
 $db = getDB();
