@@ -1,0 +1,795 @@
+{
+  "computer_information_technology" : {
+    "CIT101A" : {
+      "course" : "CIT101A",
+      "credits" : 1,
+      "name" : "Discovering Computing - Survey"
+    },
+    "CIT101B" : {
+      "course" : "CIT101B",
+      "credits" : 2,
+      "name" : "Discover Computing - Exploration"
+    },
+    "CIT101C" : {
+      "course" : "CIT101C",
+      "credits" : 3,
+      "name" : "Discovering Computing"
+    },
+    "CIT110" : {
+      "course" : "CIT110",
+      "credits" : 3,
+      "name" : "Introduction to Excel"
+    },
+    "CIT111" : {
+      "course" : "CIT111",
+      "credits" : 3,
+      "name" : "Introduction to Databases"
+    },
+    "CIT160" : {
+      "course" : "CIT160",
+      "credits" : 3,
+      "name" : "Introduction to Programming"
+    },
+    "CIT225" : {
+      "course" : "CIT225",
+      "credits" : 3,
+      "name" : "Database Design & Development"
+    },
+    "CIT230" : {
+      "course" : "CIT230",
+      "credits" : 3,
+      "name" : "Web Frontend Development"
+    },
+    "CIT240" : {
+      "course" : "CIT240",
+      "credits" : 3,
+      "name" : "Networking"
+    },
+    "CIT241" : {
+      "course" : "CIT241",
+      "credits" : 3,
+      "name" : "Network Design I"
+    },
+    "CIT260" : {
+      "course" : "CIT260",
+      "credits" : 3,
+      "name" : "Object Oriented Programming"
+    },
+    "CIT261" : {
+      "course" : "CIT261",
+      "credits" : 3,
+      "name" : "Mobile Application Development"
+    },
+    "CIT262" : {
+      "course" : "CIT262",
+      "credits" : 3,
+      "name" : "System Analysis and Design"
+    },
+    "CIT270" : {
+      "course" : "CIT270",
+      "credits" : 3,
+      "name" : "Systems Security I"
+    },
+    "CIT298R" : {
+      "course" : "CIT298R",
+      "credits" : "1-3",
+      "name" : "Introductory Internship"
+    },
+    "CIT325" : {
+      "course" : "CIT325",
+      "credits" : 3,
+      "name" : "Database Programming"
+    },
+    "CIT336" : {
+      "course" : "CIT336",
+      "credits" : 3,
+      "name" : "Web Backend Development"
+    },
+    "CIT341" : {
+      "course" : "CIT341",
+      "credits" : 3,
+      "name" : "Network Design II"
+    },
+    "CIT345" : {
+      "course" : "CIT345",
+      "credits" : 3,
+      "name" : "Wireless Networking"
+    },
+    "CIT352" : {
+      "course" : "CIT352",
+      "credits" : 3,
+      "name" : "Operating Systems I"
+    },
+    "CIT353" : {
+      "course" : "CIT353",
+      "credits" : 3,
+      "name" : "Operating Systems II"
+    },
+    "CIT360" : {
+      "course" : "CIT360",
+      "credits" : 3,
+      "name" : "Object Oriented Development"
+    },
+    "CIT365" : {
+      "course" : "CIT365",
+      "credits" : 3,
+      "name" : ".NET Software Development"
+    },
+    "CIT366" : {
+      "course" : "CIT366",
+      "credits" : 3,
+      "name" : "Full Web Stack Development"
+    },
+    "CIT380" : {
+      "course" : "CIT380",
+      "credits" : 3,
+      "name" : "Project Management"
+    },
+    "CIT381" : {
+      "course" : "CIT381",
+      "credits" : 3,
+      "name" : "Business Intel and Analytics"
+    },
+    "CIT399R" : {
+      "course" : "CIT399R",
+      "credits" : "1-3",
+      "name" : "Introductory Special Topics"
+    },
+    "CIT425" : {
+      "course" : "CIT425",
+      "credits" : 3,
+      "name" : "Data Warehousing"
+    },
+    "CIT460" : {
+      "course" : "CIT460",
+      "credits" : 3,
+      "name" : "Enterprise Development"
+    },
+    "CIT465" : {
+      "course" : "CIT465",
+      "credits" : 3,
+      "name" : "iOS Application Development"
+    },
+    "CIT470" : {
+      "course" : "CIT470",
+      "credits" : 3,
+      "name" : "System Security II"
+    },
+    "CIT485" : {
+      "course" : "CIT485",
+      "credits" : 3,
+      "name" : "Enterprise Applications"
+    },
+    "CIT490" : {
+      "course" : "CIT490",
+      "credits" : 3,
+      "name" : "Senior Project"
+    },
+    "CIT495" : {
+      "course" : "CIT495",
+      "credits" : 1,
+      "name" : "Senior Practicum"
+    },
+    "CIT498" : {
+      "course" : "CIT498",
+      "credits" : 3,
+      "name" : "Internship"
+    },
+    "CIT499R" : {
+      "course" : "CIT499R",
+      "credits" : "1-3",
+      "name" : "Special Topics"
+    },
+    "CITBC102" : {
+      "course" : "CITBC102",
+      "credits" : 3,
+      "name" : "Hardware Technician"
+    },
+    "CITBC125" : {
+      "course" : "CITBC125",
+      "credits" : 3,
+      "name" : "Windows Client"
+    },
+    "CITBC150" : {
+      "course" : "CITBC150",
+      "credits" : 3,
+      "name" : "Introduction to Networking"
+    }
+  },
+  "computer_science" : {
+    "CS101" : {
+      "course" : "CS101",
+      "credits" : 2,
+      "name" : "Introduction to Programming"
+    },
+    "CS124" : {
+      "course" : "CS124",
+      "credits" : 3,
+      "name" : "Introduction to Software Development"
+    },
+    "CS165" : {
+      "course" : "CS165",
+      "credits" : 3,
+      "name" : "Object-Oriented Software Development"
+    },
+    "CS213" : {
+      "course" : "CS213",
+      "credits" : 3,
+      "name" : "Web Engineering I"
+    },
+    "CS225" : {
+      "course" : "CS225",
+      "credits" : 3,
+      "name" : "Database Design & Development"
+    },
+    "CS235" : {
+      "course" : "CS235",
+      "credits" : 3,
+      "name" : "Data Structures"
+    },
+    "CS237" : {
+      "course" : "CS237",
+      "credits" : 2,
+      "name" : "Discrete Mathematics I"
+    },
+    "CS238" : {
+      "course" : "CS238",
+      "credits" : 4,
+      "name" : "Discrete Mathematics II"
+    },
+    "CS241" : {
+      "course" : "CS241",
+      "credits" : 4,
+      "name" : "Survey Object-Oriented Programming/Data Structures"
+    },
+    "CS246" : {
+      "course" : "CS246",
+      "credits" : 3,
+      "name" : "Software Design and Development"
+    },
+    "CS290" : {
+      "course" : "CS290",
+      "credits" : "1-3",
+      "name" : "Special Topics"
+    },
+    "CS306" : {
+      "course" : "CS306",
+      "credits" : 3,
+      "name" : "Algorithms and Complexity"
+    },
+    "CS308" : {
+      "course" : "CS308",
+      "credits" : 3,
+      "name" : "Technical Communication"
+    },
+    "CS312" : {
+      "course" : "CS312",
+      "credits" : 3,
+      "name" : "Computer Graphics"
+    },
+    "CS313" : {
+      "course" : "CS313",
+      "credits" : 3,
+      "name" : "Web Engineering II"
+    },
+    "CS335" : {
+      "course" : "CS335",
+      "credits" : 3,
+      "name" : "Data Wrangling, Exploration, and Visualization"
+    },
+    "CS345" : {
+      "course" : "CS345",
+      "credits" : 3,
+      "name" : "Operating Systems"
+    },
+    "CS364" : {
+      "course" : "CS364",
+      "credits" : 4,
+      "name" : "Software Engineering I"
+    },
+    "CS371" : {
+      "course" : "CS398",
+      "credits" : 3,
+      "name" : "Human-Computer Interaction"
+    },
+    "CS398" : {
+      "course" : "CS398",
+      "credits" : "1-4",
+      "name" : "Internship"
+    },
+    "CS416" : {
+      "course" : "CS416",
+      "credits" : 2,
+      "name" : "Software Engineering II"
+    },
+    "CS432" : {
+      "course" : "CS432",
+      "credits" : 3,
+      "name" : "Software Engineering III"
+    },
+    "CS450" : {
+      "course" : "CS450",
+      "credits" : 3,
+      "name" : "Machine Learning and Data Mining"
+    },
+    "CS460" : {
+      "course" : "CS460",
+      "credits" : 3,
+      "name" : "Computer Communication and Networks"
+    },
+    "CS470" : {
+      "course" : "CS470",
+      "credits" : 3,
+      "name" : "Computer Security"
+    },
+    "CS480" : {
+      "course" : "CS480",
+      "credits" : 3,
+      "name" : "Computational Theory"
+    },
+    "CS490R" : {
+      "course" : "CS490R",
+      "credits" : 3,
+      "name" : "Special Topics"
+    },
+    "CS498R" : {
+      "course" : "CS498R",
+      "credits" : "1-4",
+      "name" : "Internship"
+    },
+    "CS499" : {
+      "course" : "CS499",
+      "credits" : 3,
+      "name" : "Senior Project"
+    },
+    "CS499A" : {
+      "course" : "CS499A",
+      "credits" : 2,
+      "name" : "Senior Project, Part A"
+    },
+    "CS499B" : {
+      "course" : "CS499B",
+      "credits" : 1,
+      "name" : "Senior Project, Part B"
+    },
+    "CS499S" : {
+      "course" : "CS499S",
+      "credits" : "1-2",
+      "name" : "Senior Project Supplemental"
+    }
+  },
+  "foundations_religion" : {
+    "FDREL121" : {
+      "course" : "FDREL121",
+      "credits" : 2,
+      "name" : "Book of Mormon"
+    },
+    "FDREL122" : {
+      "course" : "FDREL122",
+      "credits" : 2,
+      "name" : "Book of Mormon"
+    },
+    "FDREL130" : {
+      "course" : "FDREL130",
+      "credits" : 2,
+      "name" : "Missionary Preparation"
+    },
+    "FDREL190" : {
+      "course" : "FDREL190",
+      "credits" : "1-3",
+      "name" : "Special Topics in Scripture"
+    },
+    "FDREL200" : {
+      "course" : "FDREL200",
+      "credits" : 2,
+      "name" : "The Eternal Family"
+    },
+    "FDREL211" : {
+      "course" : "FDREL211",
+      "credits" : 2,
+      "name" : "New Testament"
+    },
+    "FDREL212" : {
+      "course" : "FDREL212",
+      "credits" : 2,
+      "name" : "New Testament"
+    },
+    "FDREL215" : {
+      "course" : "FDREL215",
+      "credits" : 2,
+      "name" : "Scripture Study"
+    },
+    "FDREL225" : {
+      "course" : "FDREL225",
+      "credits" : 2,
+      "name" : "Foundations of the Restoration"
+    },
+    "FDREL234" : {
+      "course" : "FDREL234",
+      "credits" : 2,
+      "name" : "Preparing for Eternal Marriage"
+    },
+    "FDREL235" : {
+      "course" : "FDREL235",
+      "credits" : 2,
+      "name" : "Building an Eternal Marriage"
+    },
+    "FDREL250" : {
+      "course" : "FDREL250",
+      "credits" : 2,
+      "name" : "Jesus Christ and the Everlasting Gospel"
+    },
+    "FDREL261" : {
+      "course" : "FDREL261",
+      "credits" : 2,
+      "name" : "Introduction to Family History"
+    },
+    "FDREL275" : {
+      "course" : "FDREL275",
+      "credits" : 2,
+      "name" : "The Teachings and Doctrine of the Book of Mormon"
+    },
+    "FDREL301" : {
+      "course" : "FDREL301",
+      "credits" : 2,
+      "name" : "Old Testament"
+    },
+    "FDREL302" : {
+      "course" : "FDREL302",
+      "credits" : 2,
+      "name" : "Old Testament"
+    },
+    "FDREL324" : {
+      "course" : "FDREL324",
+      "credits" : 2,
+      "name" : "Doctrine and Covenants"
+    },
+    "FDREL325" : {
+      "course" : "FDREL325",
+      "credits" : 2,
+      "name" : "Doctrine and Covenants"
+    },
+    "FDREL327" : {
+      "course" : "FDREL327",
+      "credits" : 2,
+      "name" : "Pearl of Great Price"
+    },
+    "FDREL333" : {
+      "course" : "FDREL333",
+      "credits" : 2,
+      "name" : "Teachings of the Living Prophets"
+    },
+    "FDREL341" : {
+      "course" : "FDREL341",
+      "credits" : 2,
+      "name" : "Church History"
+    },
+    "FDREL342" : {
+      "course" : "FDREL342",
+      "credits" : 2,
+      "name" : "Church History"
+    },
+    "FDREL343" : {
+      "course" : "FDREL343",
+      "credits" : 2,
+      "name" : "Church History"
+    },
+    "FDREL345" : {
+      "course" : "FDREL345",
+      "credits" : 2,
+      "name" : "Presidents of the Church"
+    },
+    "FDREL351" : {
+      "course" : "FDREL351",
+      "credits" : 2,
+      "name" : "World Religions"
+    },
+    "FDREL352" : {
+      "course" : "FDREL352",
+      "credits" : 2,
+      "name" : "Christian History"
+    },
+    "FDREL397" : {
+      "course" : "FDREL397",
+      "credits" : 2,
+      "name" : "Religious Research"
+    },
+    "FDREL404" : {
+      "course" : "FDREL404",
+      "credits" : 2,
+      "name" : "Writings of Isaiah"
+    },
+    "FDREL431" : {
+      "course" : "FDREL431",
+      "credits" : 2,
+      "name" : "Doctrines of the Gospel"
+    },
+    "FDREL471" : {
+      "course" : "FDREL471",
+      "credits" : 2,
+      "name" : "Methods of Teaching Seminary"
+    },
+    "FDREL475" : {
+      "course" : "FDREL475",
+      "credits" : 2,
+      "name" : "Seminary Teaching Seminar"
+    }
+  },
+  "mathematics" : {
+    "MATH100A" : {
+      "course" : "MATH100A",
+      "credits" : 1,
+      "name" : "Arithmetic"
+    },
+    "MATH100B" : {
+      "course" : "MATH100B",
+      "credits" : 2,
+      "name" : "Beginning Algebra"
+    },
+    "MATH100G" : {
+      "course" : "MATH100G",
+      "credits" : 3,
+      "name" : "Personal Finance"
+    },
+    "MATH100L" : {
+      "course" : "MATH100L",
+      "credtis" : 5,
+      "name" : "English Language and Personal Finance"
+    },
+    "MATH101" : {
+      "course" : "MATH101",
+      "credits" : 3,
+      "name" : "Intermediate Algebra"
+    },
+    "MATH109" : {
+      "course" : "MATH109",
+      "credits" : 5,
+      "name" : "Precalculus"
+    },
+    "MATH110X" : {
+      "course" : "MATH110X",
+      "credits" : 3,
+      "name" : "College Algebra"
+    },
+    "MATH111" : {
+      "course" : "MATH111",
+      "credits" : 2,
+      "name" : "Trigonometry"
+    },
+    "MATH113" : {
+      "course" : "MATH113",
+      "credits" : 3,
+      "name" : "Calculus II"
+    },
+    "MATH119" : {
+      "course" : "MATH119",
+      "credits" : 4,
+      "name" : "Calculus for Business and Life Science"
+    },
+    "MATH190" : {
+      "course" : "MATH190",
+      "credits" : 1,
+      "name" : "Tutoring Mathematics"
+    },
+    "MATH205" : {
+      "course" : "MATH205",
+      "credits" : 3,
+      "name" : "Fundamentals of Number Theory"
+    },
+    "MATH206" : {
+      "course" : "MATH206",
+      "credits" : 2,
+      "name" : "Elementary Geometry"
+    },
+    "MATH214" : {
+      "course" : "MATH214",
+      "credits" : 3,
+      "name" : "Multivariable and Vector Calculus"
+    },
+    "MATH214E" : {
+      "course" : "MATH214E",
+      "credits" : 1,
+      "name" : "Teaching Calculus"
+    },
+    "MATH215" : {
+      "course" : "MATH215",
+      "credits" : 4,
+      "name" : "Multivariable Calculus"
+    },
+    "MATH221A" : {
+      "course" : "MATH221A",
+      "credits" : 3,
+      "name" : "Business Statistics"
+    },
+    "MATH221B" : {
+      "course" : "MATH221B",
+      "credits" : 3,
+      "name" : "Biostatistics"
+    },
+    "MATH221C" : {
+      "course" : "MATH221C",
+      "credits" : 3,
+      "name" : "Social Science Statistics"
+    },
+    "MATH241" : {
+      "course" : "MATH241",
+      "credits" : 2,
+      "name" : "Linear Algebra I"
+    },
+    "MATH242" : {
+      "course" : "MATH242",
+      "credits" : 2,
+      "name" : "Linear Algebra II"
+    },
+    "MATH280" : {
+      "course" : "MATH280",
+      "credits" : 3,
+      "name" : "Problem Solving"
+    },
+    "MATH281" : {
+      "course" : "MATH281",
+      "credits" : 3,
+      "name" : "Introduction to Applied Mathematics"
+    },
+    "MATH282" : {
+      "course" : "MATH282",
+      "credits" : 2,
+      "name" : "Modeling with Differential Equations"
+    },
+    "MATH285" : {
+      "course" : "MATH285",
+      "credits" : 3,
+      "name" : "Mathematics Connections"
+    },
+    "MATH301" : {
+      "course" : "MATH301",
+      "credits" : 3,
+      "name" : "Foundations of Math"
+    },
+    "MATH316" : {
+      "course" : "MATH316",
+      "credits" : 4,
+      "name" : "Differential Equations with Linear Algebra"
+    },
+    "MATH325" : {
+      "course" : "MATH325",
+      "credits" : 3,
+      "name" : "Intermediate Statistics"
+    },
+    "MATH326" : {
+      "course" : "MATH326",
+      "credits" : 3,
+      "name" : "Experimental Design"
+    },
+    "MATH330" : {
+      "course" : "MATH330",
+      "credits" : 3,
+      "name" : "Engineering Statistics"
+    },
+    "MATH335" : {
+      "course" : "MATH335",
+      "credits" : 3,
+      "name" : "Data Wrangling, Exploration, and Visualization"
+    },
+    "MATH340" : {
+      "course" : "MATH340",
+      "credits" : 3,
+      "name" : "Discrete Mathematics"
+    },
+    "MATH340L" : {
+      "course" : "MATH340L",
+      "credits" : 1,
+      "name" : "Technical Writing Lab"
+    },
+    "MATH341" : {
+      "course" : "MATH341",
+      "credits" : 3,
+      "name" : "Linear Algebra"
+    },
+    "MATH350" : {
+      "course" : "MATH350",
+      "credits" : 3,
+      "name" : "Geometry"
+    },
+    "MATH411" : {
+      "course" : "MATH411",
+      "credits" : 3,
+      "name" : "Numerical Analysis I"
+    },
+    "MATH412" : {
+      "course" : "MATH412",
+      "credits" : 3,
+      "name" : "Numerical Analysis II"
+    },
+    "MATH423" : {
+      "course" : "MATH423",
+      "credits" : 3,
+      "name" : "Probability and Statistics"
+    },
+    "MATH424" : {
+      "course" : "MATH424",
+      "credits" : 3,
+      "name" : "Mathematical and Bayesian Statistics"
+    },
+    "MATH425" : {
+      "course" : "MATH425",
+      "credits" : 3,
+      "name" : "Applied Linear Regression"
+    },
+    "MATH440" : {
+      "course" : "MATH440",
+      "credits" : 3,
+      "name" : "Modern Algebra"
+    },
+    "MATH441" : {
+      "course" : "MATH441",
+      "credits" : 3,
+      "name" : "Abstract Algebra I"
+    },
+    "MATH442" : {
+      "course" : "MATH442",
+      "credits" : 3,
+      "name" : "Abstract Algebra II"
+    },
+    "MATH450" : {
+      "course" : "MATH450",
+      "credits" : 2,
+      "name" : "History of Mathematics"
+    },
+    "MATH461" : {
+      "course" : "MATH461",
+      "credits" : 3,
+      "name" : "Real Analysis I"
+    },
+    "MATH462" : {
+      "course" : "MATH462",
+      "credits" : 3,
+      "name" : "Real Analysis II"
+    },
+    "MATH463" : {
+      "course" : "MATH463",
+      "credits" : 3,
+      "name" : "Complex Analysis"
+    },
+    "MATH472" : {
+      "course" : "MATH472",
+      "credits" : 3,
+      "name" : "Introduction to Partial Differential Equations"
+    },
+    "MATH488" : {
+      "course" : "MATH488",
+      "credits" : 3,
+      "name" : "Statistical Consulting"
+    },
+    "MATH490" : {
+      "course" : "MATH490",
+      "credits" : 2,
+      "name" : "Secondary Education Math Teaching Methods"
+    },
+    "MATH491" : {
+      "course" : "MATH491",
+      "credits" : 2,
+      "name" : "Mathematics Education Practicum Lab"
+    },
+    "MATH494R" : {
+      "course" : "MATH494R",
+      "credits" : 3,
+      "name" : "Topics in Statistics"
+    },
+    "MATH495R" : {
+      "course" : "MATH495R",
+      "credits" : 3,
+      "name" : "Topics in Mathematics"
+    },
+    "MATH498R" : {
+      "course" : "MATH498R",
+      "credits" : "1-3",
+      "name" : "Internship"
+    },
+    "MATH499R" : {
+      "course" : "MATH499R",
+      "credits" : "1-3",
+      "name" : "Senior Project in Mathematics"
+    }
+  }
+}

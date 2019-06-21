@@ -25,6 +25,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/assignment/header.php';
 ?>
 <label>User: <?php echo $_SESSION['username']; ?></label><label class="links"><a href="login.php"> Log Out</a></label>
   <div class="div-info">
+    <label></label>
     <div>
       <table class="table-insert">
         <form method="post" action="insertDB.php">
